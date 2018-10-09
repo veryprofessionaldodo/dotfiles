@@ -27,7 +27,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+bindsym $mod+Shift+Return exec terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -40,8 +40,8 @@ set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 # start program launcher
-bindsym $mod+d exec rofi -show drun -lines 3 -eh 2 -width 40 -padding 10 -bw 0 -bc "#0A0D14"
-bindsym $mod+Shift+d exec rofi -show run -lines 3 -eh 2 -width 40 -padding 10 -bw 0 -bc "#0A0D14"
+bindsym $mod+d exec --no-startup-id rofi -show drun -lines 3 -eh 2 -width 50 -padding 10 -bw 0 -bc "#0A0D14"
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run -lines 3 -eh 2 -width 50 -padding 10 -bw 0 -bc "#0A0D14"
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -65,17 +65,17 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F1 exec firefox
-bindsym $mod+F2 exec terminal && ranger
+bindsym $mod+F2 exec --no-startup-id terminal && ranger
 # bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
+# bindsym $mod+F3 exec --no-startup-id ranger
 bindsym $mod+Shift+F3 exec zensu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym $Ctrl+Alt+Print exec gnome-screenshot 
+bindsym Print exec gnome-screenshot 
+bindsym Ctrl+Print exec gnome-screenshot -c
+bindsym Ctrl+Shift+Print exec gnome-screenshot -c -a
+bindsym Shift+Print exec gnome-screenshot -a
 # focus_follows_mouse no
 
 # change focus
@@ -102,8 +102,8 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+h split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+h split h;exec --no-startup-id notify-send 'tile horizontally'
+bindsym $mod+v split v;exec --no-startup-id notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -119,9 +119,6 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
-# toggle sticky
-bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -144,8 +141,8 @@ bindsym $mod+Ctrl+Left workspace prev
 set $ws1 1:
 set $ws2 2:
 set $ws3 3:
-set $ws4 4:Videos
-set $ws5 5
+set $ws4 4:
+set $ws5 5:
 set $ws6 6
 set $ws7 7
 set $ws8 8
@@ -188,6 +185,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 assign [class="Firefox"] $ws1
 assign [class="Franz"] $ws2
 assign [class="Code"] $ws3
+assign [class="UE4Editor"] $ws4
+assign [class="jetbrains-studio"] $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 3
@@ -216,6 +215,8 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="Spotify"] move to workspace $ws5
+for_window [class="jetbrains-idea-ce"] move to workspace $ws3
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -227,14 +228,14 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
-bindsym $mod+Shift+l mode "$mode_system"
+bindsym $mod+Shift+s mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym l exec --no-startup-id betterlockscreen -l, mode "default"
+    bindsym s exec --no-startup-id betterlockscreen -s, mode "default"
     bindsym u exec --no-startup-id i3exit switch_user, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
@@ -272,25 +273,30 @@ mode "resize" {
 
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
-bindsym $mod+Shift+Escape exec gnome-system-monitor
+bindsym $mod+Shift+Escape exec --no-startup-id gnome-system-monitor
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1;
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+#exec --no-startup-id pamac-tray
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
+exec --no-startup-id start_conky_maia
+exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec_always --no-startup-id xautolock -time 1 -locker betterlockscreen -l
 #exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" 
 exec --no-startup-id variety
-exec franz
-exec rescuetime
+exec --no-startup-id franz
+exec --no-startup-id rescuetime
+exec --no-startup-id redshift -c "/home/workingdodo/.config/redshift.conf"
+exec --no-startup-id polybar example
+# Disables Tap to Click
+exec_always --no-startup-id synclient MaxTapTime=0
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -323,33 +329,12 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
+set_from_resource $bg_color background
+set_from_resource $fg_color foreground
+
+
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	i3bar_command i3bar
-	status_command i3status
-	position bottom
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
-	bindsym button4 nop
-	bindsym button5 nop
-	strip_workspace_numbers yes
-
-	colors {
-		background #0A0D14
-		statusline #FFFFFF
-		separator  #2B5066
-	
-		focused_workspace  #192C3F #192C3F #FFFFFF
-		active_workspace   #192C3F #192C3F #FFFFFF
-		inactive_workspace #0A0D14 #0A0D14 #888888
-		urgent_workspace   #2F343A #900000 #FFFFFF
-		binding_mode       #2F343A #900000 #FFFFFF
-    }
-}
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
@@ -419,4 +404,3 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
