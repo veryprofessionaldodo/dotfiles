@@ -19,77 +19,50 @@
 [colors]
 background = ${xrdb:background:#222}
 ;background = #222
-background-alt = #444
+background-alt = #FFFFFF
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = #FFFFFF
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
-
-bottom = true
 width = 100%
-height = 28
-offset-y = 0
+height = 29
 offset-x = 0
-radius = 1
+offset-y = -1 
+bottom = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = #5a000000
+foreground = #eee
 
-fixed-center = false
+underline-size = 2
+underline-color = #eee
 
-line-size = 3
-line-color = #f00
-
-border-size = 4
-border-color = #00000000
-
-
+spacing = 1
 padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-;-------;
-; FONTS ;
-;-------;
+padding-right = 0
+module-margin-left = 0 
+module-margin-right = 0
 
 font-0 = fixed:pixelsize=10;1
 font-1="Font Awesome 5 Free"
 font-2="Font Awesome 5 Brands"
 font-3 = "Wuncon Siji"
-;font-1 = vera:fontformat=truetype:size=8:antialias=false;0
-;font-2 = "Wuncon Siji"
-
 
 modules-left = i3
-;modules-center = mpdmpd
+modules-center = 
 modules-right = cpu battery temperature date powermenu
 
-tray-position = right
-tray-padding = 0
-;tray-transparent = true
-;tray-background = #0063ff
+;tray-position = right
+;tray-padding = 2
+;tray-background = #66333333
 
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
+wm-restack = i3
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
 ;[module/xwindow]
 ;type = internal/xwindow
 ;label = %title:0:30:...%
