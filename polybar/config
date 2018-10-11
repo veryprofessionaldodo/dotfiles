@@ -19,77 +19,52 @@
 [colors]
 background = ${xrdb:background:#222}
 ;background = #222
-background-alt = #444
+background-alt = #FFFFFF
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = #FFFFFF
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
-
-bottom = true
 width = 100%
-height = 28
-offset-y = 0
+height = 29
 offset-x = 0
-radius = 1
+offset-y = -1 
+bottom = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = #5a000000
+foreground = #eee
 
-fixed-center = false
+underline-size = 2
+underline-color = #eee
 
-line-size = 3
-line-color = #f00
-
-border-size = 4
-border-color = #00000000
-
-
+spacing = 1
 padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
+padding-right = 0
+module-margin-left = 0 
 module-margin-right = 2
-
-;-------;
-; FONTS ;
-;-------;
 
 font-0 = fixed:pixelsize=10;1
 font-1="Font Awesome 5 Free"
 font-2="Font Awesome 5 Brands"
 font-3 = "Wuncon Siji"
-;font-1 = vera:fontformat=truetype:size=8:antialias=false;0
-;font-2 = "Wuncon Siji"
-
 
 modules-left = i3
-;modules-center = mpdmpd
-modules-right = cpu battery temperature date powermenu
+modules-center = 
+modules-right = pulseaudio cpu battery temperature date powermenu tray
 
-tray-position = right
-tray-padding = 0
-;tray-transparent = true
-;tray-background = #0063ff
+tray-position = center
+tray-transparent = true
+tray-padding = 2
+tray-background = #000000
+tray-foreground = #eee
 
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
+wm-restack = i3
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
 ;[module/xwindow]
 ;type = internal/xwindow
 ;label = %title:0:30:...%
@@ -191,6 +166,8 @@ label-focused-padding = 4
 ; Default: %icon%  %name%
 label-unfocused = %name%
 label-unfocused-padding = 4
+label-unfocused-foreground = #777777
+
 
 ; Available tokens:
 ;   %name%
@@ -335,11 +312,11 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+format-volume = <label-volume> 
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted =  muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -362,30 +339,13 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/alsa]
 type = internal/alsa
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+format-volume = <label-volume> 
+label-volume = 
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = ""
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 1
-bar-volume-fill = ─
-bar-volume-fill-font = 1
-bar-volume-empty = ─
-bar-volume-empty-font = 1
-bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -396,29 +356,32 @@ full-at = 98
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging = <animation-discharging> <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
@@ -449,7 +412,7 @@ expand-right = true
 format-spacing = 1
 
 label-open-font = 1
-label-open = 
+label-open = 
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
