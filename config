@@ -305,8 +305,6 @@ exec --no-startup-id franz
 exec --no-startup-id rescuetime
 exec --no-startup-id redshift -c "/home/workingdodo/.config/redshift.conf"
 exec --no-startup-id polybar example
-# Disables Tap to Click
-exec_always --no-startup-id synclient MaxTapTime=0
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
