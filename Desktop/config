@@ -117,9 +117,6 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# toggle sticky
-bindsym $mod+Shift+s sticky toggle
-
 # focus the parent container
 bindsym $mod+a focus parent
 
@@ -143,11 +140,15 @@ bindsym $mod+Ctrl+Right move right
 set $ws1 1:
 set $ws2 2:
 set $ws3 3:
-set $ws4 4:Videos
-set $ws5 5
+set $ws4 4:
+set $ws5 5:
 set $ws6 6
 set $ws7 7
 set $ws8 8
+
+# Handle Polybars
+bindsym $mod+Shift+k exec --no-startup-id killall -q polybar
+bindsym $mod+Shift+p exec --no-startup-id polybar right ; exec --no-startup-id polybar left
 
 # Assigning workspaces to monitor
 set $monitor_one "DVI-I-1"
@@ -203,8 +204,9 @@ assign [class="Franz"] $ws2
 assign [class="Code"] $ws4
 assign [class="UE4Editor"] $ws3
 assign [class="jetbrains-clion"] $ws4
-assign [class="VirtualBox Machine"] $ws4
-assign [class="VirtualBox Manager"] $ws5
+assign [class="krita"] $ws4
+assign [class="Main"] $ws4
+assign [class="Spotify"] $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -233,6 +235,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="UnrealVersionSelector-Linux-Shipping"] move to workspace $ws4
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -247,7 +250,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
-bindsym $mod+Shift+l mode "$mode_system"
+bindsym $mod+Shift+s mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id betterlockscreen -l "dimblur", mode "default"
@@ -291,9 +294,6 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 bindsym $mod+Shift+Escape exec gnome-system-monitor
 
-#bindsym $mod+o exec --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 1920x528 --rotate normal --output DP-2 --off
-
-#bindsym $mod+Shift+o exec --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --rotate normal --output DP-2 --off
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -349,9 +349,9 @@ set_from_resource $term_color15    color15
 # Set primary monitor
 exec --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 1920x528 --rotate normal --output DP-2 --off
 
-bindsym $mod+Shift+o exec --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 1920x528 --rotate normal --output DP-2 --off
+bindsym $mod+Shift+w exec --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 1920x528 --rotate normal --output DP-2 --off ; compton --config "/home/workingdodo/.config/compton.conf" ; franz
 
-bindsym $mod+Shift+p exec --no-startup-id xrandr --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off
+bindsym $mod+Shift+g exec --no-startup-id xrandr --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off ; killall compton ; killall franz
          
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
@@ -386,11 +386,11 @@ smart_gaps on
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
+# Press $mod+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
+bindsym $mod+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
