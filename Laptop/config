@@ -19,6 +19,11 @@ bindsym $mod+u border none
 bindsym $mod+y border pixel 3
 bindsym $mod+n border normal
 
+# Polybar
+bindsym $mod+Shift+k exec --no-startup-id killall -q polybar
+bindsym $mod+Shift+p exec --no-startup-id polybar example
+bindsym $mod+Shift+t exec --no-startup-id polybar time
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font xft:URWGothic-Book 11
@@ -65,13 +70,14 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F1 exec firefox
-bindsym $mod+F2 exec --no-startup-id terminal && ranger
+bindsym $mod+F2 exec ranger
+bindsym $mod+F3 exec code
+bindsym $mod+F4 exec krita
+bindsym $mod+F5 exec spotify
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec --no-startup-id ranger
 bindsym $mod+Shift+F3 exec zensu pcmanfm
-bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdfbindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym Print exec gnome-screenshot 
 bindsym Ctrl+Print exec gnome-screenshot -c
 bindsym Ctrl+Shift+Print exec gnome-screenshot -c -a
@@ -187,6 +193,11 @@ assign [class="Franz"] $ws2
 assign [class="Code"] $ws3
 assign [class="UE4Editor"] $ws4
 assign [class="jetbrains-studio"] $ws3
+assign [class="jetbrains-idea-ce"] $ws3
+assign [class="sun-awt-X11-XDialogPeer"]$ws3
+assign [class="UnrealVersionSelector-Linux-Shipping"] $ws4
+assign [class="Main"] $ws4
+#assign [class="Spotify"] $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 3
@@ -215,9 +226,8 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="UnrealVersionSelector-Linux-Shipping"] move to workspace $ws4
 for_window [class="Spotify"] move to workspace $ws5
-for_window [class="jetbrains-idea-ce"] move to workspace $ws3
-
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -352,7 +362,7 @@ client.background       #FFFFFF
 
 # Set inner/outer gaps
 gaps inner 14
-gaps outer -2
+gaps outer -6
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -402,3 +412,4 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
