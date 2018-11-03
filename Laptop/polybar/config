@@ -62,7 +62,7 @@ offset-x = 0
 offset-y = 0 
 bottom = true
 
-background = #000111
+background = #77000111
 foreground = #eee
 
 underline-size = 2
@@ -84,7 +84,7 @@ modules-center =
 modules-right = tray pulseaudio cpu battery temperature date time powermenu 
 
 tray-position = right
-;tray-transparent = true
+tray-transparent = true
 tray-padding = 2
 tray-background = #11000011
 tray-foreground = #eee
