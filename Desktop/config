@@ -209,6 +209,7 @@ assign [class="jetbrains-clion"] $ws4
 assign [class="krita"] $ws4
 assign [class="Main"] $ws4
 assign [class="Spotify"] $ws5
+assign [class="Gitkraken"] $ws4
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
