@@ -352,9 +352,9 @@ set_from_resource $term_color15    color15
 # Set primary monitor
 exec --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 1920x528 --rotate normal --output DP-2 --off
 
-bindsym $mod+Shift+w exec --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 1920x528 --rotate normal --output DP-2 --off ; compton --config "/home/workingdodo/.config/compton.conf" ; franz
+bindsym $mod+Shift+w exec --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 1920x528 --rotate normal --output DP-2 --off ; exec --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" ; exec --no-startup-id franz ; exec --no-startup-id killall steam
 
-bindsym $mod+Shift+g exec --no-startup-id xrandr --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off ; killall compton ; killall franz
+bindsym $mod+Shift+g exec --no-startup-id xrandr --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off ; exec --no-startup-id killall compton ; exec --no-startup-id killall franz ; exec --no-startup-id steam
          
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
