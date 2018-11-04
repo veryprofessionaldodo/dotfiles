@@ -364,6 +364,9 @@ client.background       #FFFFFF
 gaps inner 14
 gaps outer -6
 
+#disables tap to click
+exec --no-startup-id synclient MaxTapTime=0
+
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
 # gaps inner all set 10
