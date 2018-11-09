@@ -78,10 +78,10 @@ bindsym $mod+F5 exec spotify
 # bindsym $mod+F3 exec --no-startup-id ranger
 bindsym $mod+Shift+F3 exec zensu pcmanfm
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdfbindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym Print exec gnome-screenshot 
-bindsym Ctrl+Print exec gnome-screenshot -c
-bindsym Ctrl+Shift+Print exec gnome-screenshot -c -a
-bindsym Shift+Print exec gnome-screenshot -a
+bindsym Print exec --no-startup-id gnome-screenshot 
+bindsym Ctrl+Print exec --no-startup-id gnome-screenshot -c
+bindsym Ctrl+Shift+Print exec --no-startup-id gnome-screenshot -c -a
+bindsym Shift+Print exec --no-startup-id gnome-screenshot -a
 # focus_follows_mouse no
 
 # change focus

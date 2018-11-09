@@ -1,5 +1,3 @@
-# TESTE YO!
-
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
@@ -74,10 +72,10 @@ bindsym $mod+F2 exec ranger
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec zensu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym Print exec --no-startup-id gnome-screenshot 
+bindsym Ctrl+Print exec --no-startup-id gnome-screenshot -c
+bindsym Ctrl+Shift+Print exec --no-startup-id gnome-screenshot -c -a
+bindsym Shift+Print exec --no-startup-id gnome-screenshot -abindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
 
