@@ -54,7 +54,7 @@ font-3 = "Wuncon Siji"
 
 modules-left = i3
 modules-center = 
-modules-right = pulseaudio cpu temperature date powermenu
+modules-right = pulseaudio cpu temperature date time powermenu
 
 
 wm-restack = i3
@@ -336,17 +336,27 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
+date = " %d-%m"
 date-alt = " %Y-%m-%d"
 
-time = %H:%M
-time-alt = %H:%M:%S
-
-format-prefix = 
+format-prefix =  
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
-label = %date% %time%
+label = %date% 
+
+[module/time]
+type = internal/date
+interval = 5
+
+time = " %H:%M"
+time-alt = %H:%M:%S
+
+format-prefix =  
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
+
+label = %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -374,6 +384,8 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+
 
 [module/alsa]
 type = internal/alsa
