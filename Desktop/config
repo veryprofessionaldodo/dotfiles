@@ -237,6 +237,7 @@ for_window [class="UnrealVersionSelector-Linux-Shipping"] move to workspace $ws4
 for_window [class="Gitkraken"] move to workspace $ws5
 for_window [class="Spotify"] move to workspace $ws5
 for_window [class="jetbrains-clion"] move to workspace $ws3
+for_window [class="jetbrains-studio"] move to workspace $ws3
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
