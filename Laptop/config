@@ -149,7 +149,7 @@ set $ws2 2:
 set $ws3 3:
 set $ws4 4:
 set $ws5 5:
-set $ws6 6
+set $ws6 6:
 set $ws7 7
 set $ws8 8
 
@@ -197,7 +197,6 @@ assign [class="jetbrains-idea-ce"] $ws3
 assign [class="sun-awt-X11-XDialogPeer"]$ws3
 assign [class="UnrealVersionSelector-Linux-Shipping"] $ws4
 assign [class="Main"] $ws4
-#assign [class="Spotify"] $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 3
@@ -229,6 +228,10 @@ for_window [class="Xfburn"] floating enable
 for_window [class="UnrealVersionSelector-Linux-Shipping"] move to workspace $ws4
 for_window [class="Spotify"] move to workspace $ws5
 # switch to workspace with urgent window automatically
+for_window [class="GitKraken"] move to workspace $ws4
+for_window [class="jetbrains-clion"] move to workspace $ws3
+for_window [class="jetbrains-studio"] move to workspace $ws3
+for_window [class="jetbrains-idea-ce"] move to workspace $ws3
 for_window [urgent=latest] focus
 
 # reload the configuration file
