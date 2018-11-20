@@ -37,7 +37,6 @@ bindsym $mod+Shift+Return exec terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
@@ -103,9 +102,9 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
-workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+#workspace_auto_back_and_forth yes
+#bindsym $mod+b workspace back_and_forth
+#bindsym $mod+Shift+b move container to workspace back_and_forth; #workspace back_and_forth
 
 # split orientation
 bindsym $mod+h split h;exec --no-startup-id notify-send 'tile horizontally'
@@ -197,6 +196,13 @@ assign [class="jetbrains-idea-ce"] $ws3
 assign [class="sun-awt-X11-XDialogPeer"]$ws3
 assign [class="UnrealVersionSelector-Linux-Shipping"] $ws4
 assign [class="Main"] $ws4
+for_window [class="Spotify"] move to workspace $ws5
+#assign [class="Spotify"] $ws5
+for_window [class="GitKraken"] $ws4
+for_window [class="gitkraken"] $ws4
+for_window [class="jetbrains-clion"] move to workspace $ws3
+for_window [class="jetbrains-studio"] move to workspace $ws3
+for_window [class="jetbrains-idea-ce"] move to workspace $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 3
@@ -226,12 +232,8 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="UnrealVersionSelector-Linux-Shipping"] move to workspace $ws4
-for_window [class="Spotify"] move to workspace $ws5
+# for_window [class="Spotify"] move to workspace $ws5
 # switch to workspace with urgent window automatically
-for_window [class="GitKraken"] move to workspace $ws4
-for_window [class="jetbrains-clion"] move to workspace $ws3
-for_window [class="jetbrains-studio"] move to workspace $ws3
-for_window [class="jetbrains-idea-ce"] move to workspace $ws3
 for_window [urgent=latest] focus
 
 # reload the configuration file
