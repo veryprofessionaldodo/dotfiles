@@ -286,8 +286,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
 bindsym $mod+Shift+Escape exec --no-startup-id gnome-system-monitor
 
 # Autostart applications
