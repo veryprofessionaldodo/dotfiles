@@ -62,7 +62,7 @@ offset-x = 0
 offset-y = 0 
 bottom = true
 
-background = #000111
+background = #cc000115
 foreground = #eee
 
 underline-size = 2
@@ -81,13 +81,7 @@ font-3 = "Wuncon Siji"
 
 modules-left = i3
 modules-center = 
-modules-right = tray pulseaudio cpu battery temperature date time powermenu 
-
-tray-position = right
-tray-transparent = false
-tray-padding = 2
-tray-background = #11000011
-tray-foreground = #eee
+modules-right = pulseaudio cpu battery temperature date time powermenu 
 
 wm-restack = i3
 
