@@ -81,7 +81,7 @@ font-3 = "Wuncon Siji"
 
 modules-left = i3
 modules-center = 
-modules-right = pulseaudio cpu battery temperature date time powermenu 
+modules-right = wlan pulseaudio cpu battery temperature date time powermenu 
 
 wm-restack = i3
 
@@ -266,7 +266,7 @@ type = internal/cpu
 interval = 2
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = #ffb52a
 label = %percentage:2%%
 
 [module/memory]
@@ -283,8 +283,8 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
+click-left = nm_applet
+label-connected = %{A1:nm-connection-editor:}%essid%%{A}
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -343,7 +343,7 @@ label = %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-
+format-underline = #ffb52a
 format-volume = <label-volume> 
 label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
@@ -370,7 +370,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/alsa]
 type = internal/alsa
-
+format-underline = #ffb52a
 format-volume = <label-volume> 
 label-volume = 
 label-volume-foreground = ${root.foreground}
