@@ -35,7 +35,7 @@ offset-x = 0
 offset-y = -1 
 bottom = true
 
-background = #5a000000
+background = #ce000115
 foreground = #eee
 
 underline-size = 2
@@ -73,7 +73,7 @@ offset-x = 0
 offset-y = -1 
 bottom = true
 
-background = #5a000000
+background = #ce000115
 foreground = #eee
 
 underline-size = 2

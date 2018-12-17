@@ -37,7 +37,7 @@ bottom = true
 radius = 3
 fixed-center = true
 
-background = #77000111
+background = #ce000115
 foreground = #eee
 
 spacing = 1
@@ -49,7 +49,7 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1="fa-brands-400"
 font-2="fa-regular-400"
-font-3 = "Wuncon Siji"
+font-3 = "siji"
 
 modules-left = 
 modules-center = time battery 
@@ -62,7 +62,7 @@ offset-x = 0
 offset-y = 0 
 bottom = true
 
-background = #88000115
+background = #ce000115
 foreground = #eee
 
 underline-size = 2
