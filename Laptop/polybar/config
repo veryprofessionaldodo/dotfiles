@@ -47,8 +47,8 @@ module-margin-left = 0
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
-font-1="Font Awesome 5 Free"
-font-2="Font Awesome 5 Brands"
+font-1="fa-brands-400"
+font-2="fa-regular-400"
 font-3 = "Wuncon Siji"
 
 modules-left = 
