@@ -37,7 +37,7 @@ bottom = true
 radius = 3
 fixed-center = true
 
-background = #ce000115
+background = #ab000115
 foreground = #eee
 
 spacing = 1
@@ -176,7 +176,7 @@ label-mode-background = #e60053
 ; Default: %icon%  %name%
 label-focused = %name%
 label-focused-foreground = #ffffff
-label-focused-background = #5a555555
+label-focused-background = #ab3f3f5f
 label-focused-underline = #fba922
 label-focused-padding = 4
 
