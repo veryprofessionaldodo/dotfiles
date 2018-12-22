@@ -14,6 +14,7 @@ cd ..
 
 cp .Xresources ~
 
+cp -r .fonts ~
 
 
 

@@ -12,9 +12,9 @@ cp polybar/config ~/.config/polybar/config
 
 cd ..
 
-cp .Xresources ~/
+cp .Xresources ~
 
-
+cp -r .fonts ~
 
 
 
