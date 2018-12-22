@@ -55,6 +55,43 @@ modules-left =
 modules-center = time battery 
 modules-right = 
 
+[bar/merda]
+monitor = ${env:MONITOR:eDP-1}
+width = 100%
+height = 27
+offset-x = 0
+offset-y = 0 
+bottom = true
+
+background = #ce000115
+foreground = #eee
+
+underline-size = 2
+underline-color = #eee
+
+spacing = 1
+padding-left = 0
+padding-right = 2
+module-margin-left = 0 
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;1
+font-1="Font Awesome 5 Free"
+font-2="Font Awesome 5 Brands"
+font-3 = "Wuncon Siji"
+
+modules-left = i3
+modules-center = 
+modules-right = tray wlan pulseaudio cpu battery temperature date time powermenu 
+
+tray-position=right
+
+wm-restack = i3
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+
 [bar/example]
 width = 100%
 height = 27
@@ -81,7 +118,9 @@ font-3 = "Wuncon Siji"
 
 modules-left = i3
 modules-center = 
-modules-right = wlan pulseaudio cpu battery temperature date time powermenu 
+modules-right = tray wlan pulseaudio cpu battery temperature date time powermenu 
+
+tray-position=right
 
 wm-restack = i3
 
