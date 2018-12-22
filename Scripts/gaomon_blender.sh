@@ -17,7 +17,7 @@ xinput set-prop "$tablet" --type=float "Velocity Scaling" 10
 xinput set-prop "$tablet" --type=float "VelocityInitialRange" 0
 xinput set-prop "$tablet" --type=float "VelocityTrackerCount" 4
 
-xsetwacom --set "$tablet" button 1 key +"space"
+xsetwacom --set "$tablet" button 1 key +"tab"
 xsetwacom --set "$tablet" button 2 key +"ctrl +space"
 xsetwacom --set "$tablet" button 3 key "ctrl"
 xsetwacom --set "$tablet" button 8 key "shift"
