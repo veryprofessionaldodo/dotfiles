@@ -82,9 +82,8 @@ font-3 = "Wuncon Siji"
 
 modules-left = i3
 modules-center = 
-modules-right = tray wlan pulseaudio cpu battery temperature date time powermenu 
+modules-right = wlan pulseaudio cpu battery temperature date time powermenu 
 
-tray-position=right
 
 wm-restack = i3
 
@@ -118,9 +117,7 @@ font-3 = "Wuncon Siji"
 
 modules-left = i3
 modules-center = 
-modules-right = tray wlan pulseaudio cpu battery temperature date time powermenu 
-
-tray-position=right
+modules-right = wlan pulseaudio cpu battery temperature date time powermenu 
 
 wm-restack = i3
 
@@ -306,7 +303,7 @@ interval = 2
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #ffb52a
-label = %percentage:2%%
+label = CPU %percentage:2%%
 
 [module/memory]
 type = internal/memory
@@ -358,8 +355,8 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %d-%m"
-date-alt = " %Y-%m-%d"
+date = "  %d-%m"
+date-alt = "  %Y-%m-%d"
 
 format-prefix =  
 format-prefix-foreground = ${colors.foreground-alt}
@@ -371,8 +368,8 @@ label = %date%
 type = internal/date
 interval = 5
 
-time = " %H:%M"
-time-alt = %H:%M:%S
+time = "  %H:%M"
+time-alt = "  %H:%M:%S"
 
 format-prefix =  
 format-prefix-foreground = ${colors.foreground-alt}
@@ -384,7 +381,7 @@ label = %time%
 type = internal/pulseaudio
 format-underline = #ffb52a
 format-volume = <label-volume> 
-label-volume =  %percentage%%
+label-volume =VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted =  muted
@@ -424,11 +421,11 @@ battery = BAT0
 adapter = AC0
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging = <animation-charging> CHAR <label-charging>
+format-charging-underline = #ffb5ff
 
-format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging = <ramp-capacity> BAT <label-discharging>
+format-discharging-underline = #ffb500
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
@@ -461,13 +458,13 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <ramp> <label>
+format = <label>
 format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
+format-warn = <label-warn>
 format-warn-underline = ${self.format-underline}
 
-label = "%temperature-c%"
-label-warn = "%temperature-c%"
+label = "  %temperature-c%"
+label-warn = "  %temperature-c%"
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
