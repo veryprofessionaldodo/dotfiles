@@ -204,6 +204,10 @@ for_window [class="jetbrains-clion"] move to workspace $ws3
 for_window [class="jetbrains-studio"] move to workspace $ws3
 for_window [class="jetbrains-idea-ce"] move to workspace $ws3
 for_window [class="Steam"] move to workspace $ws6
+for_window [class="VirtualBox Manager"] move to workspace$ws3
+assign [class="VirtualBox Manager"] $ws3
+for_window [class="VirtualBox Machine"] move to workspace$ws3
+assign [class="VirtualBox Machine"] $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 3
