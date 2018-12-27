@@ -6,15 +6,19 @@ cp compton.conf ~/.config/compton.conf
 
 cd Desktop
 
-cp config ~/.i3/config
+cp config ~/.i3/
 
-cp polybar/config ~/.config/polybar/config
+cp polybar/config ~/.config/polybar/
 
 cd ..
 
 cp .Xresources ~
 
 cp -r .fonts ~
+
+echo "Updated."
+
+exit 0
 
 
 
