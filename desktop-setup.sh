@@ -4,6 +4,12 @@ cp .Xresources ~/.Xresources
 
 cp compton.conf ~/.config/compton.conf
 
+cp polybar/modules.conf ~/.config/polybar
+
+cp polybar/master.conf ~/.config/polybar
+
+cp polybar/modules/* ~/.config/polybar/modules
+
 cd Desktop
 
 cp config ~/.i3/

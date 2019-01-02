@@ -4,11 +4,17 @@ cp .Xresources ~/.Xresources
 
 cp compton.conf ~/.config/compton.conf
 
+cp polybar/modules.conf ~/.config/polybar
+
+cp polybar/master.conf ~/.config/polybar
+
+cp polybar/modules/* ~/.config/polybar/modules
+
 cd Laptop
 
-cp config ~/.i3/config
+cp config ~/.i3/
 
-cp polybar/config ~/.config/polybar/config
+cp polybar/config ~/.config/polybar/
 
 cd ..
 
@@ -16,5 +22,6 @@ cp .Xresources ~
 
 cp -r .fonts ~
 
+echo "Updated."
 
-
+exit 0
