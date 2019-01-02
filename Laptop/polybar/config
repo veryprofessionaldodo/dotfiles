@@ -78,7 +78,9 @@ font-3 = "Wuncon Siji"
 
 modules-left = i3
 modules-center = 
-modules-right = pulseaudio cpu battery temperature date time powermenu 
+modules-right = cpu battery temperature date time powermenu tray
+
+tray-position = right
 
 wm-restack = i3
 

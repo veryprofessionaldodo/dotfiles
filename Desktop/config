@@ -70,7 +70,7 @@ bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id terminal -e ranger
 bindsym $mod+F3 exec --no-startup-id code
 bindsym $mod+F4 exec --no-startup-id krita
-bindsym $mod+F4 exec --no-startup-id spotify
+bindsym $mod+F5 exec --no-startup-id spotify
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec zensu pcmanfm
