@@ -76,9 +76,9 @@ font-1="Font Awesome 5 Free"
 font-2="Font Awesome 5 Brands"
 font-3 = "Wuncon Siji"
 
-modules-left = manjaro i3
+modules-left = i3
 modules-center = 
-modules-right = wlan pulseaudio cpu battery temperature date time powermenu 
+modules-right = pulseaudio cpu battery temperature date time powermenu 
 
 wm-restack = i3
 
