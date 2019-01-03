@@ -2,6 +2,8 @@
 
 cp .Xresources ~/.Xresources
 
+cp dunstrc ~/.config/dunst/
+
 cp compton.conf ~/.config/compton.conf
 
 cp polybar/modules.conf ~/.config/polybar
