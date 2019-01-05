@@ -1,6 +1,6 @@
 [global]
     frame_width = 3
-    frame_color = "#DDFFFF"
+    frame_color = "#99CCDD"
     
     font = Noto Sans 10
     
