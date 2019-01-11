@@ -74,7 +74,6 @@ bindsym $mod+F5 exec --no-startup-id spotify
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec zensu pcmanfm
-bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym Print exec --no-startup-id gnome-screenshot 
 bindsym Ctrl+Print exec --no-startup-id gnome-screenshot -c
 bindsym Ctrl+Shift+Print exec --no-startup-id gnome-screenshot -c -a
@@ -373,8 +372,8 @@ set $inactive #1C2332
 
 
 # class                 border  bground text    indicator child_border
-client.focused          #3B2C3F #192C3F #EDEDED #2E9EF4   #285577
-client.focused_inactive #253747 #253747 #A8A8A8 #484E50   #5F676A
+client.focused          #99CCDD #192C3F #EDEDED #2E9EF4   #99CCDD
+client.focused_inactive #141A28 #253747 #A8A8A8 #484E50   #222222
 client.unfocused        #141A28 #141A28 #888888 #292D2E   #222222
 client.urgent           #2F343A #2F343A #FFFFFF #900000   #900000
 client.placeholder      #192C3F #192C3F #FFFFFF #000000   #0C0C0C
