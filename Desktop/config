@@ -211,6 +211,8 @@ for_window [class="VirtualBox Manager"] move to workspace$ws3
 assign [class="VirtualBox Manager"] $ws3
 for_window [class="VirtualBox Machine"] move to workspace$ws3
 assign [class="VirtualBox Machine"] $ws3
+assign [class="Maya-2018"] $ws3
+for_window [class="Maya-2018] move to workspace $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
