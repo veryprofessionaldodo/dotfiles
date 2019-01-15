@@ -194,6 +194,7 @@ assign [class="Franz"] $ws2
 assign [class="code-oss"] $ws3
 assign [class="Code"] $ws3
 assign [class="UE4Editor"] $ws4
+assign [class="Chromium"] $ws5
 assign [class="jetbrains-studio"] $ws3
 assign [class="jetbrains-idea-ce"] $ws3
 assign [class="sun-awt-X11-XDialogPeer"]$ws3
@@ -218,6 +219,7 @@ for_window [class="maya.bin"] move to workspace $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 3
+for_window [class="chromium"] move to workspace $ws5
 for_window [class="Calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
