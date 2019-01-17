@@ -206,6 +206,7 @@ assign [class="Code"] $ws3
 assign [class="UE4Editor"] $ws3
 assign [class="krita"] $ws4
 assign [class="Main"] $ws4
+assign [class="Chromium"] $ws5
 for_window [class="VirtualBox Manager"] move to workspace$ws3
 assign [class="VirtualBox Manager"] $ws3
 for_window [class="VirtualBox Machine"] move to workspace$ws3
