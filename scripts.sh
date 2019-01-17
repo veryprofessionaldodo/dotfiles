@@ -8,6 +8,8 @@ sudo cp gaomon_blender.desktop /usr/share/applications/
 
 sudo cp 70-wacom.conf /usr/share/X11/xorg.conf.d/
 
+cp redshift.conf /home/workingdodo/.config/
+
 echo "Completed Task."
 
 exit 0
