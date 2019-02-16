@@ -11,6 +11,8 @@ xinput set-prop "$keyboard" --type=float "VelocityInitialRange" 0
 xinput set-prop "$keyboard" --type=float "VelocityTrackerCount" 4
 # xsetwacom set-prop "$tablet" Area -31 153 54075 30538
 
+xsetwacom --set "$keyboard" button 2 2
+
 xinput set-prop "$tablet" --type=float "VelocityRelDiff" 0.2
 xinput set-prop "$tablet" --type=int "Wacom Sample and Suppress" 4 1
 xinput set-prop "$tablet" --type=float "Velocity Scaling" 10

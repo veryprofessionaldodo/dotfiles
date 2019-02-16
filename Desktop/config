@@ -151,8 +151,8 @@ bindsym $mod+Shift+k exec --no-startup-id killall -q polybar
 bindsym $mod+Shift+p exec --no-startup-id polybar right ; exec --no-startup-id polybar left
 
 # Assigning workspaces to monitor
-set $monitor_one "DVI-I-1"
-set $monitor_two "HDMI-0"
+set $monitor_one "DVI-D-0"
+set $monitor_two "HDMI-A-0"
 
 workspace $ws1 output $monitor_one
 workspace $ws2 output $monitor_two
@@ -203,6 +203,7 @@ assign [class="Firefox"] $ws1
 assign [class="Nightly"] $ws1
 assign [class="Franz"] $ws2
 assign [class="Code"] $ws3
+assign [class="code-oss"] $ws3
 assign [class="UE4Editor"] $ws3
 assign [class="krita"] $ws4
 assign [class="Main"] $ws4
@@ -211,8 +212,8 @@ for_window [class="VirtualBox Manager"] move to workspace$ws3
 assign [class="VirtualBox Manager"] $ws3
 for_window [class="VirtualBox Machine"] move to workspace$ws3
 assign [class="VirtualBox Machine"] $ws3
-assign [class="Maya-2018"] $ws3
-for_window [class="Maya-2018"] move to workspace $ws3
+assign [class="Maya-2019"] $ws3
+for_window [class="Maya-2019"] move to workspace $ws3
 assign [class="maya.bin"] $ws3
 for_window [class="maya.bin"] move to workspace $ws3
 
@@ -364,11 +365,12 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Set primary monitor
-exec --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 1920x528 --rotate normal --output DP-2 --off
+exec --no-startup-id xrandr --output DisplayPort-1 --off --output DisplayPort-0 --off --output DVI-D-0 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --off --output HDMI-A-0 --mode 1920x1080 --pos 1920x528 --rotate normal
 
-bindsym $mod+Shift+w exec --no-startup-id xrandr --output DP-3 --off --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 1920x528 --rotate normal --output DP-2 --off ; exec --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" ; exec --no-startup-id franz ; exec --no-startup-id killall steam ; exec --no-startup-id polybar right
 
-bindsym $mod+Shift+g exec --no-startup-id xrandr --output DVI-I-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off ; exec --no-startup-id killall compton ; exec --no-startup-id killall franz ; exec --no-startup-id steam
+bindsym $mod+Shift+w exec --no-startup-id xrandr --output DisplayPort-1 --off --output DisplayPort-0 --off --output DVI-D-0 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --off --output HDMI-A-0 --mode 1920x1080 --pos 1920x528 --rotate normal ; exec --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" ; exec --no-startup-id franz ; exec --no-startup-id killall steam ; exec --no-startup-id polybar right
+
+bindsym $mod+Shift+g exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-I-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off ; exec --no-startup-id killall compton ; exec --no-startup-id killall franz ; exec --no-startup-id steam
 
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
