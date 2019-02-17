@@ -29,7 +29,7 @@ xsetwacom --set "$tablet" button 11 key "b"
 xsetwacom --set "$tablet" button 12 key "ctrl +t"
 xsetwacom --set "$tablet" button 12 key "m"
 
-xsetwacom --set "$keyboard" button 2 key "e"
+xsetwacom --set "$keyboard" button 2 2
 
 echo "Done ma boi."
 

@@ -77,7 +77,7 @@ URxvt*saveLines:                  5000
 ! URxvt*inheritPixmap:            true
 URxvt*transparent:              true
 URxvt*shading:                  50
-URxvt*blurRadius:               15
+URxvt*blurRadius:               5
 
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false
