@@ -74,10 +74,10 @@ bindsym $mod+F5 exec --no-startup-id spotify
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec zensu pcmanfm
-bindsym Print exec --no-startup-id gnome-screenshot 
-bindsym Ctrl+Print exec --no-startup-id gnome-screenshot -c
-bindsym Ctrl+Shift+Print exec --no-startup-id gnome-screenshot -c -a
-bindsym Shift+Print exec --no-startup-id gnome-screenshot -abindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym Print --release exec --no-startup-id gnome-screenshot 
+bindsym Ctrl+Print --release exec --no-startup-id gnome-screenshot -w
+bindsym Shift+Print --release exec --no-startup-id gnome-screenshot -a
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
 
@@ -207,11 +207,6 @@ assign [class="code-oss"] $ws3
 assign [class="UE4Editor"] $ws3
 assign [class="krita"] $ws4
 assign [class="Main"] $ws4
-assign [class="Chromium"] $ws5
-for_window [class="VirtualBox Manager"] move to workspace$ws3
-assign [class="VirtualBox Manager"] $ws3
-for_window [class="VirtualBox Machine"] move to workspace$ws3
-assign [class="VirtualBox Machine"] $ws3
 assign [class="Maya-2019"] $ws3
 for_window [class="Maya-2019"] move to workspace $ws3
 assign [class="maya.bin"] $ws3
