@@ -152,7 +152,7 @@ bindsym $mod+Shift+p exec --no-startup-id polybar right ; exec --no-startup-id p
 
 # Assigning workspaces to monitor
 set $monitor_one "DVI-D-0"
-set $monitor_two "HDMI-A-0"
+set $monitor_two "HDMI-A-1"
 
 workspace $ws1 output $monitor_one
 workspace $ws2 output $monitor_two
@@ -360,11 +360,11 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Set primary monitor
-exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1920x528 --rotate normal
+exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x528 --rotate normal
 
-bindsym $mod+Shift+w exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1920x528 --rotate normal ; exec --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" ; exec --no-startup-id franz ; exec --no-startup-id killall steam ; exec --no-startup-id polybar right
+bindsym $mod+Shift+w exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x528 --rotate normal ; exec --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" ; exec --no-startup-id franz ; exec --no-startup-id killall steam ; exec --no-startup-id polybar right
 
-bindsym $mod+Shift+g exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --off ; exec --no-startup-id killall compton ; exec --no-startup-id killall franz ; exec --no-startup-id steam
+bindsym $mod+Shift+g exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --off ; exec --no-startup-id killall compton ; exec --no-startup-id killall franz ; exec --no-startup-id steam
 
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
