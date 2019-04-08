@@ -70,7 +70,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id terminal -e ranger
-bindsym $mod+F3 exec --no-startup-id code
+bindsym $mod+F3 exec --no-startup-id vscodium
 bindsym $mod+F4 exec --no-startup-id krita
 bindsym $mod+F5 exec --no-startup-id spotify
 # bindsym $mod+F3 exec pcmanfm
@@ -193,6 +193,8 @@ assign [class="Overture Tools"] $ws3
 assign [class="Franz"] $ws2
 assign [class="code-oss"] $ws3
 assign [class="Code"] $ws3
+assign [class="vscodium"] $ws3
+assign [class="VSCodium"] $ws3
 assign [class="UE4Editor"] $ws4
 assign [class="Chromium"] $ws5
 assign [class="jetbrains-studio"] $ws3
