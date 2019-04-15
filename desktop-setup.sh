@@ -1,28 +1,28 @@
  #!/bin/bash
 
-cp .Xresources ~/.Xresources
+cp .Xresources /home/workingdodo/.Xresources
 
-cp dunstrc ~/.config/dunst/
+cp dunstrc /home/workingdodo/.config/dunst/
 
-cp compton.conf ~/.config/compton.conf
+cp compton.conf /home/workingdodo/.config/compton.conf
 
-cp polybar/modules.conf ~/.config/polybar
+cp polybar/modules.conf /home/workingdodo/.config/polybar
 
-cp polybar/master.conf ~/.config/polybar
+cp polybar/master.conf /home/workingdodo/.config/polybar
 
-cp polybar/modules/* ~/.config/polybar/modules
+cp polybar/modules/* /home/workingdodo/.config/polybar/modules
 
 cd Desktop
 
-cp config ~/.i3/
+cp config /home/workingdodo/.i3/
 
-cp polybar/config ~/.config/polybar/
+cp polybar/config /home/workingdodo/.config/polybar/
 
 cd ..
 
-cp .Xresources ~
+cp .Xresources /home/workingdodo
 
-cp -r .fonts ~
+cp -r .fonts /home/workingdodo
 
 echo "Updated."
 
