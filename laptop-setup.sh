@@ -1,8 +1,6 @@
- #!/bin/bash
+#!/bin/bash
 
-cp -r ranger ~/.config
-
-cp .Xresources ~/.Xresources
+cp -r ranger /home/workingdodo/.config
 
 cp dunstrc ~/.config/dunst
 
@@ -16,7 +14,7 @@ cp polybar/modules/* ~/.config/polybar/modules
 
 cd Laptop
 
-cp config ~/.i3/
+cp config ~/.config/i3/
 
 cp polybar/config ~/.config/polybar/
 
@@ -26,6 +24,6 @@ cp .Xresources ~
 
 cp -r .fonts ~
 
-echo "Updated."
+echo "Updated, maluco."
 
 exit 0
