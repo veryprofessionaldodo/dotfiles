@@ -1,5 +1,7 @@
  #!/bin/bash
 
+cp -r ranger ~/.config
+
 cp .Xresources ~/.Xresources
 
 cp dunstrc ~/.config/dunst
