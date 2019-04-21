@@ -2,7 +2,7 @@
 
 cp -r ranger /home/workingdodo/.config
 
-cp dunstrc ~/.config/dunst
+cp dunstrc ~/.config/dunst/
 
 cp compton.conf ~/.config/compton.conf
 
