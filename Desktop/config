@@ -313,6 +313,7 @@ bindsym $mod+Shift+Escape exec gnome-system-monitor
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle; exec --no-startup-id notify-send 'Mute/Unmute'
 
 # Autostart applications
+exec --no-startup-id thunar --daemon
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id nitrogen --restore; sleep 1;
 exec --no-startup-id nm-applet

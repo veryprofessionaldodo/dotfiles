@@ -8,11 +8,11 @@ cp dunstrc /home/workingdodo/.config/dunst/
 
 cp compton.conf /home/workingdodo/.config/compton.conf
 
-cp polybar/modules.conf /home/workingdodo/.config/polybar
+cp polybar/modules.conf /home/workingdodo/.config/polybar/
 
-cp polybar/master.conf /home/workingdodo/.config/polybar
+cp polybar/master.conf /home/workingdodo/.config/polybar/
 
-cp polybar/modules/* /home/workingdodo/.config/polybar/modules
+cp polybar/modules/* /home/workingdodo/.config/polybar/modules/
 
 cd Desktop
 
