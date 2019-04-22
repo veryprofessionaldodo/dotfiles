@@ -259,9 +259,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-
-
-
 # Set shut down, restart and locking features
 bindsym $mod+Shift+s mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
@@ -326,6 +323,9 @@ exec --no-startup-id franz
 exec --no-startup-id rescuetime
 exec --no-startup-id redshift -c "/home/workingdodo/.config/redshift.conf"
 exec --no-startup-id polybar example
+
+#conky 
+exec --no-startup-id ~/.conky/SimplecOne/start.sh
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:

@@ -2,6 +2,8 @@
 
 cp -r ranger /home/workingdodo/.config
 
+cp -r SimplecOne /home/workingdodo/.conky/
+
 cp dunstrc /home/workingdodo/.config/dunst/
 
 cp compton.conf /home/workingdodo/.config/compton.conf
