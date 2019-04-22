@@ -63,11 +63,12 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 ################################################################################################
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 15; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 15; notify-send 'brightness down'"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +2000; notify-send 'Volume up'"
 bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -2000; notify-send 'Volume Down'"
-
+# Mute unmute
+bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle ; exec --no-startup-id notify-send 'Mute/Unmute'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -259,8 +260,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
-# Mute unmute
-bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle ; exec --no-startup-id notify-send 'Mute/Unmute'
+
 
 # Set shut down, restart and locking features
 bindsym $mod+Shift+s mode "$mode_system"
