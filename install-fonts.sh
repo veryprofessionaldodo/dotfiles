@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo cp fonts /usr/share/
+sudo cp -r fonts /usr/share/

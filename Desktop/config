@@ -70,17 +70,14 @@ bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2000; n
 # Start Applications
 #bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F1 exec --no-startup-id firefox
-bindsym $mod+F2 exec --no-startup-id terminal -e ranger
+bindsym $mod+F2 exec --no-startup-id urxvt -e ranger
 bindsym $mod+F3 exec --no-startup-id vscodium
 bindsym $mod+F4 exec --no-startup-id krita
 bindsym $mod+F5 exec --no-startup-id spotify
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec zensu pcmanfm
-bindsym Print --release exec --no-startup-id gnome-screenshot 
-bindsym Ctrl+Print --release exec --no-startup-id gnome-screenshot -w
-bindsym Shift+Print --release exec --no-startup-id gnome-screenshot -a
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym Print --release exec --no-startup-id flameshot gui
 
 # focus_follows_mouse no
 
