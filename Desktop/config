@@ -27,7 +27,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec urxvt
+bindsym $mod+Shift+Return exec --no-startup-id urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -57,15 +57,16 @@ bindsym $mod+Ctrl+m exec --no-startup-id terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
+exec --no-startup-id nm-applet
 
 ################################################################################################
 
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +2000; notify-send 'volume up'
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2000; notify-send 'volume down'"
-
+# bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10; notify-send 'brightness up'"
+# bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +2000; notify-send 'volume up'"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -2000; notify-send 'volume down'"
+bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle; exec --no-startup-id notify-send 'Mute/Unmute'
 
 # Start Applications
 #bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -304,15 +305,16 @@ mode "resize" {
 
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
-bindsym $mod+Shift+Escape exec gnome-system-monitor
+bindsym $mod+Shift+Escape exec --no-startup-id gnome-system-monitor
 
 # Mute unmute
-bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle; exec --no-startup-id notify-send 'Mute/Unmute'
+
 
 # Autostart applications
+exec --no-startup-id thunar --daemon
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id nitrogen --restore; sleep 1;
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 exec --no-startup-id pamac-tray
 exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
@@ -328,6 +330,7 @@ exec --no-startup-id redshift -c "/home/workingdodo/.config/redshift.conf"
 exec --no-startup-id rescuetime
 exec --no-startup-id polybar left
 exec --no-startup-id polybar right
+
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -362,6 +365,10 @@ set_from_resource $term_color15    color15
 
 # Set primary monitor
 exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x528 --rotate normal
+
+# Handle monitor setup
+#exec-always --no-startup-id xsetwacom set "Tablet Monitor Pen stylus" MapToOutput DVI-D-0
+#exec-always --no-startup-id xinput set-prop "Tablet Monitor Pen stylus" --type=float "Coordinate Transformation Matrix" 0.5 0 0.5 0 .676 .3275 0 0 1
 
 bindsym $mod+Shift+w exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x528 --rotate normal ; exec --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" ; exec --no-startup-id franz ; exec --no-startup-id killall steam ; exec --no-startup-id polybar right
 

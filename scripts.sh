@@ -8,7 +8,7 @@ sudo cp gaomon_blender.desktop /usr/share/applications/
 
 sudo cp 70-wacom.conf /usr/share/X11/xorg.conf.d/
 
-sudo cp 10-evdev.cond /usr/share/X11/xorg.conf.d/
+sudo cp 10-evdev.conf /usr/share/X11/xorg.conf.d/
 
 cp redshift.conf /home/workingdodo/.config/
 

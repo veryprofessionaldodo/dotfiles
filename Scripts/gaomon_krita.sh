@@ -3,9 +3,11 @@
 keyboard="Tablet Monitor Pen stylus"
 tablet="Tablet Monitor Pad pad"
 
+xsetwacom set "$keyboard" MapToOutput HDMI-A-1
+
 # this is my particular setup, check out this in case you want to know more about the coordinate transformation matrix
 # https://github.com/linuxwacom/xf86-input-wacom/wiki/Dual-and-Multi-Monitor-Set-Up
-xinput set-prop "$keyboard" --type=float "Coordinate Transformation Matrix" 0.5 0 0.5 0 .676 .3275 0 0 1
+#xinput set-prop "$keyboard" --type=float "Coordinate Transformation Matrix" 0.5 0 0.5 0 .676 .3275 0 0 1
 xinput set-prop "$keyboard" --type=int "Wacom Sample and Suppress" 2 1
 xinput set-prop "$keyboard" --type=float "VelocityInitialRange" 0
 xinput set-prop "$keyboard" --type=float "VelocityTrackerCount" 4

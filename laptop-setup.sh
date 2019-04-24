@@ -2,15 +2,17 @@
 
 cp -r ranger /home/workingdodo/.config
 
-cp dunstrc ~/.config/dunst
+cp -r SimplecOne /home/workingdodo/.conky/
 
-cp compton.conf ~/.config/compton.conf
+cp dunstrc /home/workingdodo/.config/dunst/
 
-cp polybar/modules.conf ~/.config/polybar
+cp compton.conf /home/workingdodo/.config/compton.conf
 
-cp polybar/master.conf ~/.config/polybar
+cp polybar/modules.conf /home/workingdodo/.config/polybar/
 
-cp polybar/modules/* ~/.config/polybar/modules
+cp polybar/master.conf /home/workingdodo/.config/polybar/
+
+cp polybar/modules/* /home/workingdodo/.config/polybar/modules/
 
 cd Laptop
 
