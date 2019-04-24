@@ -163,8 +163,8 @@ workspace $ws5 output $monitor_one
 workspace $ws6 output $monitor_two
 
 #navigate workspaces next / previous
-bindsym $mod+Shift+Right move container to output $monitor_two
-bindsym $mod+Shift+Left move container to output $monitor_one
+bindsym $mod+Shift+Right move container to output $monitor_two; focus output $monitor_two
+bindsym $mod+Shift+Left move container to output $monitor_one; focus output $monitor_one
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
