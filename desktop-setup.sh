@@ -1,6 +1,6 @@
  #!/bin/bash
 
-cp -r ranger /home/workingdodo/.config
+cp -r ranger /home/workingdodo/.config/
 
 cp -r SimplecOne /home/workingdodo/.conky/
 
