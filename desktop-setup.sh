@@ -2,8 +2,6 @@
 
 cp -r ranger /home/workingdodo/.config/
 
-cp -r SimplecOne /home/workingdodo/.conky/
-
 cp .Xresources /home/workingdodo/.Xresources
 
 cp dunstrc /home/workingdodo/.config/dunst/
