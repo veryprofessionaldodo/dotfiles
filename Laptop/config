@@ -82,7 +82,7 @@ bindsym $mod+F5 exec --no-startup-id spotify
 bindsym $mod+Shift+F3 exec zensu pcmanfm
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym Print --release exec flameshot gui
+bindsym Mod4+Shift+s --release exec flameshot gui
 # focus_follows_mouse no
 
 # change focus

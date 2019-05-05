@@ -78,7 +78,7 @@ bindsym $mod+F5 exec --no-startup-id spotify
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec zensu pcmanfm
-bindsym Print --release exec --no-startup-id flameshot gui
+bindsym Mod4+Shift+s --release exec --no-startup-id flameshot gui
 
 # focus_follows_mouse no
 
