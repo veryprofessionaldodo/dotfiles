@@ -12,9 +12,11 @@ cp polybar/master.conf /home/workingdodo/.config/polybar/
 
 cp polybar/modules/* /home/workingdodo/.config/polybar/modules/
 
-cd Laptop
+rm /home/workingdodo/.i3/config
 
-cp config ~/.config/i3/
+cat common_config Laptop/config >> /home/workingdodo/.i3/config
+
+cd Laptop
 
 cp polybar/config ~/.config/polybar/
 
