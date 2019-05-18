@@ -32,7 +32,7 @@ offset-x = 0
 offset-y = -1 
 bottom = true
 
-background = #ab000115
+background = $bg-color
 foreground = #eee
 
 underline-size = 2

@@ -14,9 +14,11 @@ cp polybar/master.conf /home/workingdodo/.config/polybar/
 
 cp polybar/modules/* /home/workingdodo/.config/polybar/modules/
 
+rm /home/workingdodo/.i3/config
+
 cd Desktop
 
-cp config /home/workingdodo/.i3/
+cat ../common_config config >> /home/workingdodo/.i3/config
 
 cp polybar/config /home/workingdodo/.config/polybar/
 

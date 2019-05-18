@@ -21,6 +21,11 @@ XTerm*selectToClipboard: true
 *cursorColor:                     #1ABB9B
 *pointerColorBackground:          #2B2C2B
 *pointerColorForeground:          #16A085
+*inactive:                        #2f343f
+*textColor:                       #f3f4f5
+*inactiveTextColor:               #676E7D
+*urgentBackground:                #E53935
+*rofiBackground:                  #0A0D14
 
 !! black dark/light
 *color0:                          #222D31
