@@ -1,6 +1,7 @@
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 15; notify-send 'brightness up'"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 15; notify-send 'brightness down'"
 
+bindsym $mod+Shift+p exec --no-startup-id polybar example
 
 # Autostart applications
 exec --no-startup-id xfce4-power-manager

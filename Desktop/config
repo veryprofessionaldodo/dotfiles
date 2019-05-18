@@ -2,6 +2,7 @@
 bindsym $mod+Shift+Right move container to output $monitor_two; focus output $monitor_two
 bindsym $mod+Shift+Left move container to output $monitor_one; focus output $monitor_one
 
+bindsym $mod+Shift+p exec --no-startup-id polybar left; exec --no-startup-id polybar right
 # Assigning workspaces to monitor
 set $monitor_one "DVI-D-0"
 set $monitor_two "HDMI-A-1"
