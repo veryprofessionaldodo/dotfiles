@@ -92,7 +92,7 @@ font-3 = "Wuncon Siji"
 
 modules-left = i3
 modules-center = 
-modules-right = tray
+modules-right = time tray
 
 tray-position = right
 ;tray-transparent = true
