@@ -3,6 +3,8 @@ bindsym $mod+Shift+Right move container to output $monitor_two; focus output $mo
 bindsym $mod+Shift+Left move container to output $monitor_one; focus output $monitor_one
 
 bindsym $mod+Shift+p exec --no-startup-id polybar left; exec --no-startup-id polybar right
+bindsym $mod+Shift+t exec --no-startup-id polybar left
+
 # Assigning workspaces to monitor
 set $monitor_one "DVI-D-0"
 set $monitor_two "HDMI-A-1"
@@ -18,6 +20,7 @@ workspace $ws6 output $monitor_two
 
 exec --no-startup-id polybar left
 exec --no-startup-id polybar right
+exec --no-startup-id kdeconnect-indicator 
 
 # Set primary monitor
 exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x528 --rotate normal
