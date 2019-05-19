@@ -27,7 +27,8 @@ xsetwacom --set "$tablet" button 9 key "ctrl +z"
 xsetwacom --set "$tablet" button 10 key "ctrl +shift +z"
 xsetwacom --set "$tablet" button 11 key "b"
 xsetwacom --set "$tablet" button 12 key "ctrl +t"
-xsetwacom --set "$tablet" button 12 key "m"
+xsetwacom --set "$tablet" button 13 key "ctrl +shift +b"
+xsetwacom --set "$tablet" button 14 key "m"
 
 xsetwacom --set "$keyboard" button 2 key "e"
 
