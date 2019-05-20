@@ -213,6 +213,7 @@ for_window [class="Steam"] move to workspace $ws6
 for_window [class="Maya-2019"] move to workspace $ws3
 for_window [class="maya.bin"] move to workspace $ws3
 for_window [class="chromium"] move to workspace $ws5
+for_window [class="krita"] move to workspace $ws4
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 3
@@ -309,7 +310,7 @@ exec --no-startup-id redshift -c "/home/workingdodo/.config/redshift.conf"
 
 
 #conky 
-exec --no-startup-id ~/.conky/SimplecOne/start.sh
+#exec --no-startup-id ~/.conky/SimplecOne/start.sh
 
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
