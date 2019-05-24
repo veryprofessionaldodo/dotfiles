@@ -4,15 +4,12 @@ bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 15; notify-s
 bindsym $mod+Shift+p exec --no-startup-id polybar example
 
 # Autostart applications
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id xautolock -time 1 -locker betterlockscreen -l
-exec --no-startup-id fix_xcursor
+#exec --no-startup-id xfce4-power-manager
+#exec --no-startup-id fix_xcursor
 
 #exec --no-startup-id pamac-tray
 exec --no-startup-id start_conky_maia
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
-exec_always --no-startup-id xautolock -time 1 -locker betterlockscreen -l
-exec_always --no-startup-id fix_xcursor
 exec --no-startup-id polybar example
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
@@ -38,4 +35,4 @@ gaps inner 14
 gaps outer -6
 
 #disables tap to click
-exec --no-startup-id synclient MaxTapTime=0
+#exec --no-startup-id synclient MaxTapTime=0
