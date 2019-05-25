@@ -14,6 +14,8 @@ cp polybar/master.conf /home/workingdodo/.config/polybar/
 
 cp polybar/modules/* /home/workingdodo/.config/polybar/modules/
 
+cp -r brushes /home/workingdodo/.local/share/krita
+
 rm /home/workingdodo/.i3/config
 
 cd Desktop
