@@ -2,6 +2,10 @@
 
 cp -r ranger /home/workingdodo/.config/
 
+cp -r Apps/Krita/Config/krita*rc /home/workingdodo/.config/
+
+cp -r Apps/Krita/Resources/* /home/workingdodo/.local/share/krita/
+
 cp .Xresources /home/workingdodo/.Xresources
 
 cp dunstrc /home/workingdodo/.config/dunst/
@@ -13,8 +17,6 @@ cp polybar/modules.conf /home/workingdodo/.config/polybar/
 cp polybar/master.conf /home/workingdodo/.config/polybar/
 
 cp polybar/modules/* /home/workingdodo/.config/polybar/modules/
-
-cp -r brushes /home/workingdodo/.local/share/krita
 
 rm /home/workingdodo/.i3/config
 
