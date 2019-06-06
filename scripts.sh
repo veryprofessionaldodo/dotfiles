@@ -2,6 +2,8 @@
 
 cd Scripts 
 
+sudo cp org.kde.krita.desktop /usr/share/applications/
+
 sudo cp soundcloud.desktop /usr/share/applications/
 
 sudo cp gaomon_2D.desktop /usr/share/applications/
