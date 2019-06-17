@@ -94,7 +94,7 @@ bindsym $mod+F2 exec --no-startup-id urxvt -e ranger
 bindsym $mod+F3 exec --no-startup-id vscodium
 bindsym $mod+F4 exec --no-startup-id krita
 bindsym $mod+F5 exec --no-startup-id spotify
-bindsym Mod4+Shift+s --release exec flameshot gui
+bindsym Mod4+Shift+s --release exec --no-startup-id flameshot gui
 # focus_follows_mouse no
 
 # change focus

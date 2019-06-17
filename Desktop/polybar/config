@@ -51,7 +51,7 @@ font-3 = "Wuncon Siji"
 
 modules-left = i3
 modules-center = 
-modules-right = pulseaudio cpu temperature date time powermenu 
+modules-right = pulseaudio cpu temperature date time 
 tray
 
 tray-position = right
