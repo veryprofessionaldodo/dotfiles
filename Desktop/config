@@ -5,6 +5,9 @@ bindsym $mod+Shift+Left move container to output $monitor_one; focus output $mon
 bindsym $mod+Shift+p exec --no-startup-id polybar left; exec --no-startup-id polybar right
 bindsym $mod+Shift+t exec --no-startup-id polybar left
 
+bindsym $mod+Shift+x exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_general.sh
+bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_2d.sh
+
 # Assigning workspaces to monitor
 set $monitor_one "DVI-D-0"
 set $monitor_two "HDMI-A-1"
