@@ -1,5 +1,5 @@
-bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 5; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 5; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/brightnessControl.sh
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/Downloads/Importante/dotfiles/Scripts/brightnessControl.sh down
 
 bindsym $mod+Shift+p exec --no-startup-id polybar example
 
