@@ -83,8 +83,8 @@ exec --no-startup-id volumeicon
 ################################################################################################
 
 # Screen brightness controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +2000; notify-send 'Volume up'"
-bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -2000; notify-send 'Volume Down'"
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/Downloads/Importante/dotfiles/Scripts/volumeControl.sh up
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/Downloads/Importante/dotfiles/Scripts/volumeControl.sh down
 # Mute unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle ; exec --no-startup-id notify-send 'Mute/Unmute'
 
