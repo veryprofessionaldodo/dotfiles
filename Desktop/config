@@ -6,7 +6,7 @@ bindsym $mod+Shift+p exec --no-startup-id polybar left; exec --no-startup-id pol
 bindsym $mod+Shift+t exec --no-startup-id polybar left
 
 bindsym $mod+Shift+x exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_general.sh
-bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_2d.sh
+bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_2D.sh
 
 # Assigning workspaces to monitor
 set $monitor_one "DVI-D-0"

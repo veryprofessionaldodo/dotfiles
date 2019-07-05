@@ -1,0 +1,14 @@
+[Shortcuts]
+KisAssistantTool=Ctrl+Shift+B
+KisToolSelectOutline=L
+KisToolSelectPolygonal=Shift+L
+KisToolSelectRectangular=U
+KisToolSelectSimilar=Shift+O
+invert_selection=Shift+I
+level_of_detail_mode=none
+make_brush_color_lighter=none
+selectopaque_add=Shift+P
+show_color_selector=none
+show_common_colors=none
+svg_format_subscript=none
+wrap_around_mode=W
