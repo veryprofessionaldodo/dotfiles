@@ -16,8 +16,6 @@ rm /home/workingdodo/.i3/config
 
 cat common_config Laptop/config >> /home/workingdodo/.i3/config
 
-cat common_config Laptop/config >> /home/workingdodo/.config/i3/config
-
 cd Laptop
 
 cp polybar/config ~/.config/polybar/

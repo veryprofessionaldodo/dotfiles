@@ -297,7 +297,7 @@ set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+#bindsym $mod+m bar mode toggle
 
 # class                 border  bground text    indicator child_border
 client.focused          #DDFFFF #192C3F #EDEDED #2E9EF4   #DDFFFF
