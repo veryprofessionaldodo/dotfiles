@@ -82,12 +82,6 @@ exec --no-startup-id volumeicon
 
 ################################################################################################
 
-# Screen brightness controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/Downloads/Importante/dotfiles/Scripts/volumeControl.sh up
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/Downloads/Importante/dotfiles/Scripts/volumeControl.sh down
-# Mute unmute
-bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle ; exec --no-startup-id notify-send 'Mute/Unmute'
-
 # Start Applications
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id urxvt -e ranger

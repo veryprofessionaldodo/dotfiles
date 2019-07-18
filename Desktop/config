@@ -1,4 +1,10 @@
 #navigate workspaces next / previous
+
+bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
+bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
+bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/scripts/fullscreen_wrap.sh pavucontrol -t 3"
+
 bindsym $mod+Shift+Right move container to output $monitor_two; focus output $monitor_two
 bindsym $mod+Shift+Left move container to output $monitor_one; focus output $monitor_one
 
