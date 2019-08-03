@@ -1,7 +1,12 @@
 #navigate workspaces next / previous
 
-bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
-bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
+bindsym $mod+Control+Up move up
+bindsym $mod+Control+Down move down
+bindsym $mod+Ctrl+Left move left
+bindsym $mod+Ctrl+Right move right
+
+bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volumeControl.sh down 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volumeControl.sh up 5
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
 bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/scripts/fullscreen_wrap.sh pavucontrol -t 3"
 
