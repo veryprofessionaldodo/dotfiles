@@ -22,7 +22,7 @@ rm /home/workingdodo/.i3/config
 
 cd Desktop
 
-cat ../common_config config >> /home/workingdodo/.i3/config
+cat ../common_config config >> /home/workingdodo/i3/config
 
 cp polybar/config /home/workingdodo/.config/polybar/
 
