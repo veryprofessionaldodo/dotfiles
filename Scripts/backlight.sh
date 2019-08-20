@@ -2,7 +2,7 @@
 
 backlight="$(light)"
 
-if [[ "$@" = "-U 10" ]] && [ ${backlight%.*} -lt 11 ] && [ ${backlight%.*} -gt 1 ];
+if [[ "$@" = "-U 5" ]] && [ ${backlight%.*} -lt 6 ] && [ ${backlight%.*} -gt 1 ];
 then
   light -S 1
   dunstify -r -5555 -u "Backlight: ${backlight%.*}"    
