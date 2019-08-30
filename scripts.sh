@@ -1,12 +1,6 @@
 #!/bin/bash
 
-cd Scripts 
-
-mkdir $HOME/scripts
-
-sudo cp *.sh $HOME/scripts/
-
-sudo cp *.py $HOME/scripts/
+cd Scripts
 
 sudo cp org.kde.krita.desktop /usr/share/applications/
 
