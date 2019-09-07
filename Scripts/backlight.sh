@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-backlight="$(xbacklight)"
+backlight="$(light)"
 
-if [[ "$@" = "-dec 10" ]] && [ ${backlight%.*} -lt 11 ] && [ ${backlight%.*} -gt 1 ];
+if [[ "$@" = "-U 5" ]] && [ ${backlight%.*} -lt 6 ] && [ ${backlight%.*} -gt 1 ];
 then
-    xbacklight -set 1
-    dunstify -r -5555 -u "Backlight: ${backlight%.*}"    
+  light -S 1
+  dunstify -r -5555 -u "Backlight: ${backlight%.*}"    
 else
-  xbacklight "$@"
+  light "$@"
   dunstify -r 5555 -u "Backlight: ${backlight%.*}"
 fi
 

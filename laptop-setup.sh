@@ -1,5 +1,9 @@
 #!/bin/bash
 
+mkdir /home/workingdodo/.config/polybar
+
+mkdir /home/workingdodo/.config/polybar/modules
+
 cp -r ranger /home/workingdodo/.config/
 
 cp dunstrc /home/workingdodo/.config/dunst/
@@ -12,9 +16,11 @@ cp polybar/master.conf /home/workingdodo/.config/polybar/
 
 cp polybar/modules/* /home/workingdodo/.config/polybar/modules/
 
-rm /home/workingdodo/.i3/config
+touch /home/workingdodo/.config/i3/config
 
-cat common_config Laptop/config >> /home/workingdodo/.i3/config
+rm /home/workingdodo/.config/i3/config
+
+cat common_config Laptop/config >> /home/workingdodo/.config/i3/config
 
 cd Laptop
 
