@@ -1,8 +1,6 @@
-scripts = "/home/workingdodo/Downloads/Importante/dotfiles/Scripts"
-
-bindsym XF86AudioLowerVolume exec --no-startup-id $scripts/volumeControl.sh down 5
-bindsym XF86AudioRaiseVolume exec --no-startup-id $scripts/volumeControl.sh up 5
-bindsym XF86AudioMute exec --no-startup-id $scripts/volume_control.py toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/volumeControl.sh down 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/volumeControl.sh up 5
+bindsym XF86AudioMute exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/volume_control.py toggle
 #bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/scripts/fullscreen_wrap.sh pavucontrol -t 3"
 
 bindsym $mod+Ctrl+Shift+k exec --no-startup-id killall UE4Editor
@@ -12,8 +10,8 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Down move down
 
-bindsym XF86MonBrightnessDown exec --no-startup-id $scripts/backlight.sh -U 5
-bindsym XF86MonBrightnessUp exec --no-startup-id $scripts/backlight.sh -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/backlight.sh -U 5
+bindsym XF86MonBrightnessUp exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/backlight.sh -A 5
 
 bindsym $mod+Shift+p exec --no-startup-id polybar example
 

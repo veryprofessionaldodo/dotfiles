@@ -195,6 +195,7 @@ for_window [class="chromium"] move to workspace $ws5
 for_window [class="krita"] move to workspace $ws4
 
 # Open specific applications in floating mode
+for_window [class="OpenGL"] floating enable border pixel 3
 for_window [title="alsamixer"] floating enable border pixel 3
 for_window [class="Calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
