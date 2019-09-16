@@ -8,14 +8,14 @@ xsetwacom set "$keyboard" MapToOutput HDMI-A-1
 # this is my particular setup, check out this in case you want to know more about the coordinate transformation matrix
 # https://github.com/linuxwacom/xf86-input-wacom/wiki/Dual-and-Multi-Monitor-Set-Up
 #xinput set-prop "$keyboard" --type=float "Coordinate Transformation Matrix" 0.5 0 0.5 0 .676 .3275 0 0 1
-xinput set-prop "$keyboard" --type=int "Wacom Sample and Suppress" 2 1
+xinput set-prop "$keyboard" --type=int "Wacom Sample and Suppress" 3 0
 xinput set-prop "$keyboard" --type=float "VelocityInitialRange" 0
 xinput set-prop "$keyboard" --type=float "VelocityTrackerCount" 4
 # xsetwacom set-prop "$tablet" Area -31 153 54075 30538
 
 xinput set-prop "$tablet" --type=float "VelocityRelDiff" 0.2
 xinput set-prop "$tablet" --type=int "Wacom Sample and Suppress" 4 1
-xinput set-prop "$tablet" --type=float "Velocity Scaling" 10
+xinput set-prop "$tablet" --type=float "Velocity Scaling" 5
 xinput set-prop "$tablet" --type=float "VelocityInitialRange" 0
 xinput set-prop "$tablet" --type=float "VelocityTrackerCount" 4
 

@@ -5,8 +5,6 @@ bindsym $mod+Control+Down move down
 bindsym $mod+Ctrl+Left move left
 bindsym $mod+Ctrl+Right move right
 
-scripts = "/home/workingdodo/Downloads/Importante/dotfiles/Scripts"
-
 bindsym XF86AudioLowerVolume exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/volumeControl.sh down 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/volumeControl.sh up 5
 bindsym XF86AudioMute exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/volume_control.py toggle
@@ -44,6 +42,9 @@ exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x
 # Handle monitor setup
 #exec-always --no-startup-id xsetwacom set "Tablet Monitor Pen stylus" MapToOutput DVI-D-0
 #exec-always --no-startup-id xinput set-prop "Tablet Monitor Pen stylus" --type=float "Coordinate Transformation Matrix" 0.5 0 0.5 0 .676 .3275 0 0 1
+
+exec --no-startup-id krita
+exec --no-startup-id PureRef
 
 bindsym $mod+Shift+w exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x528 --rotate normal ; exec --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" ; exec --no-startup-id franz ; exec --no-startup-id killall steam ; exec --no-startup-id polybar right
 
