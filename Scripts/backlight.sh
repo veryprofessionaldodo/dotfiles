@@ -4,10 +4,11 @@ backlight="$(light)"
 
 if [[ "$@" = "-U 5" ]] && [ ${backlight%.*} -lt 6 ] && [ ${backlight%.*} -gt 1 ];
 then
+  echo $@
   light -S 1
   dunstify -r -5555 -u "Backlight: ${backlight%.*}"    
-else
-  ligh -S "$@"
+else	
+  light "$@"
   dunstify -r 5555 -u "Backlight: ${backlight%.*}"
 fi
 
