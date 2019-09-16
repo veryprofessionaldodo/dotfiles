@@ -7,7 +7,7 @@ then
   light -S 1
   dunstify -r -5555 -u "Backlight: ${backlight%.*}"    
 else
-  light "$@"
+  ligh -S "$@"
   dunstify -r 5555 -u "Backlight: ${backlight%.*}"
 fi
 
