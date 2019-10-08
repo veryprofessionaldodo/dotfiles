@@ -1,8 +1,13 @@
 #!/bin/bash
 
-mkdir /home/workingdodo/.config/polybar
+if [ ! -d "/home/workingdodo/.config/polybar" ]; then
+    mkdir /home/workingdodo/.config/polybar
+fi
 
-mkdir /home/workingdodo/.config/polybar/modules
+if [ ! -d "/home/workingdodo/.config/polybar/modules" ]; then
+    mkdir /home/workingdodo/.config/polybar/modules
+fi
+
 
 cp -r ranger /home/workingdodo/.config/
 

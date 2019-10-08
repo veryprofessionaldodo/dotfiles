@@ -222,6 +222,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="sun-awt-X11-XWindowPeer"] floating enable
 
 # for_window [class="Spotify"] move to workspace $ws5
 # switch to workspace with urgent window automatically
