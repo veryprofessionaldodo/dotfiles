@@ -18,6 +18,7 @@ bindsym $mod+Shift+t exec --no-startup-id polybar left
 
 bindsym $mod+Shift+x exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_general.sh
 bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_2D.sh
+bindsym $mod+Shift+z exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_3D.sh
 
 # Assigning workspaces to monitor
 set $monitor_one "DVI-D-0"
@@ -43,8 +44,8 @@ exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x
 #exec-always --no-startup-id xsetwacom set "Tablet Monitor Pen stylus" MapToOutput DVI-D-0
 #exec-always --no-startup-id xinput set-prop "Tablet Monitor Pen stylus" --type=float "Coordinate Transformation Matrix" 0.5 0 0.5 0 .676 .3275 0 0 1
 
-exec --no-startup-id krita
-exec --no-startup-id PureRef
+#exec --no-startup-id krita
+#exec --no-startup-id PureRef
 
 bindsym $mod+Shift+w exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x528 --rotate normal ; exec --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" ; exec --no-startup-id franz ; exec --no-startup-id killall steam ; exec --no-startup-id polybar right
 
