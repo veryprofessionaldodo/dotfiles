@@ -196,6 +196,7 @@ for_window [class="Maya-2019"] move to workspace $ws3
 for_window [class="maya.bin"] move to workspace $ws3
 for_window [class="chromium"] move to workspace $ws5
 for_window [class="krita"] move to workspace $ws4
+assign [instance="origin.exe"] $ws6
 
 # Open specific applications in floating mode
 for_window [class="OpenGL"] floating enable border pixel 3
@@ -224,6 +225,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="sun-awt-X11-XWindowPeer"] floating enable
+for_window [instance="origin.exe"] floating enable
 
 # for_window [class="Spotify"] move to workspace $ws5
 # switch to workspace with urgent window automatically
