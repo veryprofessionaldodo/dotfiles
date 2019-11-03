@@ -8,7 +8,6 @@ if [ ! -d "/home/workingdodo/.config/polybar/modules" ]; then
     mkdir /home/workingdodo/.config/polybar/modules
 fi
 
-
 cp -r ranger /home/workingdodo/.config/
 
 cp dunstrc /home/workingdodo/.config/dunst/
@@ -21,11 +20,11 @@ cp polybar/master.conf /home/workingdodo/.config/polybar/
 
 cp polybar/modules/* /home/workingdodo/.config/polybar/modules/
 
-touch /home/workingdodo/.config/i3/config
+touch /home/workingdodo/.i3/config
 
-rm /home/workingdodo/.config/i3/config
+rm /home/workingdodo/.i3/config
 
-cat common_config Laptop/config >> /home/workingdodo/.config/i3/config
+cat common_config Laptop/config >> /home/workingdodo/.i3/config
 
 cd Laptop
 
