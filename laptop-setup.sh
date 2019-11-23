@@ -22,6 +22,8 @@ cp polybar/modules/* /home/workingdodo/.config/polybar/modules/
 
 touch /home/workingdodo/.i3/config
 
+cp neovim/* /home/workingdodo/.config/nvim
+
 rm /home/workingdodo/.i3/config
 
 cat common_config Laptop/config >> /home/workingdodo/.i3/config
