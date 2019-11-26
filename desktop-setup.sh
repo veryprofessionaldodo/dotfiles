@@ -8,6 +8,8 @@ cp -r Apps/Krita/Resources/* /home/workingdodo/.local/share/krita/
 
 cp .Xresources /home/workingdodo/.Xresources
 
+
+
 cp dunstrc /home/workingdodo/.config/dunst/
 
 cp compton.conf /home/workingdodo/.config/compton.conf
