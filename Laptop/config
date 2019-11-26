@@ -12,8 +12,8 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Down move down
 
-bindsym XF86MonBrightnessDown exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/backlight.sh -U 5
-bindsym XF86MonBrightnessUp exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/backlight.sh -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/brightnessControl.sh down
+bindsym XF86MonBrightnessUp exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/brightnessControl.sh up
 
 bindsym $mod+Shift+p exec --no-startup-id polybar example
 

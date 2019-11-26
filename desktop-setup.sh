@@ -24,6 +24,8 @@ rm /home/workingdodo/.config/i3/config
 
 cd Desktop
 
+cp neovim/* /home/workingdodo/.config/nvim
+
 cat ../common_config config >> /home/workingdodo/.config/i3/config
 
 cp polybar/config /home/workingdodo/.config/polybar/
