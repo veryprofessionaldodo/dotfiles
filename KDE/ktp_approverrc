@@ -1,0 +1,3 @@
+[HandlerPreferences]
+org.freedesktop.Telepathy.Channel.Type.Text=org.freedesktop.Telepathy.Client.KTp.TextUi
+org.freedesktop.Telepathy.Channel.Type.FileTransfer=org.freedesktop.Telepathy.Client.KTp.FileTransferHandler

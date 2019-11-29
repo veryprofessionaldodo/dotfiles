@@ -1,0 +1,14 @@
+[KFileDialog Settings]
+ShowPreviews=false
+
+[MainWindow]
+Height=400
+Width=600
+
+[MainWindow Toolbar dvdToolBar]
+Hidden=true
+IconText=IconTextRight
+Index=0
+
+[MainWindow Toolbar mainToolBar]
+Index=1

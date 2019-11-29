@@ -1,0 +1,17 @@
+[Palapeli Collection]
+dummy=
+
+[Palapeli Collection][default1]
+Location=palapeli:///collection/castle-maintenon.puzzle
+
+[Palapeli Collection][default2]
+Location=palapeli:///collection/cincinnati-bridge.puzzle
+
+[Palapeli Collection][default3]
+Location=palapeli:///collection/citrus-fruits.puzzle
+
+[Palapeli Collection][default4]
+Location=palapeli:///collection/european-honey-bee.puzzle
+
+[Palapeli Collection][default5]
+Location=palapeli:///collection/panther-chameleon-female.puzzle

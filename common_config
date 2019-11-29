@@ -226,7 +226,40 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="sun-awt-X11-XWindowPeer"] floating enable
+
+# >>> Plasma Integration <<<
+
+# Try to kill the wallpaper set by Plasma (it takes up the entire workspace
+# and hides everythiing)
+exec --no-startup-id wmctrl -c Plasma
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+
+# Avoid tiling popups, dropdown windows from plasma
+for_window [class="plasmashell"] floating enable
+for_window [class="Plasma"] floating enable
+for_window [class="krunner"] floating enable
+for_window [class="Kmix"] floating enable
+for_window [class="Klipper"] floating enable
+for_window [class="Plasmoidviewer"] floating enable
+
+# >>> Window Rules <<<
+
+# >>> Avoid tiling for non-Plasma stuff <<<
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_role="About"] floating enable 
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+# Don’t let notifications and non-interactive pop-up windows steal focus
+no_focus [class="plasmashell" window_type="notification"]
+no_focus [class="plasmashell" window_type="on_screen_display"]
 for_window [instance="origin.exe"] floating enable
+force_display_urgency_hint 0 ms
+focus_on_window_activation urgent
+for_window [class="plasmashell" window_type="notification"] move position 1550 20
+
 
 # for_window [class="Spotify"] move to workspace $ws5
 # switch to workspace with urgent window automatically
@@ -291,6 +324,7 @@ exec_always --no-startup-id compton --config "/home/workingdodo/.config/compton.
 exec --no-startup-id variety
 exec --no-startup-id TelegramDesktop
 # exec --no-startup-id franz
+exec --no-startup-id telegram-desktop
 exec --no-startup-id rescuetime
 exec --no-startup-id redshift -c "/home/workingdodo/.config/redshift.conf"
 

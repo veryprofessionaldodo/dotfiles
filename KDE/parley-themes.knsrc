@@ -1,0 +1,6 @@
+[KNewStuff3]
+ProvidersUrl=http://download.kde.org/ocs/providers.xml
+TargetDir=parley/themes
+Uncompress=always
+Categories=KDE Parley Theme
+UploadCategories=KDE Parley Theme
