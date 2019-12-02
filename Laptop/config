@@ -13,16 +13,16 @@ bindsym $mod+Shift+Down move down
 #bindsym XF86MonBrightnessDown exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/brightnessControl.sh down
 #bindsym XF86MonBrightnessUp exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/brightnessControl.sh up
 
-#bindsym $mod+Shift+p exec --no-startup-id polybar example
+bindsym $mod+Shift+p exec --no-startup-id polybar example
 
 # Autostart applications
 #exec --no-startup-id xfce4-power-manager
 #exec --no-startup-id fix_xcursor
 
-#exec --no-startup-id pamac-tray
+exec --no-startup-id pamac-tray
 exec --no-startup-id start_conky_maia
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
-#exec --no-startup-id polybar example
+exec --no-startup-id polybar example
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 

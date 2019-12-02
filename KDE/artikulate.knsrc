@@ -1,9 +1,0 @@
-[KNewStuff2]
-ProvidersUrl=https://edu.kde.org/artikulate/downloads/providers.xml
-TargetDir=artikulate/courses/basic/
-Uncompress=true
-
-[KNewStuff3]
-ProvidersUrl=https://edu.kde.org/artikulate/downloads/providers.xml
-TargetDir=artikulate/courses/basic
-Uncompress=true
