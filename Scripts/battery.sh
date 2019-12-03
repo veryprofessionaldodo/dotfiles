@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-i3status -c $HOME/.config/i3blocks/i3status.conf | while IFS= read -r line; do
+i3status -c /home/workingdodo//.config/i3blocks/i3status.conf | while IFS= read -r line; do
     PARTS=($line)
 
     CHARGE="${PARTS[1]}"
