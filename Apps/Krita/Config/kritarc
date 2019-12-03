@@ -597,12 +597,12 @@ xPosition=0
 yPosition=19
 
 [RecentFiles]
-File1[$e]=$HOME/Projects/Paintings/33-merged.kra
-File2[$e]=$HOME/Projects/Paintings/33-merged.png
-File3[$e]=$HOME/Projects/Paintings/33.kra
-File4[$e]=$HOME/Projects/Paintings/33.png
-File5[$e]=$HOME/Downloads/antelope-canyon-arizona-beam-33041.jpg
-File6[$e]=$HOME/Projects/Paintings/34.kra
+File1[$e]=/home/workingdodo//Projects/Paintings/33-merged.kra
+File2[$e]=/home/workingdodo//Projects/Paintings/33-merged.png
+File3[$e]=/home/workingdodo//Projects/Paintings/33.kra
+File4[$e]=/home/workingdodo//Projects/Paintings/33.png
+File5[$e]=/home/workingdodo//Downloads/antelope-canyon-arizona-beam-33041.jpg
+File6[$e]=/home/workingdodo//Projects/Paintings/34.kra
 Name1[$e]=33-merged.kra
 Name2[$e]=33-merged.png
 Name3[$e]=33.kra
