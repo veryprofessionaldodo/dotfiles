@@ -24,6 +24,7 @@
 include-file = $HOME/.config/polybar/master.conf
 include-file = $HOME/.config/polybar/modules.conf
 
+
 [bar/time]
 ;override-redirect = true
 width = 100%
@@ -34,8 +35,8 @@ bottom = true
 radius = 3
 fixed-center = true
 
-background = #ab000115
-foreground = #eee
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 spacing = 1
 padding-left = 0
@@ -59,8 +60,8 @@ offset-x = 0
 offset-y = 0 
 bottom = true
 
-background = #ce000115
-foreground = #eee
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 underline-size = 2
 underline-color = #eee
@@ -91,7 +92,7 @@ wm-restack = i3
 ;label = %title:0:30:...%
 
 
-[global/wm]
+[global/wm]i3
 margin-top = 0
 margin-bottom = 1
 margin-left = 1

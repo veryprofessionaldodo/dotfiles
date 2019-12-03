@@ -8,6 +8,10 @@ if [ ! -d "/home/workingdodo/.config/polybar/modules" ]; then
     mkdir /home/workingdodo/.config/polybar/modules
 fi
 
+if [ ! -d "/home/workingdodo/.config/rofi" ]; then
+    mkdir /home/workingdodo/.config/rofi
+fi
+
 cd ../Apps
 
 cp -r ranger /home/workingdodo/.config/
@@ -17,6 +21,8 @@ cp -r Krita/Config/krita*rc /home/workingdodo/.config/
 cp -r Krita/Resources/* /home/workingdodo/.local/share/krita/
 
 #cp -r neovim/* /home/workingdodo/.config/nvim
+
+cp rofi/config /home/workingdodo/.config/rofi/
 
 cp polybar/modules.conf /home/workingdodo/.config/polybar/
 
