@@ -42,7 +42,6 @@
     # Set to 0 to disable.
     bounce_freq = 5
 
-    
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.

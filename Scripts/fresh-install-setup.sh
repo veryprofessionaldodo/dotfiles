@@ -9,14 +9,6 @@ echo "Got you fam, installing on $device."
 
 sleep 1
 
-sudo pacman -S yay base-devel
-
-yay -R manjaro-i3-settings
-
-yay -Rs palemoon-bin compton
-
-yay -S light ffmpegthumbnailer nautilus feh firefox telegram-desktop code variety sl rescuetime2 krita blender rofi polybar redshift simplenote-electron-bin transmission gsimplecal simplenote-electron-bin betterlockscreen osx-arc-darker gtk-chtheme compton-tryone-git franz-bin authy gnome-system-monitor spotify discord flameshot
-
 if [ $device == $laptop ]
 then
 	echo "\nSetting up laptop configurations..."
@@ -24,6 +16,8 @@ then
 	gpasswd -a workingdodo bumblebee
 	sudo systemctl enable bumblebeed
 	./Scripts/install-fonts.sh
+	sudo rmmod pcspkr
+	sudo echo 'blacklist pcspkr' >> /etc/modprobe.d/blacklist
 elif [ $device == $desktop ]
 then
 	echo "\nSetting up desktop configurations..."
@@ -31,12 +25,22 @@ then
 	./Scripts/install-fonts.sh
 fi
 
-echo "Uncomment color on the pacman.conf file, if you please..."
+sudo echo '\nColor' >> /etc/pacman.conf
 
-sleep 3
+echo "Installing Programs"
 
-sudo nano /etc/pacman.conf
+sudo pacman -S yay base-devel
 
-echo "Much obliged. You are now all set up!... I hope"
+yay -R manjaro-i3-settings
+
+yay -Rs palemoon-bin compton
+
+if [ $device == $laptop ]
+	yay -S xorg-xbacklight
+fi
+
+yay -S light ffmpegthumbnailer nautilus feh firefox telegram-desktop code variety sl rescuetime2 krita blender rofi polybar redshift simplenote-electron-bin transmission-qt gsimplecal simplenote-electron-bin betterlockscreen osx-arc-darker gtk-chtheme compton-tryone-git franz-bin authy gnome-system-monitor spotify discord flameshot pavucontrol 
+
+echo "And that's it!\n"
 
 
