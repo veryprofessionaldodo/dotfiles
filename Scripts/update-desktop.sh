@@ -8,7 +8,7 @@ if [ ! -d "/home/workingdodo/.config/polybar/modules" ]; then
     mkdir /home/workingdodo/.config/polybar/modules
 fi
 
-cd Apps
+cd ../Apps
 
 cp -r ranger /home/workingdodo/.config/
 
@@ -24,8 +24,6 @@ cp polybar/master.conf /home/workingdodo/.config/polybar/
 
 cp polybar/modules/* /home/workingdodo/.config/polybar/modules/
 
-cp .Xresources /home/workingdodo/.Xresources
-
 touch /home/workingdodo/.i3/config
 
 rm /home/workingdodo/.i3/config
@@ -37,6 +35,8 @@ cat ../Configs/common_config config >> /home/workingdodo/.i3/config
 cp polybar/config ~/.config/polybar/
 
 cd ../Configs
+
+cp -a .Xresources /home/workingdodo/.Xresources
 
 cp compton.conf /home/workingdodo/.config/compton.conf
 
