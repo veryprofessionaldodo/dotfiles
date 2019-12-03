@@ -299,7 +299,6 @@ exec --no-startup-id pamac-tray
 exec_always --no-startup-id python /home/workingdodo/Downloads/Importante/dotfiles/Scripts/wallpaperAndColorScheme.py
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
 exec_always --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" 
-exec --no-startup-id variety
 exec --no-startup-id TelegramDesktop
 # exec --no-startup-id franz
 exec --no-startup-id telegram-desktop

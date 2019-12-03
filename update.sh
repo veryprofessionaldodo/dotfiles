@@ -32,22 +32,24 @@ rm /home/workingdodo/.i3/config
 if [ $1 == $laptop ]
 then 
     cd ../Laptop
-elif [ $1 == $laptop ]
+    cat ../Configs/common_config config >> /home/workingdodo/.i3/config
+elif [ $1 == $desktop ]
 then
     cd ../Desktop
+    cat ../Configs/common_config config >> /home/workingdodo/.config/i3/config
 fi
 
-cat ../Configs/common_config config >> /home/workingdodo/.i3/config
+cp polybar/config /home/workingdodo/.config/polybar
+
+
 
 cd ../Configs
 
-cp -a .Xresources /home/workingdodo/.Xresources
+cp -a .Xresources /home/workingdodo/
 
 cp compton.conf /home/workingdodo/.config/compton.conf
 
 cp dunstrc /home/workingdodo/.config/dunst/
-
-cp -rf .Xresources /home/workingdodo/
 
 echo "Updated $1, homie."
 

@@ -16,8 +16,8 @@ bindsym $mod+Shift+Right move container to output $monitor_two; focus output $mo
 bindsym $mod+Shift+Left move container to output $monitor_one; focus output $monitor_one
 
 # TODO Melhorar isto aqui
-bindsym $mod+Shift+p exec --no-startup-id polybar polybar main -c ~/.config/polybar/config.ini &; exec --no-startup-id polybar main -c ~/.config/polybar/config.ini &
-bindsym $mod+Shift+t exec --no-startup-id polybar polybar main -c ~/.config/polybar/config.ini &
+bindsym $mod+Shift+p exec --no-startup-id polybar polybar left &; exec --no-startup-id polybar right &
+bindsym $mod+Shift+t exec --no-startup-id polybar polybar left &
 
 bindsym $mod+Shift+x exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_general.sh
 bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_2D.sh
