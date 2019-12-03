@@ -3,12 +3,6 @@
 laptop="laptop"
 desktop="desktop"
 
-read -p "On which device are you updating my dude? 'laptop' or 'desktop'?  " device
-
-echo "Got you fam, installing on $device."
-
-sleep 1
-
 if [ ! -d "/home/workingdodo/.config/polybar" ]; then
     mkdir /home/workingdodo/.config/polybar
 fi
@@ -17,7 +11,7 @@ if [ ! -d "/home/workingdodo/.config/rofi" ]; then
     mkdir /home/workingdodo/.config/rofi
 fi
 
-cd ../Apps
+cd Apps
 
 cp -r ranger /home/workingdodo/.config/
 
@@ -35,10 +29,10 @@ touch /home/workingdodo/.i3/config
 
 rm /home/workingdodo/.i3/config
 
-if [ $device == $laptop ]
+if [ $1 == $laptop ]
 then 
     cd ../Laptop
-elif [ $device == $laptop ]
+elif [ $1 == $laptop ]
 then
     cd ../Desktop
 fi
@@ -55,6 +49,6 @@ cp dunstrc /home/workingdodo/.config/dunst/
 
 cp -rf .Xresources /home/workingdodo/
 
-echo "Updated setup."
+echo "Updated $1, homie."
 
 exit 0

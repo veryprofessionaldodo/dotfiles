@@ -313,7 +313,7 @@ trans = #00000000
 white = #FFFFFF
 black = #000000
 
-bg = #00000044
+bg = #000000BB
 ;;bg = ${xrdb:color0:#222}
 bg-alt = ${xrdb:color0:#222}
 fg = ${xrdb:color7:#222}
@@ -431,8 +431,8 @@ label-mode-background = #e60053
 ;   %output%
 ; Default: %icon%  %name%
 label-focused = %name%
-label-focused-foreground = #ffffff
-label-focused-background = #ab3f3f5f
+label-focused-foreground = ${color.white}
+label-focused-background = ${color.bg}
 label-focused-underline = #fba922
 label-focused-padding = 4
 
@@ -444,7 +444,7 @@ label-focused-padding = 4
 ; Default: %icon%  %name%
 label-unfocused = %name%
 label-unfocused-padding = 4
-label-unfocused-foreground = #999999
+label-unfocused-foreground = ${color.fg}
 
 
 ; Available tokens:

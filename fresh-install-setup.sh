@@ -14,19 +14,14 @@ cd Scripts
 if [ $device == $laptop ]
 then
 	echo "\nSetting up laptop configurations..."
-	./update-laptop.sh
+	./update.sh latop
 	sudo gpasswd -a workingdodo bumblebee
 	sudo systemctl enable bumblebeed
 	./install-fonts.sh
-
-	#sudo rmmod pcspkr
-	#sudo echo 'blacklist pcspkr' >> /etc/modprobe.d/blacklist
-
-	#sudo echo '\nColor' >> /etc/pacman.conf
 elif [ $device == $desktop ]
 then
 	echo "\nSetting up desktop configurations..."
-	./update-desktop.sh
+	./update.sh desktop
 	./install-fonts.sh
 fi
 
