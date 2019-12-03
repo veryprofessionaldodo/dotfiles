@@ -65,10 +65,10 @@ border-color = ${color.bg}
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
 ;   padding-{left,right}
-padding = 5
+padding = 2
 
-module-margin-left = 8
-module-margin-right = 8
+module-margin-left = 3
+module-margin-right = 3
 
 font-0 = "Noto Sans:size=9;3"
 font-1 = "icomoon\-feather:size=10;2"
