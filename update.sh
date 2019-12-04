@@ -45,8 +45,6 @@ fi
 
 cp polybar/config /home/workingdodo/.config/polybar
 
-
-
 cd ../Configs
 
 cp -a .Xresources /home/workingdodo/

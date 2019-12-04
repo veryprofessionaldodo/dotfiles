@@ -84,8 +84,9 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+Shift+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -show drun -lines 5 -eh 2 -width 50 -padding 7 -bw 0 -theme "~/.cache/wal/colors-rofi-light.rasi"
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run -lines 5 -eh 2 -width 50 -padding 7 -bw 0 -theme "~/.cache/wal/colors-rofi-light.rasi"
+
 
 
 ################################################################################################
