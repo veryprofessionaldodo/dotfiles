@@ -131,7 +131,7 @@ font-2 = "Iosevka Nerd Font:size=20;5"
 
 modules-left = menu i3
 modules-center = 
-modules-right = style alsa network battery sysmenu date sep2
+modules-right = alsa network battery sysmenu date sep2
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -313,7 +313,7 @@ trans = #00000000
 white = #FFFFFF
 black = #000000
 
-bg = #000000BB
+bg = #000000FF
 ;;bg = ${xrdb:color0:#222}
 bg-alt = ${xrdb:color0:#222}
 fg = ${xrdb:color7:#222}
@@ -473,8 +473,6 @@ label-separator =
 label-separator-padding = 0
 label-separator-foreground = #ffb52a
 
-
-
 [module/alsa]
 type = internal/alsa
 
@@ -541,14 +539,14 @@ time-format = %H:%M
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-charging>
-format-charging = <animation-charging>
+format-charging = <animation-charging> <label-charging>
 
 ; Available tags:
 ;   <label-discharging> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-discharging>
-format-discharging = <ramp-capacity>
+format-discharging = <ramp-capacity> <label-discharging>
 
 ; Available tags:
 ;   <label-full> (default)
@@ -560,13 +558,13 @@ format-discharging = <ramp-capacity>
 ;   %percentage% (default)
 ;   %time%
 ;   %consumption% (shows current charge rate in watts)
-label-charging = %percentage%%
+label-charging =  %percentage%%
 
 ; Available tokens:
 ;   %percentage% (default)
 ;   %time%
 ;   %consumption% (shows current discharge rate in watts)
-label-discharging = %percentage%%
+label-discharging =  %percentage%%
 
 ; Available tokens:
 ;   %percentage% (default)
