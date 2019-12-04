@@ -120,9 +120,9 @@ module-margin-right = 3
 ;   font-3 = FontAwesome:size=10
 ; See the Fonts wiki page for more details
 
-font-0 = "Noto Sans:size=8;3"
-font-1 = "icomoon\-feather:size=8;2"
-font-2 = "Iosevka Nerd Font:size=14;5"
+font-0 = "Noto Sans:size=9;3"
+font-1 = "icomoon\-feather:size=9;3"
+font-2 = "Iosevka Nerd Font:size=12;3"
 
 ; Modules are added to one of the available blocks
 ;   modules-left = cpu ram
