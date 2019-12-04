@@ -101,7 +101,7 @@ bindsym $mod+F3 exec --no-startup-id vscodium
 bindsym $mod+F4 exec --no-startup-id krita
 bindsym $mod+F5 exec --no-startup-id spotify
 bindsym Mod4+Shift+s --release exec --no-startup-id flameshot gui
-focus_follows_mouse no
+#focus_follows_mouse no
 
 # change focus
 bindsym $mod+j focus left
@@ -177,7 +177,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 assign [class="PureRef"] $ws3
-assign [class="Blender"] $ws4
+#assign [class="Blender"] $ws4
 assign [class="discord"] $ws5
 assign [class="firefox"] $ws1
 assign [class="Navigator"] $ws1
@@ -299,7 +299,6 @@ exec --no-startup-id pamac-tray
 exec_always --no-startup-id python /home/workingdodo/Downloads/Importante/dotfiles/Scripts/wallpaperAndColorScheme.py
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
 exec_always --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" 
-exec --no-startup-id variety
 exec --no-startup-id TelegramDesktop
 # exec --no-startup-id franz
 exec --no-startup-id telegram-desktop
