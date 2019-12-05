@@ -27,6 +27,9 @@ fi
 
 ./install-programs.sh $device
 
+# For Spicetify
+sudo chown $USER -R /opt/spotify
+
 betterlockscreen -u ~/Downloads/Importante/dotfiles/Wallpapers/wallhaven-83do1o.jpg 
 
 

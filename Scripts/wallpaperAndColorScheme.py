@@ -21,3 +21,7 @@ randWallpaper = allFiles[random.randint(0,len(allFiles)-1)]
 myCmd = 'wal -i' + randWallpaper
 
 os.system(myCmd)
+
+myCmd = 'spicetify update apply'
+
+os.system(myCmd)

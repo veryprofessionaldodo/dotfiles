@@ -17,17 +17,6 @@
 include-file = $HOME/.config/polybar/master.conf
 include-file = $HOME/.config/polybar/modules.conf
 
-[global/wm]
-; Adjust the _NET_WM_STRUT_PARTIAL top value
-; Used for top aligned bars
-margin-bottom = 0
-
-; Adjust the _NET_WM_STRUT_PARTIAL bottom value
-; Used for bottom aligned bars
-margin-top = 0
-
-;; Bar Settings
-
 [bar/left]
 ; Use either of the following command to list available outputs:
 ; If unspecified, the application will pick the first one it finds.

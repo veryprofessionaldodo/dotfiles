@@ -7,6 +7,10 @@ if [ ! -d "/home/workingdodo/.config/polybar" ]; then
     mkdir /home/workingdodo/.config/polybar
 fi
 
+if [ ! -d "/home/workingdodo/.config/spicetify/Themes/Yoo" ]; then
+    mkdir /home/workingdodo/.config/spicetify/Themes/Yoo
+fi
+
 if [ ! -d "/home/workingdodo/.config/rofi" ]; then
     mkdir /home/workingdodo/.config/rofi
 fi
@@ -52,6 +56,10 @@ cp -a .Xresources /home/workingdodo/
 cp compton.conf /home/workingdodo/.config/compton.conf
 
 cp dunstrc /home/workingdodo/.config/dunst/
+
+cp config.ini /home/workingdodo/.config/spicetify
+
+cp ../Apps/spicetify/* /home/workingdodo/.config/spicetify/Themes/Yoo
 
 echo "Updated $1, homie."
 
