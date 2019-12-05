@@ -1,6 +1,7 @@
 import os
 import sys
 import subprocess
+import time
 
 myCmd = "echo " + sys.argv[1]
 
@@ -9,35 +10,26 @@ if sys.argv[1] == "toggle":
   
   os.system(action)
 
+  time.sleep(0.1)
+
   result = subprocess.run(['playerctl', 'status'], stdout=subprocess.PIPE)
 
-  notification = "dunstify " + result.stdout.decode()
+  notification = "dunstify " + result.stdout.decode() + "."
 
-def getTrackInformation(result):
-  trackInfo = result.split('\n')
+def getTrackInformation():
+  song = subprocess.run(['playerctl', 'metadata', 'title'], stdout=subprocess.PIPE).stdout.decode().rstrip()
+  artist = subprocess.run(['playerctl', 'metadata', 'artist'], stdout=subprocess.PIPE).stdout.decode().rstrip()
 
-  # Split artist metadata
-  artist = ""
-  for x in range(2, len(trackInfo[5].split())):
-    artist += trackInfo[5].split()[x] + " "
-
-  # Split song metadata
-  song = ""
-  for x in range(2, len(trackInfo[8].split())):
-    song += trackInfo[8].split()[x] + " "
-
-  print("\'" + song + "\', by " + artist)
-  return "\'" + song + "\', by " + artist;
-
+  return song + ", by " + artist
 
 if sys.argv[1] == "previous":
   action = "playerctl previous"
 
   os.system(action)
 
-  result = subprocess.run(['playerctl', 'metadata'], stdout=subprocess.PIPE)
+  time.sleep(0.1)
 
-  notification = "dunstify 'AGAIN!'" 
+  notification = "dunstify \""+ "Its rewind time:\n" + getTrackInformation() + "\""
 
 
 if sys.argv[1] == "next":
@@ -45,10 +37,8 @@ if sys.argv[1] == "next":
 
   os.system(action)
 
-  myCmd += " && dunstify 'Playing Next: '"
-  
-  result = subprocess.run(['playerctl', 'metadata'], stdout=subprocess.PIPE)
+  time.sleep(0.1)
 
-  notification = "dunstify 'Thank u next'"
+  notification = "dunstify \""+ "Thank u next:\n" +  getTrackInformation() + "\""
 
 os.system(notification)
