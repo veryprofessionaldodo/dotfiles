@@ -32,15 +32,6 @@ exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
-# class                 border  bground text    indicator child_border
-client.focused          #DDFFFF #192C3F #EDEDED #2E9EF4   #DDFFFF
-client.focused_inactive #5F676A #253747 #A8A8A8 #484E50   #222222
-client.unfocused        #141A28 #141A28 #888888 #292D2E   #222222
-client.urgent           #2F343A #2F343A #FFFFFF #900000   #900000
-client.placeholder      #192C3F #192C3F #FFFFFF #000000   #0C0C0C
-
-client.background       #FFFFFF
-
 #############################
 ### settings for i3-gaps: ###
 #############################

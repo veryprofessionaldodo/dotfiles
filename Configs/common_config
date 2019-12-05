@@ -75,10 +75,10 @@ set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.focused          $fg     $bg     $bg  $fg       $fg
+client.focused_inactive $bg     $bg     $bg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
+client.urgent           $fg     $bg     $fg  $fg       $fg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
@@ -86,7 +86,6 @@ client.background       $bg
 # start program launcher
 bindsym $mod+d exec --no-startup-id rofi -show drun -lines 5 -eh 2 -width 50 -padding 7 -bw 0 -theme "~/.cache/wal/colors-rofi-light.rasi"
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run -lines 5 -eh 2 -width 50 -padding 7 -bw 0 -theme "~/.cache/wal/colors-rofi-light.rasi"
-
 
 
 ################################################################################################
