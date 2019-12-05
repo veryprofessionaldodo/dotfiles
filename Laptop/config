@@ -21,9 +21,11 @@ bindsym $mod+Shift+p exec --no-startup-id polybar main
 #exec --no-startup-id fix_xcursor
 
 exec --no-startup-id pamac-tray
-exec --no-startup-id start_conky_maia
-exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
+
+#Polybar
 exec --no-startup-id polybar main
+
+exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 

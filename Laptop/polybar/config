@@ -666,6 +666,9 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 
+click-left = networkmanaged_dmenu
+click-right = nm-tui
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/sysmenu]

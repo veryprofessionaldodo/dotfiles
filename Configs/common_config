@@ -313,6 +313,9 @@ exec --no-startup-id clipit
 #conky 
 #exec --no-startup-id ~/.conky/SimplecOne/start.sh
 
+exec --no-startup-id conky -c /home/workingdodo/Downloads/Importante/dotfiles/Apps/conky/conky_shortcuts
+exec --no-startup-id conky -c /home/workingdodo/Downloads/Importante/dotfiles/Apps/conky/conky
+
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 
