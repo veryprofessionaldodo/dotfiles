@@ -124,7 +124,7 @@ font-2 = "Iosevka Nerd Font:size=12;3"
 
 modules-left = menu i3
 modules-center = 
-modules-right = alsa network battery date sysmenu
+modules-right = alsa network battery time date sysmenu
 
 ; The separator will be inserted between the output of each module
 separator =

@@ -126,6 +126,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+v exec --no-startup-id python /home/workingdodo/Downloads/Importante/dotfiles/Scripts/mediaPlayerController.py toggle
 bindsym $mod+Shift+b exec --no-startup-id python /home/workingdodo/Downloads/Importante/dotfiles/Scripts/mediaPlayerController.py previous
 bindsym $mod+Shift+n exec --no-startup-id python /home/workingdodo/Downloads/Importante/dotfiles/Scripts/mediaPlayerController.py next
+bindsym $mod+Shift+m exec --no-startup-id python /home/workingdodo/Downloads/Importante/dotfiles/Scripts/mediaPlayerController.py info
 
 # split orientation
 bindsym $mod+h split h;exec --no-startup-id notify-send 'tile horizontally'

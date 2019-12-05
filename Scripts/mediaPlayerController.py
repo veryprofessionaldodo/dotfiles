@@ -29,7 +29,7 @@ if sys.argv[1] == "previous":
 
   time.sleep(0.1)
 
-  notification = "dunstify \""+ "Its rewind time:\n" + getTrackInformation() + "\""
+  notification = "dunstify \""+ "It's rewind time:\n" + getTrackInformation() + "\""
 
 
 if sys.argv[1] == "next":
@@ -40,5 +40,8 @@ if sys.argv[1] == "next":
   time.sleep(0.1)
 
   notification = "dunstify \""+ "Thank u next:\n" +  getTrackInformation() + "\""
+
+if sys.argv[1] == "info":
+  notification = "dunstify \""+ "Current playing:\n" +  getTrackInformation() + "\""
 
 os.system(notification)
