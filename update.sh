@@ -61,6 +61,8 @@ cp config.ini /home/workingdodo/.config/spicetify
 
 cp ../Apps/spicetify/* /home/workingdodo/.config/spicetify/Themes/Yoo
 
+spicetify update apply
+
 echo "Updated $1, homie."
 
 exit 0
