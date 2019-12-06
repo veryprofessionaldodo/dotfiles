@@ -37,7 +37,7 @@ LIGHT_GREEN="#7cb342"
 MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System :' \
 -hide-scrollbar true \
 -bw 0 \
--lines 4 \
+-lines 5 \
 -line-padding 8 \
 -padding 20 \
 -width 15 \
@@ -51,9 +51,10 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System :' \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
-<<< ">> Lock|>> Logout|>> Reboot|>> Shutdown")"
+<<< ">> Lock|>> Suspend|>> Logout|>> Reboot|>> Shutdown")"
 case "$MENU" in
-  *Lock) i3lock-fancy ;;
+  *Lock) betterlockscreen -l;;
+  *Suspend) betterlockscreen -s;;
   *Logout) openbox --exit;;
   *Reboot) systemctl reboot ;;
   *Shutdown) systemctl -i poweroff

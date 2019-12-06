@@ -30,8 +30,9 @@ fi
 # For Spicetify
 sudo chown $USER -R /opt/spotify
 
-betterlockscreen -u ~/Downloads/Importante/dotfiles/Wallpapers/wallhaven-83do1o.jpg 
+spicetify backup enable-devtool
 
+betterlockscreen -u ~/Downloads/Importante/dotfiles/Wallpapers/wallhaven-83do1o.jpg 
 
 echo "And that's it!\n"
 
