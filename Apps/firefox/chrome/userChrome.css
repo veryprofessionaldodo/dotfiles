@@ -15,7 +15,13 @@ tab[selected="true"] {
 	transition: all 100ms var(--animation-easing-function) !important;
 }
 
-/* Show on hover or focus */
+.browser-toolbar:not(.titlebar-color) {
+	background: var(--background);
+}
+
+#navigator-toolbox {
+	border: none;
+}
 
 :root:not([customizing]) :hover>#nav-bar toolbarbutton, :root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton, :root:not([customizing]) :hover>#titlebar toolbarbutton {
 	margin-left: 0 !important;
