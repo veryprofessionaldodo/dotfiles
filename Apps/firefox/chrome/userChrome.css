@@ -1,7 +1,6 @@
 @import url('file:///home/workingdodo/.cache/wal/colors.css');
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-.tab-background[selected="true"] {
-}
+.tab-background[selected="true"] {}
 
 tab[selected="true"] {
 	font-weight: bold !important;
@@ -78,7 +77,6 @@ tab[selected="true"] {
 	padding: 0 !important;
 }
 
-
 @media (max-width: 1200px) {
 	/* Full size url bar on small screen if url bar is focused */
 	#navigator-toolbox #nav-bar:focus-within {
@@ -104,5 +102,8 @@ tab[selected="true"] {
 	/* Hide shadow over url bar */
 	.tabbrowser-arrowscrollbox>.arrowscrollbox-overflow-start-indicator:not([collapsed]), .tabbrowser-arrowscrollbox>.arrowscrollbox-overflow-end-indicator:not([collapsed]) {
 		background-image: none !important;
+	}
+	.browser-toolbar:not(.titlebar-color) {
+		background: var(--background);
 	}
 }
