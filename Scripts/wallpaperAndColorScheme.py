@@ -18,7 +18,7 @@ for entry in listOfFile:
 # Get random wallpaper
 randWallpaper = allFiles[random.randint(0,len(allFiles)-1)]
 
-myCmd = 'wal -i' + randWallpaper
+myCmd = 'wpg -s' + randWallpaper #+ ' && wal -i ' + randWallpaper
 
 os.system(myCmd)
 

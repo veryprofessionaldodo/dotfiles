@@ -41,6 +41,6 @@ if sys.argv[1] == "next":
   notification = "notify-send \""+ "Thank u next:\n" +  getTrackInformation() + "\""
 
 if sys.argv[1] == "info":
-  notification = "notify-send \""+ "Current playing:\n" +  getTrackInformation() + "\""
+  notification = "notify-send \""+ "Currently playing:\n" +  getTrackInformation() + "\""
 
 os.system(notification)
