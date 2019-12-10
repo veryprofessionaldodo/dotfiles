@@ -33,6 +33,9 @@ sudo chown $USER -R /opt/spotify
 spicetify backup apply enable-devtool
 spicetify update apply
 
+wpg-install.sh -i
+wpg-install.sh -g
+
 betterlockscreen -u ~/Downloads/Importante/dotfiles/Wallpapers/wallhaven-83do1o.jpg 
 
 echo "And that's it!\n"

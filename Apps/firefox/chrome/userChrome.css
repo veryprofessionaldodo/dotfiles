@@ -15,7 +15,7 @@ tab[selected="true"] {
 	transition: all 100ms var(--animation-easing-function) !important;
 }
 
-.browser-toolbar:not(.titlebar-color) {
+#nav-bar {
 	background: var(--background);
 }
 
