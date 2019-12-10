@@ -3,8 +3,6 @@ import sys
 import subprocess
 import time
 
-myCmd = "echo " + sys.argv[1]
-
 if sys.argv[1] == "toggle":
   action = "playerctl play-pause"
   
@@ -14,7 +12,8 @@ if sys.argv[1] == "toggle":
 
   result = subprocess.run(['playerctl', 'status'], stdout=subprocess.PIPE)
 
-  notification = "dunstify " + result.stdout.decode() + "."
+  # Notify current state
+  notification = "notify-send " + result.stdout.decode() + "."
 
 def getTrackInformation():
   song = subprocess.run(['playerctl', 'metadata', 'title'], stdout=subprocess.PIPE).stdout.decode().rstrip()
@@ -29,7 +28,7 @@ if sys.argv[1] == "previous":
 
   time.sleep(0.1)
 
-  notification = "dunstify \""+ "It's rewind time:\n" + getTrackInformation() + "\""
+  notification = "notify-send \""+ "It's rewind time:\n" + getTrackInformation() + "\""
 
 
 if sys.argv[1] == "next":
@@ -39,9 +38,9 @@ if sys.argv[1] == "next":
 
   time.sleep(0.1)
 
-  notification = "dunstify \""+ "Thank u next:\n" +  getTrackInformation() + "\""
+  notification = "notify-send \""+ "Thank u next:\n" +  getTrackInformation() + "\""
 
 if sys.argv[1] == "info":
-  notification = "dunstify \""+ "Current playing:\n" +  getTrackInformation() + "\""
+  notification = "notify-send \""+ "Current playing:\n" +  getTrackInformation() + "\""
 
 os.system(notification)
