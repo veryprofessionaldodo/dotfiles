@@ -22,6 +22,7 @@ myCmd = 'wal -i' + randWallpaper
 
 os.system(myCmd)
 
-myCmd = 'spicetify update apply'
+# Update Spotify and Dunst
+myCmd = 'spicetify update && cp /home/workingdodo/.cache/wal/dunstrc /home/workingdodo/.config/dunst/ && killall dunst && dunst &'
 
 os.system(myCmd)

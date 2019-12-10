@@ -1,107 +1,118 @@
 @import url('file:///home/workingdodo/.cache/wal/colors.css');
-
-
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-
 .tab-background[selected="true"] {
+	background-color: var(--color1) !important;
+}
 
-	background-color:var(--color1) !important;
-   
-   } tab[selected="true"] {
+tab[selected="true"] {
 	background: var(--color1) !important;
-	color:var(--foreground) !important;
-	font-weight:bold !important;
-   
-   } tab:not([selected="true"]) {
-   
+	color: var(--foreground) !important;
+	font-weight: bold !important;
+}
+
+tab:not([selected="true"]) {
 	background: var(--color1) !important;
-   color:var(--foreground) !important;
-   
-   } tab:hover {
+	color: var(--foreground) !important;
+}
+
+tab:hover {
 	background: var(--color1) !important;
-   	color:var(--foreground) !important;
-   } 
+	color: var(--foreground) !important;
+}
+
+#TabsToolbar {
+	background-color: var(--color1) !important;
+	color: var(--foreground) !important;
+}
 
 /* Hide buttons **/
+
 :root:not([customizing]) #nav-bar toolbarbutton {
 	margin-left: -30px !important;
 	opacity: 0 !important;
-  pointer-events: none !important;
-  background: var(--color1) !important;
-  transition: all 100ms var(--animation-easing-function) !important;
+	pointer-events: none !important;
+	background: var(--color1) !important;
+	transition: all 100ms var(--animation-easing-function) !important;
 }
 
 /* Show on hover or focus */
-:root:not([customizing]) :hover > #nav-bar toolbarbutton,
-:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
-:root:not([customizing]) :hover > #titlebar toolbarbutton {
+
+:root:not([customizing]) :hover>#nav-bar toolbarbutton, :root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton, :root:not([customizing]) :hover>#titlebar toolbarbutton {
 	margin-left: 0 !important;
 	opacity: 1 !important;
-  pointer-events: auto !important;
-  background: var(--color1) !important;
+	pointer-events: auto !important;
+	background: var(--color1) !important;
 }
 
 /* Don't hide tab buttons */
-:root:not([customizing]) :hover > #titlebar #TabsToolbar toolbarbutton {
+
+:root:not([customizing]) :hover>#titlebar #TabsToolbar toolbarbutton {
 	margin-left: 0px !important;
 	opacity: 1 !important;
-  pointer-events: auto !important;
-  background: var(--color1) !important;
+	pointer-events: auto !important;
+	background: var(--color1) !important;
 }
 
+#PopupAutoCompleteRichResult {
+	background: var(--color1) !important;
+	color: red !important;
+}
 
 /* Hide controls on urlbar focus */
+
 :root:not([customizing]) #navigator-toolbox #nav-bar #urlbar-container:focus-within {
 	width: 100% !important;
 	position: absolute !important;
 	left: 0 !important;
-  white-space: nowrap;
-  background: var(--color1) !important;
+	white-space: nowrap;
+	background: var(--color1) !important;
 }
 
 :root:not([customizing]) #navigator-toolbox #nav-bar #urlbar-container:focus-within #urlbar {
-  width: 100% !important;
-  background: var(--color1) !important;
+	width: 100% !important;
+	background: var(--color1) !important;
 }
 
-
 /* Move tabs 35% to rihgt */
+
 #TabsToolbar {
-  margin-left: 35vw !important;
-  background: var(--color1) !important;
+	margin-left: 35vw !important;
+	background: var(--color1) !important;
 }
 
 /* Move navigation 65% to left and negative margin to move to top line */
+
 #nav-bar {
 	margin-right: 65vw !important;
-  margin-top: -29px !important;
-  background: var(--color1) !important;
+	margin-top: -29px !important;
+	background: var(--color1) !important;
 	z-index: 2;
 }
 
 /* Full height url bar without border radius */
+
 #nav-bar {
-  min-height: 29px !important;
-  background: var(--color1) !important;
+	min-height: 29px !important;
+	background: var(--color1) !important;
 }
+
 #urlbar {
 	border: 0px solid transparent !important;
 	border-radius: 0 !important;
-  margin: 0 1px 0 0 !important;
-  background: var(--color1) !important;
-  color: red;
+	margin: 0 1px 0 0 !important;
+	background: var(--color1) !important;
 	min-height: 29px !important;
 }
 
 /* Fix padding around URL bar */
+
 #urlbar-container, #search-container {
-  padding: 0 !important;
-  background: var(--color1) !important;
+	padding: 0 !important;
+	background: var(--color1) !important;
 }
 
 #navigator-tool-box {
-  background: var(--color1) !important;
+	background: var(--color1) !important;
 }
 
 @media (max-width: 1200px) {
@@ -117,24 +128,21 @@
 		background-size: auto auto !important;
 	}
 	/* Buttons leave hidden on hover */
-	:root:not([customizing]) :hover > #nav-bar toolbarbutton,
-	:root:not([customizing]) :hover > #titlebar toolbarbutton {
+	:root:not([customizing]) :hover>#nav-bar toolbarbutton, :root:not([customizing]) :hover>#titlebar toolbarbutton {
 		margin-left: -30px !important;
-    opacity: 0 !important;
-    background: var(--color1) !important;
+		opacity: 0 !important;
+		background: var(--color1) !important;
 		pointer-events: none !important;
 	}
 	/* Do not hide buttons on urlbar focus */
 	:root:not([customizing]) #navigator-toolbox #nav-bar #urlbar-container:focus-within {
 		position: static !important;
-    width: auto !important;
-    background: var(--color1) !important;
+		width: auto !important;
+		background: var(--color1) !important;
 	}
-
 	/* Hide shadow over url bar */
-	.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:not([collapsed]),
-	.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:not([collapsed]) {
-    background-image: none !important;
-    background: var(--color1) !important;
+	.tabbrowser-arrowscrollbox>.arrowscrollbox-overflow-start-indicator:not([collapsed]), .tabbrowser-arrowscrollbox>.arrowscrollbox-overflow-end-indicator:not([collapsed]) {
+		background-image: none !important;
+		background: var(--color1) !important;
 	}
 }

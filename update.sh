@@ -55,13 +55,20 @@ cp -a .Xresources /home/workingdodo/
 
 cp compton.conf /home/workingdodo/.config/compton.conf
 
-cp dunstrc /home/workingdodo/.config/dunst/
+# Dunst needs to be updated, and then sent to it's place
+cp dunstrc /home/workingdodo/.config/wal/templates
 
 cp config.ini /home/workingdodo/.config/spicetify
 
-cp ../Apps/spicetify/* /home/workingdodo/.config/spicetify/Themes/Yoo
+cp -r ../Apps/spicetify/* /home/workingdodo/.config/spicetify/Themes/Yoo
 
-spicetify update apply
+FIREFOX="$(cd /home/workingdodo/.mozilla/firefox/ && ls -a | grep *-release)"
+
+echo $FIREFOX
+
+cp -r ../Apps/firefox/* /home/workingdodo/.mozilla/firefox/$FIREFOX
+
+spicetify update
 
 echo "Updated $1, homie."
 
