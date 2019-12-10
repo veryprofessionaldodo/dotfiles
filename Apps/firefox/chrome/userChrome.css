@@ -31,7 +31,6 @@ tab:hover {
 	margin-left: -30px !important;
 	opacity: 0 !important;
 	pointer-events: none !important;
-	background: var(--color1) !important;
 	transition: all 100ms var(--animation-easing-function) !important;
 }
 
@@ -41,7 +40,6 @@ tab:hover {
 	margin-left: 0 !important;
 	opacity: 1 !important;
 	pointer-events: auto !important;
-	background: var(--color1) !important;
 }
 
 /* Don't hide tab buttons */
@@ -50,12 +48,6 @@ tab:hover {
 	margin-left: 0px !important;
 	opacity: 1 !important;
 	pointer-events: auto !important;
-	background: var(--color1) !important;
-}
-
-#PopupAutoCompleteRichResult {
-	background: var(--color1) !important;
-	color: red !important;
 }
 
 /* Hide controls on urlbar focus */
@@ -65,19 +57,16 @@ tab:hover {
 	position: absolute !important;
 	left: 0 !important;
 	white-space: nowrap;
-	background: var(--color1) !important;
 }
 
 :root:not([customizing]) #navigator-toolbox #nav-bar #urlbar-container:focus-within #urlbar {
 	width: 100% !important;
-	background: var(--color1) !important;
 }
 
 /* Move tabs 35% to rihgt */
 
 #TabsToolbar {
 	margin-left: 35vw !important;
-	background: var(--color1) !important;
 }
 
 /* Move navigation 65% to left and negative margin to move to top line */
@@ -85,7 +74,6 @@ tab:hover {
 #nav-bar {
 	margin-right: 65vw !important;
 	margin-top: -29px !important;
-	background: var(--color1) !important;
 	z-index: 2;
 }
 
@@ -93,14 +81,12 @@ tab:hover {
 
 #nav-bar {
 	min-height: 29px !important;
-	background: var(--color1) !important;
 }
 
 #urlbar {
 	border: 0px solid transparent !important;
 	border-radius: 0 !important;
 	margin: 0 1px 0 0 !important;
-	background: var(--color1) !important;
 	min-height: 29px !important;
 }
 
@@ -108,12 +94,8 @@ tab:hover {
 
 #urlbar-container, #search-container {
 	padding: 0 !important;
-	background: var(--color1) !important;
 }
 
-#navigator-tool-box {
-	background: var(--color1) !important;
-}
 
 @media (max-width: 1200px) {
 	/* Full size url bar on small screen if url bar is focused */
@@ -121,7 +103,6 @@ tab:hover {
 		margin-right: 0vw !important;
 		z-index: 2 !important;
 		background-attachment: fixed !important;
-		background: var(--color1) !important;
 		background-image: var(--lwt-header-image) !important;
 		background-position: right top !important;
 		background-repeat: no-repeat !important;
@@ -131,18 +112,15 @@ tab:hover {
 	:root:not([customizing]) :hover>#nav-bar toolbarbutton, :root:not([customizing]) :hover>#titlebar toolbarbutton {
 		margin-left: -30px !important;
 		opacity: 0 !important;
-		background: var(--color1) !important;
 		pointer-events: none !important;
 	}
 	/* Do not hide buttons on urlbar focus */
 	:root:not([customizing]) #navigator-toolbox #nav-bar #urlbar-container:focus-within {
 		position: static !important;
 		width: auto !important;
-		background: var(--color1) !important;
 	}
 	/* Hide shadow over url bar */
 	.tabbrowser-arrowscrollbox>.arrowscrollbox-overflow-start-indicator:not([collapsed]), .tabbrowser-arrowscrollbox>.arrowscrollbox-overflow-end-indicator:not([collapsed]) {
 		background-image: none !important;
-		background: var(--color1) !important;
 	}
 }
