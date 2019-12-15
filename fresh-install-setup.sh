@@ -36,7 +36,7 @@ spicetify update apply
 wpg-install.sh -i
 wpg-install.sh -g
 
-betterlockscreen -u ~/Downloads/Importante/dotfiles/Wallpapers/wallhaven-83do1o.jpg 
+betterlockscreen -u ~/Documents/dotfiles/Wallpapers/wallhaven-83do1o.jpg 
 
 echo "And that's it!\n"
 

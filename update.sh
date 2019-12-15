@@ -36,6 +36,8 @@ then
     touch /home/workingdodo/.i3/config
     rm /home/workingdodo/.i3/config
 
+    FIREFOX="$(cd /home/workingdodo/.mozilla/firefox/ && ls -a | grep *-release)"
+
     cat ../Configs/common_config config >> /home/workingdodo/.i3/config
 elif [ $1 == $desktop ]
 then
@@ -43,6 +45,8 @@ then
 
     touch /home/workingdodo/.config/i3/config
     rm /home/workingdodo/.config/i3/config
+
+    FIREFOX="$(cd /home/workingdodo/.mozilla/firefox/ && ls -a | grep *.default)"
 
     cat ../Configs/common_config config >> /home/workingdodo/.config/i3/config
 fi
@@ -61,8 +65,6 @@ cp dunstrc /home/workingdodo/.config/wal/templates
 cp config.ini /home/workingdodo/.config/spicetify
 
 cp -r ../Apps/spicetify/* /home/workingdodo/.config/spicetify/Themes/Yoo
-
-FIREFOX="$(cd /home/workingdodo/.mozilla/firefox/ && ls -a | grep *-release)"
 
 echo $FIREFOX
 

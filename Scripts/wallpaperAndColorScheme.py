@@ -1,7 +1,7 @@
 import os
 import random
 
-dirName = "/home/workingdodo/Downloads/Importante/dotfiles/Wallpapers"
+dirName = "/home/workingdodo/Documents/dotfiles/Wallpapers"
 
 listOfFile = os.listdir(dirName)
 allFiles = list()

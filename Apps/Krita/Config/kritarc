@@ -250,7 +250,7 @@ workingColorSpace=RGBA
 
 [File Dialogs]
 DontUseNativeFileDialog=true
-ImportShortcuts=/home/workingdodo/Downloads/Importante/dotfiles/Apps/Krita/Config
+ImportShortcuts=/home/workingdodo/Documents/dotfiles/Apps/Krita/Config
 OpenDocument=/home/workingdodo/Projects/Paintings
 SaveAs=/home/workingdodo/Projects/feup-rvau/Assets/Images
 

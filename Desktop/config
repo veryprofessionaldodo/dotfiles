@@ -7,9 +7,9 @@ bindsym $mod+Control+Down move down
 bindsym $mod+Ctrl+Left move left
 bindsym $mod+Ctrl+Right move right
 
-bindsym XF86AudioLowerVolume exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/volumeControl.sh down 5
-bindsym XF86AudioRaiseVolume exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/volumeControl.sh up 5
-bindsym XF86AudioMute exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/volume_control.py toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/volumeControl.sh down 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/volumeControl.sh up 5
+bindsym XF86AudioMute exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/volumeControl.sh mute
 
 bindsym $mod+Shift+Right move container to output $monitor_two; focus output $monitor_two
 bindsym $mod+Shift+Left move container to output $monitor_one; focus output $monitor_one
@@ -18,9 +18,9 @@ bindsym $mod+Shift+Left move container to output $monitor_one; focus output $mon
 bindsym $mod+Shift+p exec --no-startup-id polybar left; exec --no-startup-id polybar right
 bindsym $mod+Shift+t exec --no-startup-id polybar left
 
-bindsym $mod+Shift+x exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_general.sh
-bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_2D.sh
-bindsym $mod+Shift+z exec --no-startup-id /home/workingdodo/Downloads/Importante/dotfiles/Scripts/gaomon_3D.sh
+bindsym $mod+Shift+x exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon_general.sh
+bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon_2D.sh
+bindsym $mod+Shift+z exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon_3D.sh
 
 # Assigning workspaces to monitor
 set $monitor_one "DVI-D-0"
