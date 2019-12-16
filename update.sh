@@ -19,9 +19,9 @@ cd Apps
 
 cp -r ranger /home/workingdodo/.config/
 
-cp -r Krita/Config/krita*rc /home/workingdodo/.config/
+cp -r krita/Config/krita*rc /home/workingdodo/.config/
 
-cp -r Krita/Resources/* /home/workingdodo/.local/share/krita/
+cp -r krita/Resources/* /home/workingdodo/.local/share/krita/
 
 #cp -r neovim/* /home/workingdodo/.config/nvim
 
