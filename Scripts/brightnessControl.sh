@@ -22,15 +22,23 @@ function send_notification {
   dunstify -i "$icon" -r 5555 -u normal "    $bar"
 }
 
+backlight="$(xbacklight)"
+
 case $1 in
   up)
-    # increase the backlight by 5%
-    xbacklight -inc 10
+    xbacklight -inc 5
     send_notification
     ;;
   down)
     # decrease the backlight by 5%
-    xbacklight -dec 10
+    if [ [ ${backlight%.*} -lt 8] && [ ${backlight%.*} -gt 2 ];
+    then
+      echo $@
+      xbacklight -set 2
+      dunstify -r -5555 -u "Backlight: ${backlight%.*}"    
+    else	
+      xbacklight -dec 5    
+    fi
     send_notification
     ;;
 esac

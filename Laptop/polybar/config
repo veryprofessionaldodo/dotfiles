@@ -124,8 +124,8 @@ font-2 = "Iosevka Nerd Font:size=12;3"
 
 modules-left = menu i3
 modules-center = 
-modules-right = alsa network battery time date sysmenu
-
+#modules-right = alsa network battery time date sysmenu tray
+modules-right = alsa network battery time date sysmenu 
 ; The separator will be inserted between the output of each module
 separator =
 
@@ -147,7 +147,7 @@ wm-name =
 ;   center
 ;   right
 ;   none
-tray-position = none
+tray-position = right
 
 ; If true, the bar will not shift its
 ; contents when the tray changes

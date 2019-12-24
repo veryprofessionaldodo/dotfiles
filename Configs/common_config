@@ -216,6 +216,7 @@ for_window [class="Maya-2019"] move to workspace $ws3
 for_window [class="maya.bin"] move to workspace $ws3
 for_window [class="chromium"] move to workspace $ws5
 for_window [class="krita"] move to workspace $ws4
+for_window [instance="origin.exe"] floating enable
 assign [instance="origin.exe"] $ws6
 
 # Open specific applications in floating mode
