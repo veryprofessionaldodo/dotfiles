@@ -23,7 +23,7 @@ bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Documents/dotfiles/S
 bindsym $mod+Shift+z exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon_3D.sh
 
 # Assigning workspaces to monitor
-set $monitor_one "DVI-D-0"
+set $monitor_one "DisplayPort-0"
 set $monitor_two "HDMI-A-0"
 
 workspace $ws1 output $monitor_one
@@ -40,18 +40,18 @@ exec --no-startup-id polybar right
 exec --no-startup-id kdeconnect-indicator 
 
 # Set primary monitor
-exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1920x528 --rotate normal
+exec --no-startup-id xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1920x528 --rotate normal
 
 # Handle monitor setup
-#exec-always --no-startup-id xsetwacom set "Tablet Monitor Pen stylus" MapToOutput DVI-D-0
+#exec-always --no-startup-id xsetwacom set "Tablet Monitor Pen stylus" MapToOutput DisplayPort-0
 #exec-always --no-startup-id xinput set-prop "Tablet Monitor Pen stylus" --type=float "Coordinate Transformation Matrix" 0.5 0 0.5 0 .676 .3275 0 0 1
 
 #exec --no-startup-id krita
 #exec --no-startup-id PureRef
 
-bindsym $mod+Shift+w exec --no-startup-id killall compton ; exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1920x528 --rotate normal ;  exec --no-startup-id polybar right ; exec --no-startup-id compton 
+bindsym $mod+Shift+w exec --no-startup-id killall compton ; exec --no-startup-id xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1920x528 --rotate normal ;  exec --no-startup-id polybar right ; exec --no-startup-id compton 
 
-bindsym $mod+Shift+g exec --no-startup-id killall compton ; exec --no-startup-id xrandr --output DVI-D-0 --mode 1920x1080 --primary --output HDMI-A-0 --off ; exec --no-startup-id compton
+bindsym $mod+Shift+g exec --no-startup-id killall compton ; exec --no-startup-id xrandr --output DisplayPort-0 --mode 1920x1080 --primary --output HDMI-A-0 --off ; exec --no-startup-id compton
 
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
