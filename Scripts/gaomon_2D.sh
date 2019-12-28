@@ -3,7 +3,7 @@
 keyboard="Tablet Monitor Pen stylus"
 tablet="Tablet Monitor Pad pad"
 
-xsetwacom set "$keyboard" MapToOutput HDMI-A-0
+xsetwacom set "$keyboard" MapToOutput HDMI-A-1
 
 # this is my particular setup, check out this in case you want to know more about the coordinate transformation matrix
 # https://github.com/linuxwacom/xf86-input-wacom/wiki/Dual-and-Multi-Monitor-Set-Up

@@ -14,9 +14,11 @@ bindsym XF86AudioMute exec --no-startup-id /home/workingdodo/Documents/dotfiles/
 bindsym $mod+Shift+Right move container to output $monitor_two; focus output $monitor_two
 bindsym $mod+Shift+Left move container to output $monitor_one; focus output $monitor_one
 
-# TODO Melhorar isto aqui
 bindsym $mod+Shift+p exec --no-startup-id polybar left; exec --no-startup-id polybar right
-bindsym $mod+Shift+t exec --no-startup-id polybar left
+bindsym $mod+Shift+l exec --no-startup-id polybar left
+
+# Toggle refresh rates
+
 
 bindsym $mod+Shift+x exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon_general.sh
 bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon_2D.sh
@@ -24,7 +26,7 @@ bindsym $mod+Shift+z exec --no-startup-id /home/workingdodo/Documents/dotfiles/S
 
 # Assigning workspaces to monitor
 set $monitor_one "DisplayPort-0"
-set $monitor_two "HDMI-A-0"
+set $monitor_two "HDMI-A-1"
 
 workspace $ws1 output $monitor_one
 workspace $ws2 output $monitor_two
@@ -40,18 +42,13 @@ exec --no-startup-id polybar right
 exec --no-startup-id kdeconnect-indicator 
 
 # Set primary monitor
-exec --no-startup-id xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1920x528 --rotate normal
-
-# Handle monitor setup
-#exec-always --no-startup-id xsetwacom set "Tablet Monitor Pen stylus" MapToOutput DisplayPort-0
-#exec-always --no-startup-id xinput set-prop "Tablet Monitor Pen stylus" --type=float "Coordinate Transformation Matrix" 0.5 0 0.5 0 .676 .3275 0 0 1
-
+exec --no-startup-id xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x630 --rotate normal
 #exec --no-startup-id krita
 #exec --no-startup-id PureRef
 
-bindsym $mod+Shift+w exec --no-startup-id killall compton ; exec --no-startup-id xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1920x528 --rotate normal ;  exec --no-startup-id polybar right ; exec --no-startup-id compton 
-
-bindsym $mod+Shift+g exec --no-startup-id killall compton ; exec --no-startup-id xrandr --output DisplayPort-0 --mode 1920x1080 --primary --output HDMI-A-0 --off ; exec --no-startup-id compton
+bindsym $mod+Shift+w exec --no-startup-id xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x630 --rotate normal ;  exec --no-startup-id polybar right
+bindsym $mod+Shift+g exec --no-startup-id xrandr --output DisplayPort-0 --mode 1920x1080 --primary --output HDMI-A-1 --off
+bindsym $mod+Shift+h exec --no-startup-id python /home/workingdodo/Documents/dotfiles/Scripts/toggleMonitorRate.py
 
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
