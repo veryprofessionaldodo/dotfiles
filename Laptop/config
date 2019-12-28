@@ -20,8 +20,6 @@ bindsym $mod+Shift+p exec --no-startup-id polybar main
 #exec --no-startup-id xfce4-power-manager
 #exec --no-startup-id fix_xcursor
 
-exec --no-startup-id pamac-tray
-
 #Polybar
 exec --no-startup-id polybar main
 

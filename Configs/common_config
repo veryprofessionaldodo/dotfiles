@@ -218,6 +218,7 @@ for_window [class="chromium"] move to workspace $ws5
 for_window [class="krita"] move to workspace $ws4
 for_window [instance="origin.exe"] floating enable
 for_window [class="firefox"] sticky enable
+for_window [class="PureRef"] sticky enable
 
 assign [instance="origin.exe"] $ws6
 
@@ -305,7 +306,7 @@ bindsym $mod+Shift+Escape exec --no-startup-id gnome-system-monitor
 exec --no-startup-id thunar --daemon
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
-exec --no-startup-id pamac-tray
+#exec --no-startup-id pamac-tray
 exec --no-startup-id python /home/workingdodo/Documents/dotfiles/Scripts/wallpaperAndColorScheme.py
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
