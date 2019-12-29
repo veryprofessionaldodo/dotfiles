@@ -3,6 +3,7 @@
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod1
+set $mod4 Mod4
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
