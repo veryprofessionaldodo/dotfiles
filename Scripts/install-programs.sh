@@ -7,12 +7,22 @@ desktop="desktop"
 
 yay -R manjaro-i3-settings
 
-yay -Rs picom
+yay -Rs picom palemoon-bin
 
 if [ $1 == $laptop ]
 then
-    yay -S light ffmpegthumbnailer nautilus feh firefox telegram-desktop code sl rescuetime2 krita blender rofi polybar redshift simplenote-electron-bin transmission-qt gsimplecal simplenote-electron-bin betterlockscreen osx-arc-darker gtk-chtheme compton-tryone-git franz-bin authy gnome-system-monitor spotify discord flameshot pavucontrol vlc betterlockscreen xorg-xbacklight wpgtk-git neofetch blacklist_pcspkr unzip playerctl spicetify-cli youtube-dl lxappearance
+    yay -S light ffmpegthumbnailer nautilus feh firefox telegram-desktop code sl rescuetime2 krita blender rofi polybar redshift simplenote-electron-bin transmission-qt gsimplecal simplenote-electron-bin betterlockscreen osx-arc-darker gtk-chtheme compton-tryone-git franz-bin authy gnome-system-monitor discord flameshot pavucontrol vlc betterlockscreen xorg-xbacklight wpgtk-git neofetch blacklist_pcspkr unzip playerctl spicetify-cli youtube-dl lxappearance steam-manjaro
 elif [ $1 == $desktop ]
 then
-    yay -S ffmpegthumbnailer nautilus feh firefox telegram-desktop code sl rescuetime2 krita blender rofi polybar redshift simplenote-electron-bin transmission-qt gsimplecal simplenote-electron-bin betterlockscreen osx-arc-darker gtk-chtheme compton-tryone-git franz-bin authy gnome-system-monitor spotify discord flameshot pavucontrol vlc betterlockscreen wpgtk-git neofetch unzip playerctl spicetify-cli youtube-dl lxappearance pureref
+    yay -S ffmpegthumbnailer nautilus feh firefox telegram-desktop code sl rescuetime2 krita blender rofi polybar redshift simplenote-electron-bin transmission-qt gsimplecal simplenote-electron-bin betterlockscreen osx-arc-darker gtk-chtheme compton-tryone-git franz-bin authy gnome-system-monitor discord flameshot pavucontrol vlc betterlockscreen wpgtk-git neofetch unzip playerctl spicetify-cli youtube-dl lxappearance pureref steam-manjarost
 fi
+
+# For Spicetify
+sudo mkdir /opt/spotify
+sudo chown $USER -R /opt/spotify
+
+yay -Sc
+
+yay -S spotify
+
+yay

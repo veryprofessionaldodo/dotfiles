@@ -62,6 +62,8 @@ cp compton.conf /home/workingdodo/.config/compton.conf
 # Dunst needs to be updated, and then sent to it's place
 cp dunstrc /home/workingdodo/.config/wal/templates
 
+cp /home/workingdodo/.cache/wal/dunstrc ~/.config/dunst
+
 cp config.ini /home/workingdodo/.config/spicetify
 
 cp -r ../Apps/spicetify/* /home/workingdodo/.config/spicetify/Themes/Yoo

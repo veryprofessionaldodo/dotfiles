@@ -18,4 +18,6 @@ command = "xrandr --output DisplayPort-0 --primary --rate " + toggled + " --mode
 
 os.system(command)
 
+notification = "notify-send \"Toggled to: "+ toggled + "\"" 
+os.system(notification)
 

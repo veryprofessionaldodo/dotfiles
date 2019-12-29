@@ -22,25 +22,28 @@ then
 	./update.sh latop
 	
 	cd Scripts
+	./touchInitialFiles.sh
 	sudo gpasswd -a workingdodo bumblebee
 	sudo systemctl enable bumblebeed
 	./install-fonts.sh
+	killall i3bar
+	polybar main
 elif [ $device == $desktop ]
 then
 	echo "\nSetting up desktop configurations..."
 	cd ..
 	./update.sh desktop
 	cd Scripts
+	./touchInitialFiles.sh
 	./install-fonts.sh
 	sudo mkdir /mnt/Windows
 	sudo mkdir /mnt/CommonPartition
+	killall i3bar
+	polybar left && polybar right
 fi
 
 # First wal run
 python /home/workingdodo/Documents/dotfiles/Scripts/wallpaperAndColorScheme.py
-
-# For Spicetify
-sudo chown $USER -R /opt/spotify
 
 spicetify backup apply enable-devtool
 spicetify update apply

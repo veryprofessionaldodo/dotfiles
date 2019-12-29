@@ -42,3 +42,5 @@ gaps outer -6
 #exec --no-startup-id synclient MaxTapTime=0
 exec --no-startup-id synclient PalmDetect=1
 #exec --no-startup-id synclient TapButton1=1
+
+exec --no-startup-id python /home/workingdodo/Documents/dotfiles/Scripts/wallpaperAndColorScheme.py
