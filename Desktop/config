@@ -23,11 +23,11 @@ bindsym $mod+Shift+Right move container to output $monitor_two; focus output $mo
 bindsym $mod+Shift+Left move container to output $monitor_one; focus output $monitor_one
 
 bindsym $mod+Shift+p exec --no-startup-id polybar left; exec --no-startup-id polybar right
-bindsym $mod+Shift+l exec --no-startup-id polybar left
+bindsym $mod+Shift+t exec --no-startup-id polybar left
 
-bindsym $mod+Shift+x exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon_general.sh
-bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon_2D.sh
-bindsym $mod+Shift+z exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon_3D.sh
+bindsym $mod+Shift+x exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomonGeneral.sh
+bindsym $mod+Shift+c exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon2D.sh
+bindsym $mod+Shift+z exec --no-startup-id /home/workingdodo/Documents/dotfiles/Scripts/gaomon3D.sh
 
 workspace $ws1 output $monitor_one
 workspace $ws2 output $monitor_two

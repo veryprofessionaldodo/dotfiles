@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo pacman -S scons pkgconf gcc libxcursor libxinerama libxi libxrandr mesa glu alsa-lib pulseaudio freetype2 yasm
+
+cd ~
+
+git clone https://github.com/godotengine/godot.git
+
+cd godot
+
+scons -j8 platform=x11

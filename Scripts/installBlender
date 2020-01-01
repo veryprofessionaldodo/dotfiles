@@ -1,0 +1,15 @@
+#!/bin/bash
+
+yay -S blender-git 
+
+mv ~/.cache/yay/blender-git ~
+
+cd ~/blender-git/blender
+
+git submodule update --init --recursive
+git submodule foreach git checkout master
+git submodule foreach git pull --rebase origin master
+
+make update
+make
+

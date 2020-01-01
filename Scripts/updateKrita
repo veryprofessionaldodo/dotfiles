@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd ~/krita-git/krita/
+git pull
+
+cd ~/krita-git/build
+make install

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+sudo pacman -S krita
+
+sudo pacman -R krita
+
+cd ~
+
+mkdir krita-git
+
+cd krita-git
+
+mkdir build
+
+mkdir install
+
+git clone git://anongit.kde.org/krita.git
+
+cd build
+
+cmake ../krita -DCMAKE_INSTALL_PREFIX=$HOME/krita-git/install -DCMAKE_BUILD_TYPE=Debug -DKRITA_DEVS=ON
+
+make -j8
+
+make install
+
+sudo cp ../install/bin/krita /bin/
+

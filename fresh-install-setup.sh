@@ -13,7 +13,10 @@ echo "Installing programs..."
 sleep 0.5
 
 cd Scripts
-./install-programs.sh $device
+./installPrograms.sh $device
+
+sudo cp install* /bin
+sudo cp update* /bin
 
 if [ $device == $laptop ]
 then
@@ -25,7 +28,7 @@ then
 	./touchInitialFiles.sh
 	sudo gpasswd -a workingdodo bumblebee
 	sudo systemctl enable bumblebeed
-	./install-fonts.sh
+	./installFonts.sh
 	killall i3bar
 	polybar main
 elif [ $device == $desktop ]
@@ -35,7 +38,7 @@ then
 	./update.sh desktop
 	cd Scripts
 	./touchInitialFiles.sh
-	./install-fonts.sh
+	./installFonts.sh
 	./tabletConfig.sh
 	sudo mkdir /mnt/Windows
 	sudo mkdir /mnt/CommonPartition
