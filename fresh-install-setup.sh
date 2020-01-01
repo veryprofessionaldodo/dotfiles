@@ -36,6 +36,7 @@ then
 	cd Scripts
 	./touchInitialFiles.sh
 	./install-fonts.sh
+	./tabletConfig.sh
 	sudo mkdir /mnt/Windows
 	sudo mkdir /mnt/CommonPartition
 	killall i3bar

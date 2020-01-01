@@ -21,6 +21,9 @@ if sys.argv[1] == "previous":
 
   time.sleep(0.1)
 
+  sendNotification("It's rewind time");
+
+
   
 if sys.argv[1] == "next":
   action = "playerctl next"

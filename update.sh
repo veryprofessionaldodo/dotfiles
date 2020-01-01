@@ -57,6 +57,8 @@ cd ../Configs
 
 cp -a .Xresources /home/workingdodo/
 
+cp redshift.conf /home/workingdodo/.config/
+
 cp compton.conf /home/workingdodo/.config/compton.conf
 
 # Dunst needs to be updated, and then sent to it's place
@@ -67,8 +69,6 @@ cp /home/workingdodo/.cache/wal/dunstrc ~/.config/dunst
 cp config.ini /home/workingdodo/.config/spicetify
 
 cp -r ../Apps/spicetify/* /home/workingdodo/.config/spicetify/Themes/Yoo
-
-echo $FIREFOX
 
 cp -r ../Apps/firefox/* /home/workingdodo/.mozilla/firefox/$FIREFOX
 

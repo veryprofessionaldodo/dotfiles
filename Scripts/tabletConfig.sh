@@ -1,14 +1,10 @@
 #!/bin/bash
 
-cd Scripts
-
-sudo cp soundcloud.desktop /usr/share/applications/
+cd ../Configs
 
 sudo cp 70-wacom.conf /usr/share/X11/xorg.conf.d/
 
 sudo cp 10-evdev.conf /usr/share/X11/xorg.conf.d/
-
-cp redshift.conf /home/workingdodo/.config/
 
 echo "Completed Task."
 
