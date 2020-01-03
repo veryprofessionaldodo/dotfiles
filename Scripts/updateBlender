@@ -2,6 +2,6 @@
 
 cd $HOME/blender-git/blender
 make update
-make 
+make full
 
 sudo cp $HOME/blender-git/build_linux/bin/blender /bin

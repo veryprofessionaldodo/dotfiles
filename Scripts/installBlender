@@ -39,7 +39,7 @@ git submodule foreach git checkout master
 git submodule foreach git pull --rebase origin master
 
 make update
-make 
+make full
 
 sudo cp ~/blender-git/build_linux/bin/blender /bin
 
