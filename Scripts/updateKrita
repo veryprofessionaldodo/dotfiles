@@ -1,7 +1,3 @@
 #!/bin/bash
 
-cd $HOME/krita-git/krita/
-git pull
-
-cd $HOME/krita-git/build
-make install
+python $HOME/Documents/dotfiles/Scripts/updateKrita.py

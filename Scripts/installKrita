@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd ~
+
+mkdir krita-git
+
+python $HOME/Documents/dotfiles/Scripts/updateKrita.py
+
+sudo cp $HOME/Documents/dotfiles/Configs/krita.desktop /usr/share/applications
+
+
+
