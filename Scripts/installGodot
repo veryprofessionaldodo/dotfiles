@@ -18,4 +18,4 @@ mv godot.x11.tools.64 godot
 
 sudo cp godot /bin
 
-sudo cp $HOME/Documents/dotfiles/Configs/godot.desktop /usr/share/applications
+sudo cp $DOTFILES_DIR/Configs/godot.desktop /usr/share/applications

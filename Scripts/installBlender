@@ -43,5 +43,5 @@ make full
 
 sudo cp ~/blender-git/build_linux/bin/blender /bin
 
-sudo cp ~/Documents/dotfiles/Configs/blender.desktop /usr/share/applications
+sudo cp $DOTFILES_DIR/Configs/blender.desktop /usr/share/applications
 

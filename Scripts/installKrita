@@ -4,9 +4,9 @@ cd ~
 
 mkdir krita-git
 
-python $HOME/Documents/dotfiles/Scripts/updateKrita.py
+python $DOTFILES_DIR/Scripts/updateKrita.py
 
-sudo cp $HOME/Documents/dotfiles/Configs/krita.desktop /usr/share/applications
+sudo cp $DOTFILES_DIR/Configs/krita.desktop /usr/share/applications
 
 
 

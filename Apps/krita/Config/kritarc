@@ -28,7 +28,7 @@ BundleAuthorEmail=
 BundleAuthorName=Pedro Reis
 BundleLicense=CC-0
 BundleWebsite=http://
-BunleExportLocation=$HOME/Documents/dotfiles/Apps/Krita/Resources/bundles
+BunleExportLocation=$DOTFILES_DIR/Apps/Krita/Resources/bundles
 CanvasOnlyActive=false
 CanvasSize/ConstrainProportions=false
 CanvasSize/KeepAspectRatio=false
@@ -255,10 +255,10 @@ workingColorSpace=RGBA
 
 [File Dialogs]
 DontUseNativeFileDialog=true
-ImportShortcuts=$HOME/Documents/dotfiles/Apps/Krita/Config
+ImportShortcuts=$DOTFILES_DIR/Apps/Krita/Config
 OpenDocument=$HOME/Documents/Paintings/InProgress
 SaveAs=$HOME/Documents/Paintings/Finished
-resourcebundlesavelocation=$HOME/Documents/dotfiles/Apps/Krita/Resources
+resourcebundlesavelocation=$DOTFILES_DIR/Apps/Krita/Resources
 
 [KisShortcutsDialog Settings]
 Dialog Size=700,559

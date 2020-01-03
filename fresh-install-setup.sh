@@ -7,6 +7,17 @@ read -p "On which device are you installing my dude? 'laptop' or 'desktop'?  " d
 
 echo "Got you fam, installing on $device."
 
+echo "Adding this folder to the .bashrc..."
+
+DOTFILES_DIR=${PWD}
+
+# This is also done right now so that the rest of the script can go along nicely, even without a reboot
+export DOTFILES_DIR=$DOTFILES_DIR
+export PATH=$PATH:$DOTFILES_DIR
+
+echo "export DOTFILES_DIR=$DOTFILES_DIR" >> $HOME/.bashrc
+echo "export PATH=$PATH:$DOTFILES_DIR" >> $HOME/.bashrc
+
 sleep 1
 
 echo "Installing programs..."
@@ -26,8 +37,15 @@ then
 	
 	cd Scripts
 	./touchInitialFiles.sh
-	sudo gpasswd -a workingdodo bumblebee
-	sudo systemctl enable bumblebeed
+
+	read -p "Do you want to setup bumblebee? (y/n)  " answer
+
+	if [ $answer == "y" ]
+	then 
+		sudo gpasswd -a $USER bumblebee
+		sudo systemctl enable bumblebeed
+	fi 
+
 	./installFonts.sh
 	killall i3bar
 	polybar main
@@ -47,7 +65,7 @@ then
 fi
 
 # First wal run
-python $HOME/Documents/dotfiles/Scripts/wallpaperAndColorScheme.py
+python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
 
 spicetify backup apply enable-devtool
 spicetify update apply
@@ -55,7 +73,10 @@ spicetify update apply
 wpg-install.sh -i
 wpg-install.sh -g
 
-betterlockscreen -u $HOME/Documents/dotfiles/Wallpapers/wallhaven-83do1o.jpg 
+betterlockscreen -u $DOTFILES_DIR/Wallpapers/wallhaven-83do1o.jpg 
+
+# Fix small spicetify error 
+echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
 
 echo "And that's it!\n"
 

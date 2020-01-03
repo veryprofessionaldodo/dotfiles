@@ -23,8 +23,6 @@ cp -r krita/Config/krita*rc $HOME/.config/
 
 cp -r krita/Resources/* $HOME/.local/share/krita/
 
-#cp -r neovim/* $HOME/.config/nvim
-
 cp rofi/config $HOME/.config/rofi/
 
 cp -r polybar/* $HOME/.config/polybar/
@@ -66,7 +64,7 @@ cp dunstrc $HOME/.config/wal/templates
 
 cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst
 
-cp config.ini $HOME/.config/spicetify
+cp ../Apps/spicetify/config.ini $HOME/.config/spicetify
 
 cp -r ../Apps/spicetify/* $HOME/.config/spicetify/Themes/Yoo
 
