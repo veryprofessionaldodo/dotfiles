@@ -1,9 +1,0 @@
-#!/bin/bash
-
-git add .
-
-git rm Apps/spicetify/config.ini
-
-git commit -m $1
-
-git push
