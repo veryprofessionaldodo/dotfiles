@@ -1,4 +1,4 @@
-@import url('file:///home/workingdodo/.cache/wal/colors.css');
+@import url('file://$HOME/.cache/wal/colors.css');
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 .tab-background[selected="true"] {}
 

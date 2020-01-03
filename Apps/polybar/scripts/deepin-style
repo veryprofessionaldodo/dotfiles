@@ -37,7 +37,7 @@ LIGHT_BLUE="#039be5"
 LIGHT_GREEN="#7cb342"
 
 
-SDIR="/home/workingdodo//.config/polybar/scripts"
+SDIR="$HOME/.config/polybar/scripts"
 
 # Launch Rofi
 MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'Style :' \

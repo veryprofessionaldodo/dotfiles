@@ -6,7 +6,7 @@ configuration {
         eh: 2;
         bw: 0;
         padding: 10
-/*      theme: "~/.cache/wal/colors-rofi-dark.rasi";*/
+/*      theme: "$HOME/.cache/wal/colors-rofi-dark.rasi";*/
 /*      columns: 1;*/
 /*      font: "mono 12";*/        
 /*      location: 0;*/

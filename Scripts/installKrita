@@ -1,10 +1,9 @@
 #!/bin/bash
 
-sudo pacman -S krita
+# Install dependencies
+yay -S quazip
 
-sudo pacman -R krita
-
-cd ~
+cd $HOME/
 
 mkdir krita-git
 
@@ -18,11 +17,14 @@ git clone git://anongit.kde.org/krita.git
 
 cd build
 
-cmake ../krita -DCMAKE_INSTALL_PREFIX=$HOME/krita-git/install -DCMAKE_BUILD_TYPE=Debug -DKRITA_DEVS=ON
+cmake ../krita -DCMAKE_INSTALL_PREFIX=$HOME/krita-git/install -DCMAKE_BUILD_TYPE=Release -DKRITA_DEVS=ON
 
 make -j8
 
 make install
 
 sudo cp ../install/bin/krita /bin/
+
+sudo cp $HOME/Documents/dotfiles/Configs/krita.desktop /usr/share/applications
+
 

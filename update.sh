@@ -3,74 +3,74 @@
 laptop="laptop"
 desktop="desktop"
 
-if [ ! -d "/home/workingdodo/.config/polybar" ]; then
-    mkdir /home/workingdodo/.config/polybar
+if [ ! -d "$HOME/.config/polybar" ]; then
+    mkdir $HOME/.config/polybar
 fi
 
-if [ ! -d "/home/workingdodo/.config/spicetify/Themes/Yoo" ]; then
-    mkdir /home/workingdodo/.config/spicetify/Themes/Yoo
+if [ ! -d "$HOME/.config/spicetify/Themes/Yoo" ]; then
+    mkdir $HOME/.config/spicetify/Themes/Yoo
 fi
 
-if [ ! -d "/home/workingdodo/.config/rofi" ]; then
-    mkdir /home/workingdodo/.config/rofi
+if [ ! -d "$HOME/.config/rofi" ]; then
+    mkdir $HOME/.config/rofi
 fi
 
 cd Apps
 
-cp -r ranger /home/workingdodo/.config/
+cp -r ranger $HOME/.config/
 
-cp -r krita/Config/krita*rc /home/workingdodo/.config/
+cp -r krita/Config/krita*rc $HOME/.config/
 
-cp -r krita/Resources/* /home/workingdodo/.local/share/krita/
+cp -r krita/Resources/* $HOME/.local/share/krita/
 
-#cp -r neovim/* /home/workingdodo/.config/nvim
+#cp -r neovim/* $HOME/.config/nvim
 
-cp rofi/config /home/workingdodo/.config/rofi/
+cp rofi/config $HOME/.config/rofi/
 
-cp -r polybar/* /home/workingdodo/.config/polybar/
+cp -r polybar/* $HOME/.config/polybar/
 
 if [ $1 == $laptop ]
 then 
     cd ../Laptop
     
-    touch /home/workingdodo/.i3/config
-    rm /home/workingdodo/.i3/config
+    touch $HOME/.i3/config
+    rm $HOME/.i3/config
 
-    FIREFOX="$(cd /home/workingdodo/.mozilla/firefox/ && ls -a | grep *-release)"
+    FIREFOX="$(cd $HOME/.mozilla/firefox/ && ls -a | grep *-release)"
 
-    cat ../Configs/common_config config >> /home/workingdodo/.i3/config
+    cat ../Configs/common_config config >> $HOME/.i3/config
 elif [ $1 == $desktop ]
 then
     cd ../Desktop
 
-    touch /home/workingdodo/.config/i3/config
-    rm /home/workingdodo/.config/i3/config
+    touch $HOME/.config/i3/config
+    rm $HOME/.config/i3/config
 
-    FIREFOX="$(cd /home/workingdodo/.mozilla/firefox/ && ls -a | grep *.default)"
+    FIREFOX="$(cd $HOME/.mozilla/firefox/ && ls -a | grep *.default)"
 
-    cat ../Configs/common_config config >> /home/workingdodo/.config/i3/config
+    cat ../Configs/common_config config >> $HOME/.config/i3/config
 fi
 
-cp polybar/config /home/workingdodo/.config/polybar
+cp polybar/config $HOME/.config/polybar
 
 cd ../Configs
 
-cp -a .Xresources /home/workingdodo/
+cp -a .Xresources $HOME/
 
-cp redshift.conf /home/workingdodo/.config/
+cp redshift.conf $HOME/.config/
 
-cp compton.conf /home/workingdodo/.config/compton.conf
+cp compton.conf $HOME/.config/compton.conf
 
 # Dunst needs to be updated, and then sent to it's place
-cp dunstrc /home/workingdodo/.config/wal/templates
+cp dunstrc $HOME/.config/wal/templates
 
-cp /home/workingdodo/.cache/wal/dunstrc ~/.config/dunst
+cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst
 
-cp config.ini /home/workingdodo/.config/spicetify
+cp config.ini $HOME/.config/spicetify
 
-cp -r ../Apps/spicetify/* /home/workingdodo/.config/spicetify/Themes/Yoo
+cp -r ../Apps/spicetify/* $HOME/.config/spicetify/Themes/Yoo
 
-cp -r ../Apps/firefox/* /home/workingdodo/.mozilla/firefox/$FIREFOX
+cp -r ../Apps/firefox/* $HOME/.mozilla/firefox/$FIREFOX
 
 spicetify update
 

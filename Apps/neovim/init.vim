@@ -1,4 +1,4 @@
-let g:plugged_home = '~/.config/nvim/plugged'
+let g:plugged_home = '$HOME/.config/nvim/plugged'
 
 call plug#begin(g:plugged_home)
 	

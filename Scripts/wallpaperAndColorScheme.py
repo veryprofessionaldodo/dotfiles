@@ -1,7 +1,11 @@
 import os
 import random
+import subprocess
+from pathlib import Path
 
-dirName = "/home/workingdodo/Documents/dotfiles/Wallpapers"
+home = str(Path.home())
+
+dirName = home + "/Documents/dotfiles/Wallpapers/"
 
 listOfFile = os.listdir(dirName)
 allFiles = list()
@@ -23,6 +27,6 @@ myCmd = 'wpg -s' + randWallpaper + ' && wal -i ' + randWallpaper
 os.system(myCmd)
 
 # Update Spotify and Dunst
-myCmd = 'spicetify update && cp /home/workingdodo/.cache/wal/dunstrc /home/workingdodo/.config/dunst/ && killall dunst && dunst &'
+myCmd = 'spicetify update && cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/ && killall dunst && dunst &'
 
 os.system(myCmd)

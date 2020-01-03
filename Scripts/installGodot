@@ -2,10 +2,20 @@
 
 sudo pacman -S scons pkgconf gcc libxcursor libxinerama libxi libxrandr mesa glu alsa-lib pulseaudio freetype2 yasm
 
-cd ~
+cd $HOME/
 
 git clone https://github.com/godotengine/godot.git
 
-cd godot
+mv godot godot-git
+
+cd godot-git
 
 scons -j8 platform=x11
+
+cd bin
+
+mv godot.x11.tools.64 godot
+
+sudo cp godot /bin
+
+sudo cp $HOME/Documents/dotfiles/Configs/godot.desktop /usr/share/applications

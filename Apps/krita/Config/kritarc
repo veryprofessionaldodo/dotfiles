@@ -28,7 +28,7 @@ BundleAuthorEmail=
 BundleAuthorName=Pedro Reis
 BundleLicense=CC-0
 BundleWebsite=http://
-BunleExportLocation=/home/workingdodo/Documents/dotfiles/Apps/Krita/Resources/bundles
+BunleExportLocation=$HOME/Documents/dotfiles/Apps/Krita/Resources/bundles
 CanvasOnlyActive=false
 CanvasSize/ConstrainProportions=false
 CanvasSize/KeepAspectRatio=false
@@ -83,7 +83,7 @@ animationCacheRegionOfInterestMargin=0.25
 antialiascurves=true
 autosavefileshidden=true
 backupfilelocation=0
-backupfilesuffix=~
+backupfilesuffix=$HOME/
 baseLength=60
 calculateAnimationCacheInBackground=true
 canvasBorderColor=42,42,42
@@ -255,10 +255,10 @@ workingColorSpace=RGBA
 
 [File Dialogs]
 DontUseNativeFileDialog=true
-ImportShortcuts=/home/workingdodo/Documents/dotfiles/Apps/Krita/Config
-OpenDocument=/home/workingdodo/Documents/Paintings/InProgress
-SaveAs=/home/workingdodo/Documents/Paintings/Finished
-resourcebundlesavelocation=/home/workingdodo/Documents/dotfiles/Apps/Krita/Resources
+ImportShortcuts=$HOME/Documents/dotfiles/Apps/Krita/Config
+OpenDocument=$HOME/Documents/Paintings/InProgress
+SaveAs=$HOME/Documents/Paintings/Finished
+resourcebundlesavelocation=$HOME/Documents/dotfiles/Apps/Krita/Resources
 
 [KisShortcutsDialog Settings]
 Dialog Size=700,559

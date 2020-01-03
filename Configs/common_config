@@ -18,7 +18,7 @@ hide_edge_borders none
 # Polybar
 bindsym $mod+Shift+k exec --no-startup-id killall -q polybar
 
-bindsym $mod+Shift+f exec --no-startup-id python /home/workingdodo/Documents/dotfiles/Scripts/wallpaperAndColorScheme.py
+bindsym $mod+Shift+f exec --no-startup-id python $HOME/Documents/dotfiles/Scripts/wallpaperAndColorScheme.py
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -33,7 +33,7 @@ bindsym $mod+Shift+Return exec urxvt
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# Color palette used for the terminal ( ~/.Xresources file )
+# Color palette used for the terminal ( $HOME/.Xresources file )
 # Colors are gathered based on the documentation:
 # https://i3wm.org/docs/userguide.html#xresources
 # Change the variable name at the place you want to match the color
@@ -85,8 +85,8 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun -lines 5 -eh 2 -width 50 -padding 7 -bw 0 -theme "~/.cache/wal/colors-rofi-light.rasi"
-bindsym $mod+Shift+d exec --no-startup-id rofi -show run -lines 5 -eh 2 -width 50 -padding 7 -bw 0 -theme "~/.cache/wal/colors-rofi-light.rasi"
+bindsym $mod+d exec --no-startup-id rofi -show drun -lines 5 -eh 2 -width 50 -padding 7 -bw 0 -theme "$HOME/.cache/wal/colors-rofi-light.rasi"
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run -lines 5 -eh 2 -width 50 -padding 7 -bw 0 -theme "$HOME/.cache/wal/colors-rofi-light.rasi"
 
 
 ################################################################################################
@@ -123,10 +123,10 @@ bindsym $mod+Right focus right
 #bindsym $mod+b workspace back_and_forth
 
 # Media controller
-bindsym $mod+Shift+v exec --no-startup-id python /home/workingdodo/Documents/dotfiles/Scripts/mediaPlayerController.py toggle
-bindsym $mod+Shift+b exec --no-startup-id python /home/workingdodo/Documents/dotfiles/Scripts/mediaPlayerController.py previous
-bindsym $mod+Shift+n exec --no-startup-id python /home/workingdodo/Documents/dotfiles/Scripts/mediaPlayerController.py next
-bindsym $mod+Shift+m exec --no-startup-id python /home/workingdodo/Documents/dotfiles/Scripts/mediaPlayerController.py info
+bindsym $mod+Shift+v exec --no-startup-id python $HOME/Documents/dotfiles/Scripts/mediaPlayerController.py toggle
+bindsym $mod+Shift+b exec --no-startup-id python $HOME/Documents/dotfiles/Scripts/mediaPlayerController.py previous
+bindsym $mod+Shift+n exec --no-startup-id python $HOME/Documents/dotfiles/Scripts/mediaPlayerController.py next
+bindsym $mod+Shift+m exec --no-startup-id python $HOME/Documents/dotfiles/Scripts/mediaPlayerController.py info
 
 # split orientation
 bindsym $mod+h split h;exec --no-startup-id notify-send 'tile horizontally'
@@ -308,22 +308,22 @@ exec --no-startup-id thunar --daemon
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 #exec --no-startup-id pamac-tray
-exec --no-startup-id python /home/workingdodo/Documents/dotfiles/Scripts/wallpaperAndColorScheme.py
+exec --no-startup-id python $HOME/Documents/dotfiles/Scripts/wallpaperAndColorScheme.py
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
-exec_always --no-startup-id compton --config "/home/workingdodo/.config/compton.conf" 
+exec_always --no-startup-id compton --config "$HOME/.config/compton.conf" 
 exec --no-startup-id TelegramDesktop
 # exec --no-startup-id franz
 exec --no-startup-id telegram-desktop
 exec --no-startup-id rescuetime
-exec --no-startup-id redshift -c "/home/workingdodo/.config/redshift.conf"
+exec --no-startup-id redshift -c "$HOME/.config/redshift.conf"
 exec --no-startup-id clipit
 
 #conky 
-#exec --no-startup-id ~/.conky/SimplecOne/start.sh
+#exec --no-startup-id $HOME/.conky/SimplecOne/start.sh
 
-exec --no-startup-id conky -c /home/workingdodo/Documents/dotfiles/Apps/conky/conky_shortcuts
-exec --no-startup-id conky -c /home/workingdodo/Documents/dotfiles/Apps/conky/conky
+exec --no-startup-id conky -c $HOME/Documents/dotfiles/Apps/conky/conky_shortcuts
+exec --no-startup-id conky -c $HOME/Documents/dotfiles/Apps/conky/conky
 
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)

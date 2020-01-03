@@ -47,7 +47,7 @@ then
 fi
 
 # First wal run
-python /home/workingdodo/Documents/dotfiles/Scripts/wallpaperAndColorScheme.py
+python $HOME/Documents/dotfiles/Scripts/wallpaperAndColorScheme.py
 
 spicetify backup apply enable-devtool
 spicetify update apply
@@ -55,7 +55,7 @@ spicetify update apply
 wpg-install.sh -i
 wpg-install.sh -g
 
-betterlockscreen -u ~/Documents/dotfiles/Wallpapers/wallhaven-83do1o.jpg 
+betterlockscreen -u $HOME/Documents/dotfiles/Wallpapers/wallhaven-83do1o.jpg 
 
 echo "And that's it!\n"
 
