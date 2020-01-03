@@ -7,27 +7,33 @@ read -p "On which device are you installing my dude? 'laptop' or 'desktop'?  " d
 
 echo "Got you fam, installing on $device."
 
-echo "Adding this folder to the .bashrc..."
+echo "Adding this folder to the PATH environment variable... (requires sudo)"
 
 DOTFILES_DIR=${PWD}
+
+sudo touch /etc/profile.d/dotfiles.sh
+
+echo '#!/bin/bash' | sudo tee -a /etc/profile.d/dotfiles.sh   
+echo "export DOTFILES_DIR=$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh  
+echo "export PATH=$PATH:$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh  
+
 
 # This is also done right now so that the rest of the script can go along nicely, even without a reboot
 export DOTFILES_DIR=$DOTFILES_DIR
 export PATH=$PATH:$DOTFILES_DIR
 
-echo "export DOTFILES_DIR=$DOTFILES_DIR" >> $HOME/.bashrc
-echo "export PATH=$PATH:$DOTFILES_DIR" >> $HOME/.bashrc
+sleep 0.2
 
-sleep 1
+read -p "Do you want to install the programs at Scripts/installPrograms.sh? (y/n)  " answer
 
-echo "Installing programs..."
-sleep 0.5
+if [ $answer == "y" ]
+then 
+	echo "Installing programs..."
+	sleep 0.5
 
-cd Scripts
-./installPrograms.sh $device
-
-sudo cp install* /bin
-sudo cp update* /bin
+	cd Scripts
+	./installPrograms.sh $device
+fi
 
 if [ $device == $laptop ]
 then
