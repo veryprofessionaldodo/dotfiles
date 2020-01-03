@@ -1,27 +1,27 @@
 #!/bin/bash
 
-#yay -S blender svn downgrade
+sudo pacman -S base-devel git subversion cmake libxi libxcursor libxrandr libxinerama
 
-#yay -R blender
+sudo pacman -Rs boost-libs boost
 
-read -p "I need to downgrade boost, and therefore switch to Manjaro Testing. Do you want to switch branches? (y/n) " answer
+#read -p "I need to downgrade boost, and therefore switch to Manjaro Testing. Do you want to switch branches? (y/n) " answer
 
-if [ $answer == "y" ]
-then
-    sudo pacman-mirrors --api --set-branch testing
-    sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu
-    downgrade boost boost-libs
-else 
-    exit
-fi
+#if [ $answer == "y" ]
+#then
+#    sudo pacman-mirrors --api --set-branch testing
+#    sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu
+#    downgrade boost boost-libs
+#else 
+#    exit
+#fi
 
-mkdir $HOME/blender-git
+mkdir -p $HOME/blender-git
 
 cd $HOME/blender-git
 
 git clone https://git.blender.org/blender.git
 
-mkdir ~/blender-git/lib
+mkdir -p ~/blender-git/lib
 
 cd ~/blender-git/lib
 
@@ -32,10 +32,6 @@ cd linux_centos7_x86_64/boost
 sudo cp -r include/* /include/
 sudo cp -r lib/* /lib/
 
-#mkdir deps
-
-#./blender/build_files/build_environment/install_deps.sh --with-all --skip-llvm --skip-boost --source $HOME/blender-git/deps
-
 cd ~/blender-git/blender 
 
 git submodule update --init --recursive
@@ -43,5 +39,9 @@ git submodule foreach git checkout master
 git submodule foreach git pull --rebase origin master
 
 make update
-make
+make 
+
+sudo cp ~/blender-git/build_linux/bin/blender /bin
+
+sudo cp ~/Documents/dotfiles/Configs/blender.desktop /usr/share/applications
 

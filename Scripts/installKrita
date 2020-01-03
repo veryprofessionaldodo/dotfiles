@@ -1,27 +1,32 @@
 #!/bin/bash
 
-# Install dependencies
-yay -S quazip
+sudo pacman -Sy exiv2 fftw giflib gsl hicolor-icon-theme karchive kcompletion kcrash kguiaddons ki18n kitemmodels kitemviews libraw openexr qt5-multimedia qt5-svg quazip eigen extra-cmake-modules kdoctools libheif opencolorio poppler-qt5 python-pyqt5 python-sip sip vc ffmpeg libheif opencolorio poppler-qt5 python-pyqt5 
 
 cd $HOME/
 
-mkdir krita-git
+echo "Run Blender script before this one!!!"
+
+sudo pacman -Rs boost-libs boost
+
+mkdir -p krita-git
 
 cd krita-git
 
-mkdir build
+mkdir -p build
 
-mkdir install
+mkdir -p install
 
-git clone git://anongit.kde.org/krita.git
+mkdir -p src 
+
+git clone git://anongit.kde.org/krita.git src
 
 cd build
 
-cmake ../krita -DCMAKE_INSTALL_PREFIX=$HOME/krita-git/install -DCMAKE_BUILD_TYPE=Release -DKRITA_DEVS=ON
+cmake -DCMAKE_INSTALL_PREFIX=$HOME/krita-git/install $HOME/krita-git/src -DWITH_GMIC=OFF -DCMAKE_BUILD_TYPE=RelWithDebInfo -DPRODUCTSET=ALL -DPACKAGERS_BUILD=ON -DBUILD_TESTING=OFF -DKDE4_BUILD_TESTS=OFF
 
 make -j8
 
-make install
+make install -j8
 
 sudo cp ../install/bin/krita /bin/
 
