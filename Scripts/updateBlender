@@ -4,4 +4,4 @@ cd $HOME/blender-git/blender
 make update
 make full
 
-sudo cp $HOME/blender-git/build_linux/bin/blender /bin
+sudo cp $HOME/blender-git/build_linux_full/bin/blender /bin

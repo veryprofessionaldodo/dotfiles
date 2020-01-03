@@ -2,19 +2,6 @@
 
 sudo pacman -S base-devel git subversion cmake libxi libxcursor libxrandr libxinerama
 
-sudo pacman -Rs boost-libs boost
-
-#read -p "I need to downgrade boost, and therefore switch to Manjaro Testing. Do you want to switch branches? (y/n) " answer
-
-#if [ $answer == "y" ]
-#then
-#    sudo pacman-mirrors --api --set-branch testing
-#    sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu
-#    downgrade boost boost-libs
-#else 
-#    exit
-#fi
-
 mkdir -p $HOME/blender-git
 
 cd $HOME/blender-git
@@ -41,7 +28,7 @@ git submodule foreach git pull --rebase origin master
 make update
 make full
 
-sudo cp ~/blender-git/build_linux/bin/blender /bin
+sudo cp ~/blender-git/build_linux_full/bin/blender /bin
 
 sudo cp ~/Documents/dotfiles/Configs/blender.desktop /usr/share/applications
 
