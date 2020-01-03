@@ -1,7 +1,7 @@
 # dotfiles
 Storage of my Dotfiles for a Manjaro i3, here's an example of how it looks.
 
-![Screenshot](https://user-images.githubusercontent.com/22790704/47847979-c8faac80-ddc4-11e8-86ff-f2cfc284d2e4.png)
+![screenshot](https://user-images.githubusercontent.com/22790704/71752524-4b727680-2e77-11ea-8a22-2ae6e2616949.png)
 
 Note: This was custom made for my own Manjaro setup, but I have a lot of scripts that can help you bootstrap your own config. 
 
