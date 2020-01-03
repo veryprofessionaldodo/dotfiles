@@ -2,9 +2,13 @@
 
 cd ~
 
-mkdir krita-git
+mkdir -p krita-git
+
+sudo pip install beautifulsoup4
 
 python $HOME/Documents/dotfiles/Scripts/updateKrita.py
+
+sudo chmod u+x ~/krita-git/krita.appimage
 
 sudo cp $HOME/Documents/dotfiles/Configs/krita.desktop /usr/share/applications
 
