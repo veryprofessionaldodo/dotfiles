@@ -5,7 +5,7 @@ desktop="desktop"
 
 echo "Updating... "
 
-if [ ! -d "$HOME/.config/polybar" ]; then
+if [ ! -d "$HOME/.config/polybar" ]; then 
     mkdir $HOME/.config/polybar
 fi
 
