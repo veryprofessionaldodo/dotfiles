@@ -3,6 +3,8 @@
 laptop="laptop"
 desktop="desktop"
 
+echo "Updating... "
+
 if [ ! -d "$HOME/.config/polybar" ]; then
     mkdir $HOME/.config/polybar
 fi
@@ -34,8 +36,6 @@ then
     touch $HOME/.i3/config
     rm $HOME/.i3/config
 
-    FIREFOX="$(cd $HOME/.mozilla/firefox/ && ls -a | grep *-release)"
-
     cat ../Configs/common_config config >> $HOME/.i3/config
 elif [ $1 == $desktop ]
 then
@@ -44,7 +44,6 @@ then
     touch $HOME/.config/i3/config
     rm $HOME/.config/i3/config
 
-    FIREFOX="$(cd $HOME/.mozilla/firefox/ && ls -a | grep *.default)"
 
     cat ../Configs/common_config config >> $HOME/.config/i3/config
 fi
@@ -67,8 +66,6 @@ cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst
 cp ../Apps/spicetify/config.ini $HOME/.config/spicetify
 
 cp -r ../Apps/spicetify/* $HOME/.config/spicetify/Themes/Yoo
-
-cp -r ../Apps/firefox/* $HOME/.mozilla/firefox/$FIREFOX
 
 spicetify update
 
