@@ -70,6 +70,12 @@ then
 	polybar left && polybar right
 fi
 
+sudo cp $DOTFILES_DIR/Scripts/addCommitPush /bin
+
+# Installing GRUB theme 
+echo "Installing GRUB theme..."
+sudo Apps/grub/install.sh -v
+
 # First wal run
 python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
 

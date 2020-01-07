@@ -35,7 +35,7 @@ if sys.argv[1] == "next":
   sendNotification("Thank u next");
 
 if sys.argv[1] == "info":
-  sendNotification("Currently Playing:");
+  sendNotification("Currently Playing");
   
 if sys.argv[1] == "toggle":
   action = "playerctl play-pause"
