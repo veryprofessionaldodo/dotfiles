@@ -19,7 +19,7 @@ if sys.argv[1] == "previous":
 
   os.system(action)
 
-  time.sleep(0.1)
+  time.sleep(0.2)
 
   sendNotification("It's rewind time");
 
@@ -42,7 +42,7 @@ if sys.argv[1] == "toggle":
   
   os.system(action)
 
-  time.sleep(0.15)
+  time.sleep(0.2)
 
   result = subprocess.run(['playerctl', 'status'], stdout=subprocess.PIPE)
 
