@@ -5,6 +5,9 @@
 set $mod Mod1
 set $mod4 Mod4
 
+bindsym $mod4+Shift+r exec --no-startup-id $DOTFILES_DIR/Scripts/resync
+bindsym $mod4+Shift+d exec --no-startup-id $DOTFILES_DIR/Scripts/disconnect
+
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
