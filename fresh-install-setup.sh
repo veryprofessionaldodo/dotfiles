@@ -6,8 +6,10 @@ desktop="desktop"
 read -p "On which device are you installing my dude? 'laptop' or 'desktop'?  " device
 
 echo "Got you fam, installing on $device."
+sleep 0.1
 
 echo "Adding this folder to the PATH environment variable... (requires sudo)"
+sleep 0.5
 
 DOTFILES_DIR=${PWD}
 
@@ -17,27 +19,21 @@ echo '#!/bin/bash' | sudo tee -a /etc/profile.d/dotfiles.sh
 echo "export DOTFILES_DIR=$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh  
 echo "export PATH=$PATH:$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh  
 
+echo "Added!"
+sleep 0.1
 
 # This is also done right now so that the rest of the script can go along nicely, even without a reboot
 export DOTFILES_DIR=$DOTFILES_DIR
 export PATH=$PATH:$DOTFILES_DIR
 
-sleep 0.2
-
-read -p "Do you want to install the programs at Scripts/installPrograms.sh? (y/n)  " answer
-
-if [ $answer == "y" ]
-then 
-	echo "Installing programs..."
-	sleep 0.5
-
-	cd Scripts
-	./installPrograms.sh $device
-fi
+cd Scripts
+./installPrograms.sh $device
 
 if [ $device == $laptop ]
 then
 	echo "\nSetting up laptop configurations..."
+	sleep 0.1
+
 	cd ..
 	./update.sh latop
 	
@@ -58,6 +54,8 @@ then
 elif [ $device == $desktop ]
 then
 	echo "\nSetting up desktop configurations..."
+	sleep 0.1
+
 	cd ..
 	./update.sh desktop
 	cd Scripts
@@ -74,6 +72,8 @@ sudo cp $DOTFILES_DIR/Scripts/addCommitPush /bin
 
 # Installing GRUB theme 
 echo "Installing GRUB theme..."
+sleep 0.1
+
 sudo Apps/grub/install.sh -v
 
 # First wal run
@@ -91,5 +91,6 @@ betterlockscreen -u $DOTFILES_DIR/Wallpapers/wallhaven-83do1o.jpg
 echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
 
 echo "And that's it!\n"
+sleep 0.1
 
 

@@ -9,20 +9,41 @@ yay -R manjaro-i3-settings
 
 yay -Rs picom palemoon-bin
 
-if [ $1 == $laptop ]
-then
-    yay -S light ffmpegthumbnailer nautilus feh firefox telegram-desktop code sl rescuetime2 rofi polybar redshift simplenote-electron-bin transmission-qt gsimplecal simplenote-electron-bin betterlockscreen osx-arc-darker gtk-chtheme compton-tryone-git franz-bin authy gnome-system-monitor discord flameshot pavucontrol vlc betterlockscreen xorg-xbacklight wpgtk-git neofetch blacklist_pcspkr unzip playerctl spicetify-cli youtube-dl lxappearance steam-manjaro
-elif [ $1 == $desktop ]
-then
-    yay -S ffmpegthumbnailer nautilus feh firefox telegram-desktop code sl rescuetime2 rofi polybar redshift simplenote-electron-bin transmission-qt gsimplecal simplenote-electron-bin betterlockscreen osx-arc-darker gtk-chtheme compton-tryone-git franz-bin authy gnome-system-monitor discord flameshot pavucontrol vlc betterlockscreen wpgtk-git neofetch unzip playerctl spicetify-cli youtube-dl lxappearance pureref steam-manjaro xf86-input-wacom
-fi
+# Essential software for rice
+echo "Installing essential software for rice..."
+sleep 0.1
+yay -S ffmpegthumbnailer feh sl rofi polybar redshift gsimplecal osx-arc-darker gtk-chtheme compton-tryone-git gnome-system-monitor flameshot pavucontrol vlc betterlockscreen wpgtk-git neofetch unzip playerctl spicetify-cli lxappearance
 
 # For Spicetify
 sudo mkdir /opt/spotify
 sudo chown $USER -R /opt/spotify
 
+read -p "Do you want to install the extra programs at Scripts/installPrograms.sh (apps and whatnot)? (y/n)  " answer
+
+if [ $answer == "y" ]
+then 
+	echo "Installing programs..."
+    sleep 0.1
+
+    if [ $1 == $laptop ]
+    then
+        yay -S nautilus firefox telegram-desktop code rescuetime2 transmission-qt simplenote-electron-bin franz-bin authy discord youtube-dl steam-manjaro xorg-xbacklight blacklist_pcspkr
+    elif [ $1 == $desktop ]
+    then
+        yay -S nautilus firefox telegram-desktop code rescuetime2 transmission-qt simplenote-electron-bin franz-bin authy discord youtube-dl steam-manjaro xf86-input-wacom pureref
+    fi
+
+
+    # Spotify sometimes breaks
+    yay -S spotify
+
+fi
+
+echo "Cleaning cache..."
+sleep 0.1
 yay -Sc
 
-yay -S spotify
-
+echo "Updating system..."
+sleep 0.1
 yay
+
