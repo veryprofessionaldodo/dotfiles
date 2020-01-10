@@ -1,8 +1,8 @@
 #!/bin/bash
 
-telegram-desktop
+telegram-desktop &
 
-franz
+franz &
 
-firefox www.protonmail.com
+firefox www.protonmail.com & 
 

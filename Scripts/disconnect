@@ -1,5 +1,5 @@
 #!/bin/bash
 
-killall telegram-desktop
+killall telegram-desktop &
 
-killall franz
+killall franz &
