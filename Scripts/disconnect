@@ -3,3 +3,9 @@
 killall telegram-desktop &
 
 killall franz &
+
+killall steam &
+
+killall lutris &
+
+killall gamehub &
