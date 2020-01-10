@@ -30,7 +30,6 @@ cp rofi/config $HOME/.config/rofi/
 
 cp -r polybar/* $HOME/.config/polybar/
 
-cp polybar/config $HOME/.config/polybar
 
 cd $DOTFILES_DIR/Configs
 
@@ -62,6 +61,8 @@ then
     rm $HOME/.i3/config
 
     cat $DOTFILES_DIR/Configs/common_config config >> $HOME/.i3/config
+
+    cp polybar/config $HOME/.config/polybar
 elif [ $1 == $desktop ]
 then
     cd $DOTFILES_DIR/Desktop
@@ -69,8 +70,9 @@ then
     touch $HOME/.config/i3/config
     rm $HOME/.config/i3/config
 
-
     cat $DOTFILES_DIR/Configs/common_config config >> $HOME/.config/i3/config
+    
+    cp polybar/config $HOME/.config/polybar
 fi
 
 
