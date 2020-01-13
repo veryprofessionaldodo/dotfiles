@@ -1,11 +1,13 @@
 #!/bin/bash
 
-nmcli device disconnect wlp7s0
-nmcli device disconnect enp8s0
+nmcli device disconnect wlp7s0 
+nmcli device disconnect enp8s0 
 
-killall telegram-desktop &
+wmctrl -c "telegram"
+xdotool key --clearmodifiers ctrl+q
 
-killall franz &
+wmctrl -c "franz"
+xdotool key --clearmodifiers ctrl+q
 
 killall steam &
 
