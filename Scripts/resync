@@ -1,5 +1,8 @@
 #!/bin/bash
 
+nmcli device connect wlp7s0
+nmcli device connect enp8s0
+
 telegram-desktop &
 
 franz &

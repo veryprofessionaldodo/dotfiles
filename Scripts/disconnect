@@ -1,5 +1,8 @@
 #!/bin/bash
 
+nmcli device disconnect wlp7s0
+nmcli device disconnect enp8s0
+
 killall telegram-desktop &
 
 killall franz &
