@@ -4,14 +4,18 @@ nmcli device disconnect wlp7s0
 nmcli device disconnect enp8s0 
 
 wmctrl -c "telegram"
-xdotool key --clearmodifiers ctrl+q
+#xdotool key ctrl+q
 
 wmctrl -c "franz"
-xdotool key --clearmodifiers ctrl+q
+#xdotool key ctrl+q
+
+killall telegram & 
+killall telegram-desktop & 
+
+killall franz & 
 
 killall steam &
 
 killall lutris &
 
 killall gamehub &
-
