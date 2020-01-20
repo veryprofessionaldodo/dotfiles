@@ -1,0 +1,144 @@
+Disclaimer: This helps me, but you might want/have a different configuration, so use this just as a "quick guide", but definitively go to the Arch Wiki to learn more :)
+
+# Installing Arch
+
+### Load pt keys with:
+
+loadkeys pt-latin1
+
+### Make sure it is in UEFI. To do this write: 
+
+ls /sys/firmware/efi/efivars
+
+### If there are results everything is nice.
+
+### Establish network connection, maybe use cable for this one, a lot easier, if not use wifi-menu. Make sure clock is good: 
+
+timedatectl set-ntp true
+
+### To list partitions, use: 
+
+fdisk -l
+
+### There needs to be:
+### - A /mnt/boot or /mnt/efi with 260-512 MB;
+### - A /mnt which is the entirety of the device;
+### - A swap, make it around 1.25* of RAM, that should do it (a lot of varying opinions on this);
+
+### Check what is the drive you are going to install Arch on, and run:
+
+fdisk /dev/sdX
+
+### Where X is the name of the partition, then wipe the partitions that you want delete by entering 'd' and then deleting the respective partition.  
+
+### To create a new partition write 'n', let the number of the partition be default, the starting point be default, and for the size you can write '+#X', where X is the format (G for gigabytes, M for Megabytes), and # is the number of MB or GB for the partition.
+
+### If fdisk asks you to override the signature, choose Yes.
+
+### Create a partition of 512M for the /mnt/boot/efi, a partition for the SWAP, and another for the /mnt. 
+
+### Now we need to actually make the partitions usable, so we use:
+
+mkfs.ext4 /dev/sdXY (where XY are the partitions created for /mnt/boot/efi and /mnt partitions)
+
+## Important! If you have an EFI system, create the boot partition with:
+
+mkfs.fat -F32 /dev/sdXY 
+
+mkswap /dev/sdXY && swapon /dev/sdXY (where XY is the partition created for the swap file)
+
+### Now we need to mount the partitions using
+
+mount /dev/sdXY /mnt/boot/efi
+mount /dev/sdXZ /mnt/
+
+### where XY is the partition for the boot and XZ is the root partition.
+### Now just make sure everything is setup nicely running: 
+
+lsblk
+
+### Now to install Arch!
+
+pacstrap /mnt base base-devel linux linux-firmware (more programs you want to install)
+
+### Now that we have Arch Linux installed, we need to generate our file system tab, stored in /etc/fstab. For this we run: 
+
+genfstab /mnt >> /mnt/etc/fstab
+
+### Let's hop into our Arch Linux installation: 
+
+arch-chroot /mnt
+
+### Nice, we're getting there. Now to install GRUB
+
+pacman -S grub (and efibootmgr if you have UEFI)
+
+### All that's left is installing and configuring grub.
+
+grub-install /dev/sdX (not sdXY, the file system, and not the partition)
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+### Setup a password using: 
+
+passwd
+
+### Setup locale:
+
+nano /etc/locale.gen
+
+(uncomment locale you want, like en_GB things)
+
+nano /etc/locale.conf 
+
+(add LANG=en_GB.UTF-8) 
+
+locale-gen
+
+nano /etc/vconsole.conf 
+
+(add KEYMAP=pt-latin1, change it to whatever keymap you want)
+
+### Timezone information 
+
+ln -sf /usr/share/zoneinfo/ZONEOFYOURCHOOSING /etc/localtime
+
+### Now setup hostname 
+
+nano /etc/hostname 
+
+(add a single word to be your hostname)
+
+nano /etc/hosts
+
+(add this, and replace myhostname with the word you wrote above)
+
+127.0.0.1	localhost
+127.0.1.1	myhostname
+::1		localhost ip6-localhost ip6-loopback
+
+### Configure a NetworkManager
+
+sudo pacman -S networkmanager
+sudo systemctl enable NetworkManager
+
+### Arch is installed! Exit your arch-chroot by entering 'exit', and then do 'umount -R /mnt' to unmount all partitions.
+
+### Reboot, and then in the new Arch Linux install do: 
+
+useradd -m -g wheel username (change this to what you want)
+
+passwd username 
+
+### Now edit the /etc/sudoers file and uncomment the %wheel statement
+
+### Now reboot, log into your user and setup basic folder structure: 
+
+cd ~
+
+mkdir Documents Downloads Music Games Pictures Desktop 
+
+sudo pacman -S git 
+
+### Then clone this repo, and after this, I made a script to automate everything :) and run the archFullSetup.sh, and you're good to go!
+

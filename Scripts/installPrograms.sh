@@ -12,7 +12,7 @@ yay -Rs picom palemoon-bin
 # Essential software for rice
 echo "Installing essential software for rice..."
 sleep 0.1
-yay -S wmctrl ffmpegthumbnailer feh sl rofi polybar redshift gsimplecal osx-arc-darker gtk-chtheme compton-tryone-git gnome-system-monitor flameshot pavucontrol vlc betterlockscreen wpgtk-git neofetch unzip playerctl spicetify-cli lxappearance
+yay -S wmctrl ffmpegthumbnailer feh sl rofi polybar redshift gsimplecal gtk-chtheme compton-tryone-git gnome-system-monitor flameshot pavucontrol vlc betterlockscreen wpgtk-git neofetch unzip playerctl spicetify-cli lxappearance xorg-xinput
 
 # For Spicetify
 sudo mkdir /opt/spotify
@@ -27,10 +27,10 @@ then
 
     if [ $1 == $laptop ]
     then
-        yay -S nautilus firefox telegram-desktop code rescuetime2 transmission-qt simplenote-electron-bin franz-bin authy discord youtube-dl steam-manjaro xorg-xbacklight blacklist_pcspkr
+        yay -S authy nautilus firefox telegram-desktop code transmission-qt simplenote-electron-bin franz-bin authy discord youtube-dl steam-manjaro xorg-xbacklight blacklist_pcspkr
     elif [ $1 == $desktop ]
     then
-        yay -S nautilus firefox telegram-desktop code rescuetime2 transmission-qt simplenote-electron-bin franz-bin authy discord youtube-dl steam-manjaro xf86-input-wacom pureref
+        yay -S authy nautilus firefox telegram-desktop code transmission-qt simplenote-electron-bin franz-bin authy discord youtube-dl steam-manjaro xf86-input-wacom pureref
     fi
 
 
