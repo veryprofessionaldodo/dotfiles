@@ -16,8 +16,8 @@ bindsym $mod4+F3 exec --no-startup-id $DOTFILES_DIR/Scripts/volumeControl.sh up 
 bindsym $mod4+F1 exec --no-startup-id $DOTFILES_DIR/Scripts/volumeControl.sh mute
 
 # Assigning workspaces to monitor
-set $monitor_one "DisplayPort-0"
-set $monitor_two "HDMI-A-1"
+set $monitor_one "DP-1"
+set $monitor_two "HDMI-2"
 
 bindsym $mod+Shift+Right move container to output $monitor_two; focus output $monitor_two
 bindsym $mod+Shift+Left move container to output $monitor_one; focus output $monitor_one
@@ -43,7 +43,7 @@ exec --no-startup-id polybar right
 exec --no-startup-id kdeconnect-indicator 
 
 # Set primary monitor
-exec --no-startup-id xrandr --output DisplayPort-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x630 --rotate normal 
+exec --no-startup-id xrandr --output DP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 1920x630 --rotate normal 
 
 bindsym $mod+Shift+w exec --no-startup-id $DOTFILES_DIR/Scripts/dualMonitorSetup.sh 
 bindsym $mod+Shift+g exec --no-startup-id $DOTFILES_DIR/Scripts/singleMonitorSetup.sh 

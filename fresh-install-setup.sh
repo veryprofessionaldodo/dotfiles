@@ -79,6 +79,19 @@ sudo Apps/grub/install.sh -v
 # First wal run
 python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
 
+# For Spicetify
+sudo mkdir /opt/spotify
+sudo mkdir /opt/spotify/Apps/zlink
+sudo mkdir /opt/spotify/Apps/zlink/css
+sudo touch /opt/spotify/Apps/zlink/css/user.cs
+sudo mkdir /opt/spotify/Apps/login
+sudo mkdir /opt/spotify/Apps/login/css
+
+
+sudo chown $USER -R /opt/spotify
+
+mkdir ${HOME}/.config/spotify/prefs
+
 spicetify backup apply enable-devtool
 spicetify update apply
 
@@ -86,6 +99,7 @@ wpg-install.sh -i
 wpg-install.sh -g
 
 betterlockscreen -u $DOTFILES_DIR/Wallpapers/wallhaven-83do1o.jpg 
+
 
 # Fix small spicetify error 
 echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini

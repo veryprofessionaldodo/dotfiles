@@ -12,7 +12,7 @@ yay -Rs picom palemoon-bin
 # Essential software for rice
 echo "Installing essential software for rice..."
 sleep 0.1
-yay -S wmctrl ffmpegthumbnailer feh sl rofi polybar redshift gsimplecal osx-arc-darker gtk-chtheme compton-tryone-git gnome-system-monitor flameshot pavucontrol vlc betterlockscreen wpgtk-git neofetch unzip playerctl spicetify-cli lxappearance
+yay -S wmctrl dunst ffmpegthumbnailer feh sl rofi polybar redshift gsimplecal gtk-chtheme compton-tryone-git gnome-system-monitor flameshot pavucontrol vlc betterlockscreen wpgtk-git neofetch unzip playerctl spicetify-cli lxappearance
 
 # For Spicetify
 sudo mkdir /opt/spotify
