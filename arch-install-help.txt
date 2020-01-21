@@ -12,7 +12,8 @@ ls /sys/firmware/efi/efivars
 
 ### If there are results everything is nice.
 
-### Establish network connection, maybe use cable for this one, a lot easier, if not use wifi-menu. Make sure clock is good: 
+### Establish network connection, maybe use cable for this one, a lot easier, configure the wireless:
+
 
 timedatectl set-ntp true
 
@@ -132,7 +133,9 @@ passwd username
 
 ### Now edit the /etc/sudoers file and uncomment the %wheel statement
 
-### Now reboot, log into your user and setup basic folder structure: 
+### Edit the /etc/pacman.conf, and uncomment multilib
+
+### Now exit, log into your user and setup basic folder structure: 
 
 cd ~
 

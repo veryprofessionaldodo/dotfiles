@@ -103,7 +103,7 @@ betterlockscreen -u $DOTFILES_DIR/Wallpapers/wallhaven-83do1o.jpg
 # Fix small spicetify error 
 echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
 
-echo "And that's it!\n"
+echo "And that's it!\n Use lxappearance to set the GTK and Icon Theme to FlatColor"
 sleep 0.1
 
 
