@@ -44,14 +44,11 @@ then
 
 	if [ $answer == "y" ]
 	then 
-		sudo pacman -S nvidia lib32-nvidia-utils xf86-video-bumblebee
-		yay -S bumblebee
-		sudo gpasswd -a $USER bumblebee
-		sudo systemctl enable bumblebeed
+		sudo pacman -S nvidia lib32-nvidia-utils xf86-video-intel nvidia-prime
+		sudo mv $DOTFILES_DIR/Configs/30-nvidia.conf /etc/X11/xorg.conf.d/
 	fi 
 
 	cd Scripts
-
 	./installFonts.sh
 	killall i3bar
 	polybar main
@@ -85,6 +82,7 @@ sudo Apps/grub/install.sh -v
 # First wal run
 python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
 
+mkdir ~/.cache/vlc
 
 spicetify backup apply enable-devtool
 spicetify update apply
