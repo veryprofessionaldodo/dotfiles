@@ -42,7 +42,7 @@ cp compton.conf $HOME/.config/compton.conf
 # Dunst needs to be updated, and then sent to it's place
 cp dunstrc $HOME/.config/wal/templates
 
-cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst
+cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/
 
 cp $DOTFILES_DIR/Apps/spicetify/config.ini $HOME/.config/spicetify
 
@@ -57,10 +57,10 @@ if [ $1 == $laptop ]
 then 
     cd $DOTFILES_DIR/Laptop
     
-    touch $HOME/.i3/config
-    rm $HOME/.i3/config
+    touch $HOME/.config/i3/config
+    rm $HOME/.config/i3/config
 
-    cat $DOTFILES_DIR/Configs/common_config config >> $HOME/.i3/config
+    cat $DOTFILES_DIR/Configs/common_config config >> $HOME/.config/i3/config
 
     cp polybar/config $HOME/.config/polybar
 elif [ $1 == $desktop ]
