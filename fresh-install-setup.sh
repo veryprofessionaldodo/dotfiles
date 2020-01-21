@@ -14,9 +14,9 @@ sleep 0.5
 DOTFILES_DIR=${PWD}
 
 sudo touch /etc/profile.d/dotfiles.sh
-
-echo '#!/bin/bash' | sudo tee -a /etc/profile.d/dotfiles.sh   
-echo "export PATH=$PATH:$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh  
+echo "#!/bin/bash" | sudo tee -a /etc/profile.d/dotfiles.sh
+echo "export PATH=DOTFILES_DIR=$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh
+echo "export PATH=$PATH:$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh
 
 echo "Added!"
 sleep 0.1
@@ -27,6 +27,10 @@ export PATH=$PATH:$DOTFILES_DIR
 
 cd Scripts
 ./installPrograms.sh $device
+./touchInitialFiles
+
+# Fix small spicetify error 
+echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
 
 if [ $device == $laptop ]
 then
@@ -36,16 +40,17 @@ then
 	cd ..
 	./update.sh latop
 	
-	cd Scripts
-	./touchInitialFiles.sh
-
 	read -p "Do you want to setup bumblebee? (y/n)  " answer
 
 	if [ $answer == "y" ]
 	then 
+		sudo pacman -S nvidia lib32-nvidia-utils xf86-video-bumblebee
+		yay -S bumblebee
 		sudo gpasswd -a $USER bumblebee
 		sudo systemctl enable bumblebeed
 	fi 
+
+	cd Scripts
 
 	./installFonts.sh
 	killall i3bar
@@ -57,8 +62,8 @@ then
 
 	cd ..
 	./update.sh desktop
+	
 	cd Scripts
-	./touchInitialFiles.sh
 	./installFonts.sh
 	./tabletConfig.sh
 	sudo mkdir /mnt/Windows
@@ -68,6 +73,8 @@ then
 fi
 
 sudo cp $DOTFILES_DIR/Scripts/addCommitPush /bin
+sudo cp $DOTFILES_DIR/Scripts/install* /bin
+sudo cp $DOTFILES_DIR/Scripts/update* /bin
 
 # Installing GRUB theme 
 echo "Installing GRUB theme..."
@@ -78,18 +85,6 @@ sudo Apps/grub/install.sh -v
 # First wal run
 python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
 
-# For Spicetify
-sudo mkdir /opt/spotify
-sudo mkdir /opt/spotify/Apps/zlink
-sudo mkdir /opt/spotify/Apps/zlink/css
-sudo touch /opt/spotify/Apps/zlink/css/user.cs
-sudo mkdir /opt/spotify/Apps/login
-sudo mkdir /opt/spotify/Apps/login/css
-
-
-sudo chown $USER -R /opt/spotify
-
-mkdir ${HOME}/.config/spotify/prefs
 
 spicetify backup apply enable-devtool
 spicetify update apply
@@ -98,10 +93,6 @@ wpg-install.sh -i
 wpg-install.sh -g
 
 betterlockscreen -u $DOTFILES_DIR/Wallpapers/wallhaven-83do1o.jpg 
-
-
-# Fix small spicetify error 
-echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
 
 echo "And that's it!\n Use lxappearance to set the GTK and Icon Theme to FlatColor"
 sleep 0.1

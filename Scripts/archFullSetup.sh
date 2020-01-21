@@ -13,6 +13,10 @@ sudo systemctl enable lightdm.service
 echo "exec i3" | tee -a ~/.xinitrc  
 echo "loadkeys keymap" | tee -a ~/.xinitrc
 
+echo "export LANG=en_US.UTF-8" | tee -a ~/.bashrc 
+echo "export LANGUAGE=en_US.UTF-8" | tee -a ~/.bashrc
+echo "export LC_COLLATE=C" | tee -a ~/.bashrc
+echo "export LC_CTYPE=en_US.UTF-8" | tee -a ~/.bashrc
 
 cd Downloads
 
