@@ -17,9 +17,9 @@ print(settings)
 
 # Two monitors active
 if len(settings) == 2:
-  command = "xrandr --output DP-1 --primary --rate " + toggled + " --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-2 --mode 1920x1080 --pos 1920x630 --rotate normal"
+  command = "xrandr --output DisplayPort-0 --primary --rate " + toggled + " --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x630 --rotate normal"
 else:
-  command = "xrandr --output DP-1 --primary --rate " + toggled + " --mode 1920x1080 --pos 0x0 --rotate normal"
+  command = "xrandr --output DisplayPort-0 --primary --rate " + toggled + " --mode 1920x1080 --pos 0x0 --rotate normal"
 
 os.system(command)
 

@@ -13,8 +13,7 @@ yay -Rs picom palemoon-bin
 echo "Installing essential software for rice..."
 sleep 0.1
 
-yay -S wmctrl pacmixer dmenu dunst ffmpegthumbnailer feh sl rofi polybar redshift gsimplecal gtk-chtheme compton-tryone-git gnome-system-monitor flameshot pavucontrol vlc betterlockscreen wpgtk-git neofetch unzip playerctl spicetify-cli lxappearance
-
+yay -S wmctrl ranger pacmixer dmenu dunst ffmpegthumbnailer feh sl rofi polybar redshift gsimplecal gtk-chtheme compton-tryone-git gnome-system-monitor flameshot pavucontrol vlc betterlockscreen wpgtk-git neofetch unzip playerctl spicetify-cli lxappearance
 
 read -p "Do you want to install the extra programs at Scripts/installPrograms.sh (apps and whatnot)? (y/n)  " answer
 
