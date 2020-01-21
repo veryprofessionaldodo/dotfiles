@@ -29,16 +29,17 @@ cd Scripts
 ./installPrograms.sh $device
 ./touchInitialFiles
 
+# Fix small spicetify error 
+echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
+
 if [ $device == $laptop ]
 then
 	echo "\nSetting up laptop configurations..."
 	sleep 0.1
 
-	
 	cd ..
 	./update.sh latop
 	
-
 	read -p "Do you want to setup bumblebee? (y/n)  " answer
 
 	if [ $answer == "y" ]
@@ -92,10 +93,6 @@ wpg-install.sh -i
 wpg-install.sh -g
 
 betterlockscreen -u $DOTFILES_DIR/Wallpapers/wallhaven-83do1o.jpg 
-
-
-# Fix small spicetify error 
-echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
 
 echo "And that's it!\n"
 sleep 0.1
