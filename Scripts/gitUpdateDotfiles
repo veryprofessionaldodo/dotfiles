@@ -6,7 +6,7 @@ git add .
 
 git reset HEAD -- Apps/spicetify/config.ini
 
-
+git reset HEAD -- Apps/ranger/rc.conf
 
 git commit -m "$1"
 
