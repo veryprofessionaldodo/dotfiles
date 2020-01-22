@@ -1,9 +1,46 @@
 #!/bin/bash
 
+
+laptop="laptop"
+desktop="desktop"
+
+echo "Important! Run this inside the dotfiles folder!"
+sleep 2
+
+cd ~
+
+mkdir Documents Downloads Music Games Pictures Desktop 
+
+echo "Entering the void..."
+
+sleep 1
+
+sudo xbps-install -Suv
+sudo xbps-install -S xorg-minimal xorg-fonts i3-gaps rxvt-unicode tlp lightdm lightdm-gtk3-greeter python-pip pamixer pulseaudio alsa-utils w3m elogind dbus polkit polkit-gnome
+
+echo "Configuring i3 on boot..."
+
+sudo ln -srf /etc/sv/{dbus,polkitd,elogind} /var/service
+sudo ln -sb /etc/sv/dbus /var/service/dbus
+sudo ln -sv /etc/sv/polkitd/ /var/service
+sudo ln -s /etc/sv/lightdm /var/service/lightdm
+
+sleep 1
+
+echo "exec i3" | tee -a ~/.xinitrc  
+echo "loadkeys keymap" | tee -a ~/.xinitrc
+
+echo "export LANG=en_US.UTF-8" | tee -a ~/.bashrc 
+echo "export LANGUAGE=en_US.UTF-8" | tee -a ~/.bashrc
+
+cd Downloads
+
 laptop="laptop"
 desktop="desktop"
 
 read -p "On which device are you installing my dude? 'laptop' or 'desktop'?  " device
+
+sudo xbps-install -S xorg-minimal xorg-fonts xf86-video-intel
 
 echo "Got you fam, installing on $device. Adding this folder to the PATH environment variable... (requires sudo)"
 sleep 1
@@ -24,7 +61,7 @@ export PATH=$PATH:$DOTFILES_DIR
 
 cd Scripts
 
-./installPrograms.sh $device
+./installPrograms.sh $device "void"
 
 echo "There is a list of programs at Scripts/extraProgramsToInstall.sh . You can modify this file now if you want, to download exactly what you need!"
 sleep 2
@@ -32,7 +69,7 @@ sleep 2
 read -p "Do you want to install the extra programs at Scripts/extraProgramsToInstall.sh? (y/n)  " answer
 if [ $answer == "y" ]
 then 
-	./extraProgramsToInstall.sh $device "arch-based"
+	./extraProgramsToInstall.sh $device "void"
 fi
 
 ./touchInitialFiles

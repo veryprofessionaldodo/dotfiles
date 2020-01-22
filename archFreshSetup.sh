@@ -16,7 +16,7 @@ echo "Installing essential Arch apps..."
 
 sleep 1
 
-sudo pacman -S xorg-server xorg-xinit i3-gaps rxvt-unicode tlp lightdm lightdm-gtk-greeter python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m
+sudo pacman -S xorg-server xorg-xinit i3-gaps rxvt-unicode tlp lightdm lightdm-gtk-greeter python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m polkit-gnome
 
 echo "Configuring i3 on boot..."
 
