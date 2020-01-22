@@ -26,7 +26,10 @@ cd Scripts
 
 ./installPrograms.sh $device
 
-read -p "Do you want to install the extra programs at Scripts/extraProgramsToInstall.sh (apps and whatnot)? (y/n)  " answer
+echo "There is a list of programs at Scripts/extraProgramsToInstall.sh . You can modify this file now if you want, to download exactly what you need!"
+sleep 2
+
+read -p "Do you want to install the extra programs at Scripts/extraProgramsToInstall.sh? (y/n)  " answer
 if [ $answer == "y" ]
 then 
 	./extraProgramsToInstall.sh $device
@@ -47,7 +50,6 @@ cd Scripts
 ./installFonts.sh
 killall i3bar
 	
-
 if [ $device == $laptop ]
 then
 	polybar main
