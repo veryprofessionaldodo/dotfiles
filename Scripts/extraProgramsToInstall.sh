@@ -11,8 +11,13 @@ sleep 1
 
 if [ $2 == $void ]
 then
-    sudo xbps-install -S epdfview neofetch unzip sl redshift gnome-system-monitor pavucontrol vlc networkmanager-dmenu-git authy nautilus firefox telegram-desktop code transmission-qt simplenote-electron-bin franz-bin authy discord youtube-dl steam
+    sudo xbps-install -S epdfview neofetch unzip sl redshift gnome-system-monitor pavucontrol vlc networkmanager-dmenu-git authy nautilus firefox telegram-desktop code transmission-qt authy discord youtube-dl steam
 
+    # Missing packages 
+    # Simplenote electron-bin
+    # Franz
+    # Authy 
+    
     if [ $1 == $laptop ]
     then
         yay -S xorg-xbacklight blacklist_pcspkr

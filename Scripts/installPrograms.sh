@@ -13,7 +13,7 @@ yay -Rs picom palemoon-bin
 echo "Installing essential software for rice..."
 sleep 0.1
 
-yay -S wmctrl ranger pacmixer dmenu dunst ffmpegthumbnailer feh rofi polybar gsimplecal compton-tryone-git flameshot betterlockscreen wpgtk-git playerctl spicetify-cli lxappearance
+yay -S wmctrl ranger pacmixer dmenu dunst ffmpegthumbnailer feh rofi polybar gsimplecal compton flameshot betterlockscreen wpgtk-git playerctl spicetify-cli lxappearance
 
 
 echo "Cleaning cache..."

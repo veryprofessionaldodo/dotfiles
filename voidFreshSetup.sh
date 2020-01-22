@@ -61,7 +61,21 @@ export PATH=$PATH:$DOTFILES_DIR
 
 cd Scripts
 
-./installPrograms.sh $device "void"
+echo "Setting up Void repositories..."
+sleep 1
+
+sudo xbps-install void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree 
+xbps-install -S
+
+echo "Installing Void programs..."
+sleep 1
+
+xbps-install wmctrl ranger dmenu dunst ffmpegthumbnailer feh rofi polybar gsimplecal compton flameshot betterlockscreen wpgtk playerctl lxappearance
+
+# Extra packages for Void 
+# compton-tryone-git
+# pacmixer
+# spicetify-cli
 
 echo "There is a list of programs at Scripts/extraProgramsToInstall.sh . You can modify this file now if you want, to download exactly what you need!"
 sleep 2
@@ -72,7 +86,7 @@ then
 	./extraProgramsToInstall.sh $device "void"
 fi
 
-./touchInitialFiles
+./touchInitialFiles.sh
 
 # Fix small spicetify error 
 echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
@@ -83,7 +97,7 @@ echo "set preview_script $HOME/.config/ranger/scope.sh" >> Apps/ranger/rc.conf
 echo "\nSetting up $device configurations..."
 sleep 1
 
-./update.sh $device
+./updateVoid.sh $device
 
 cd Scripts
 
@@ -98,7 +112,7 @@ then
 
 	if [ $answer == "y" ]
 	then 
-		sudo pacman -S nvidia lib32-nvidia-utils xf86-video-intel nvidia-prime
+		sudo pacman -S nvidia lib32-nvidia-utils xf86-video-intel
 		sudo mv $DOTFILES_DIR/Configs/30-nvidia.conf /etc/X11/xorg.conf.d/
 	fi 
 
@@ -124,11 +138,11 @@ python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
 # Fix small error for VLC downloading
 mkdir ~/.cache/vlc
 
-echo "Setting up Spicetify..."
-sleep 1
+#echo "Setting up Spicetify..."
+#sleep 1
 
-spicetify backup apply enable-devtool
-spicetify update apply
+#spicetify backup apply enable-devtool
+#spicetify update apply
 
 echo "Setting up WPGTK theme... (CHANGE LATER WITH LXAPPEARANCE TO FLATCOLOR THEME AND ICON PACK)"
 sleep 3
