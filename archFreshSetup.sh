@@ -16,11 +16,12 @@ echo "Installing essential Arch apps..."
 
 sleep 1
 
-sudo pacman -S xorg-server xorg-xinit i3-gaps rxvt-unicode tlp lightdm lightdm-gtk-greeter python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m polkit-gnome
+sudo pacman -S xorg-server xorg-xinit i3-gaps rxvt-unicode tlp powertop lightdm lightdm-gtk-greeter python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m polkit-gnome
 
 sudo systemctl enable tlp
 sudo systemctl start tlp
 sudo systemctl enable lightdm
+sudo powertop --auto-tune
 
 echo "Configuring i3 on boot..."
 

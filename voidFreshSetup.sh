@@ -12,7 +12,7 @@ echo "Entering the void..."
 sleep 1
 
 sudo xbps-install -Suv
-sudo xbps-install -S xorg-minimal xorg-fonts i3-gaps rxvt-unicode tlp lightdm python lightdm-gtk-greeter python-pip pamixer pulseaudio alsa-utils w3m elogind dbus polkit polkit-gnome 
+sudo xbps-install -S xorg-minimal xorg-fonts i3-gaps rxvt-unicode tlp powertop lightdm python lightdm-gtk-greeter python-pip pamixer pulseaudio alsa-utils w3m elogind dbus polkit polkit-gnome 
 
 echo "Configuring i3 on boot..."
 
@@ -21,6 +21,7 @@ sudo ln -sb /etc/sv/dbus /var/service/dbus
 sudo ln -sv /etc/sv/polkitd/ /var/service
 sudo ln -s /etc/sv/lightdm /var/service/lightdm
 sudo ln -s /etc/sv/NetworkManager /var/service
+sudo ln -s /etc/sv/tlp /var/service
 
 sleep 1
 

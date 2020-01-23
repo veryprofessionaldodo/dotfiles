@@ -11,7 +11,7 @@ sleep 1
 
 if [ $2 == $void ]
 then
-    sudo xbps-install -S epdfview neofetch unzip sl redshift gnome-system-monitor pavucontrol vlc networkmanager-dmenu-git authy nautilus firefox telegram-desktop code transmission-qt authy discord youtube-dl steam
+    sudo xbps-install -S epdfview neofetch unzip sl redshift gnome-system-monitor pavucontrol vlc networkmanager-dmenu-git authy nautilus firefox telegram-desktop vscode transmission-qt authy discord youtube-dl steam
 
     # Missing packages 
     # Simplenote electron-bin
@@ -20,10 +20,10 @@ then
     
     if [ $1 == $laptop ]
     then
-        xbps-install xorg-xbacklight 
+        sudo xbps-install xorg-xbacklight powertop tlp
     elif [ $1 == $desktop ]
     then
-        xbps-install xf86-input-wacom pureref xf86-video-amdgpu
+        sudo xbps-install xf86-input-wacom pureref xf86-video-amdgpu
         sudo cp $DOTFILES_DIR/Configs/20-amdgpu.conf /etc/X11/xorg.conf.d/
     fi
 
