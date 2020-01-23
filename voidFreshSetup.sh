@@ -7,16 +7,12 @@ desktop="desktop"
 echo "Important! Run this inside the dotfiles folder!"
 sleep 2
 
-cd ~
-
-mkdir Documents Downloads Music Games Pictures Desktop 
-
 echo "Entering the void..."
 
 sleep 1
 
 sudo xbps-install -Suv
-sudo xbps-install -S xorg-minimal xorg-fonts i3-gaps rxvt-unicode tlp lightdm lightdm-gtk3-greeter python-pip pamixer pulseaudio alsa-utils w3m elogind dbus polkit polkit-gnome
+sudo xbps-install -S xorg-minimal xorg-fonts i3-gaps rxvt-unicode tlp lightdm python lightdm-gtk-greeter python-pip pamixer pulseaudio alsa-utils w3m elogind dbus polkit polkit-gnome 
 
 echo "Configuring i3 on boot..."
 
@@ -24,6 +20,7 @@ sudo ln -srf /etc/sv/{dbus,polkitd,elogind} /var/service
 sudo ln -sb /etc/sv/dbus /var/service/dbus
 sudo ln -sv /etc/sv/polkitd/ /var/service
 sudo ln -s /etc/sv/lightdm /var/service/lightdm
+sudo ln -s /etc/sv/NetworkManager /var/service
 
 sleep 1
 
@@ -32,8 +29,6 @@ echo "loadkeys keymap" | tee -a ~/.xinitrc
 
 echo "export LANG=en_US.UTF-8" | tee -a ~/.bashrc 
 echo "export LANGUAGE=en_US.UTF-8" | tee -a ~/.bashrc
-
-cd Downloads
 
 laptop="laptop"
 desktop="desktop"
@@ -59,18 +54,16 @@ sleep 1
 export DOTFILES_DIR=$DOTFILES_DIR
 export PATH=$PATH:$DOTFILES_DIR
 
-cd Scripts
-
 echo "Setting up Void repositories..."
 sleep 1
 
 sudo xbps-install void-repo-multilib void-repo-multilib-nonfree void-repo-nonfree 
-xbps-install -S
+sudo xbps-install -S
 
 echo "Installing Void programs..."
 sleep 1
 
-xbps-install wmctrl ranger dmenu dunst ffmpegthumbnailer feh rofi polybar gsimplecal compton flameshot betterlockscreen wpgtk playerctl lxappearance
+sudo xbps-install wmctrl ranger dmenu dunst ffmpegthumbnailer feh rofi polybar gsimplecal compton flameshot betterlockscreen wpgtk playerctl lxappearance
 
 # Extra packages for Void 
 # compton-tryone-git
@@ -80,11 +73,14 @@ xbps-install wmctrl ranger dmenu dunst ffmpegthumbnailer feh rofi polybar gsimpl
 echo "There is a list of programs at Scripts/extraProgramsToInstall.sh . You can modify this file now if you want, to download exactly what you need!"
 sleep 2
 
+cd Scripts
+
 read -p "Do you want to install the extra programs at Scripts/extraProgramsToInstall.sh? (y/n)  " answer
 if [ $answer == "y" ]
 then 
 	./extraProgramsToInstall.sh $device "void"
 fi
+
 
 ./touchInitialFiles.sh
 
@@ -97,12 +93,13 @@ echo "set preview_script $HOME/.config/ranger/scope.sh" >> Apps/ranger/rc.conf
 echo "\nSetting up $device configurations..."
 sleep 1
 
-./updateVoid.sh $device
+cd $DOTFILES_DIR
+
+./update.sh $device
 
 cd Scripts
 
 ./installFonts.sh
-killall i3bar
 	
 if [ $device == $laptop ]
 then
@@ -112,7 +109,7 @@ then
 
 	if [ $answer == "y" ]
 	then 
-		sudo pacman -S nvidia lib32-nvidia-utils xf86-video-intel
+		sudo xbps-install -S nvidia lib32-nvidia-utils xf86-video-intel
 		sudo mv $DOTFILES_DIR/Configs/30-nvidia.conf /etc/X11/xorg.conf.d/
 	fi 
 
