@@ -18,11 +18,13 @@ sleep 1
 
 sudo pacman -S xorg-server xorg-xinit i3-gaps rxvt-unicode tlp lightdm lightdm-gtk-greeter python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m polkit-gnome
 
+sudo systemctl enable tlp
+sudo systemctl start tlp
+sudo systemctl enable lightdm
+
 echo "Configuring i3 on boot..."
 
 sleep 1
-
-sudo systemctl enable lightdm.service
 
 echo "exec i3" | tee -a ~/.xinitrc  
 echo "loadkeys keymap" | tee -a ~/.xinitrc
