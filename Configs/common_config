@@ -75,15 +75,15 @@ set_from_resource $term_color15    color15
 set_from_resource $bg_color background
 set_from_resource $fg_color foreground
 
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $fg foreground
+set_from_resource $bg background
 
-# class                 border  backgr. text indicator child_border
-client.focused          $fg     $bg     $bg  $fg       $fg
-client.focused_inactive $bg     $bg     $bg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $fg     $bg     $fg  $fg       $fg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
+# class                 border    backgr.   text     indicator  child_border
+client.focused          $fg       $bg       $fg      $fg        $fg
+client.focused_inactive $bg       $bg       $fg      $bg        $bg
+client.unfocused        $bg       $bg       $fg      $bg        $bg
+client.urgent           $fg       $bg       $fg      $fg        $fg
+client.placeholder      $bg       $bg       $fg      $bg        $bg
 
 client.background       $bg
 

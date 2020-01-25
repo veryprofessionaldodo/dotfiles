@@ -31,10 +31,10 @@ case $1 in
     ;;
   down)
     # decrease the backlight by 5%
-    if [ [ ${backlight} -lt 8] && [ ${backlight} -gt 2 ];
+    if [ ${backlight} -lt 8.0 ] && [ ${backlight} -gt 1.0 ] ;
     then
       echo $@
-      xbacklight -set 2
+      xbacklight -set 1
       dunstify -r -5555 -u "Backlight: ${backlight%.*}"    
     else	
       xbacklight -dec 5    

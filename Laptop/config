@@ -38,5 +38,5 @@ gaps outer -6
 
 #disables tap to click
 #exec --no-startup-id synclient MaxTapTime=0
-exec --no-startup-id synclient PalmDetect=1
+#exec --no-startup-id synclient PalmDetect=1
 #exec --no-startup-id synclient TapButton1=1
