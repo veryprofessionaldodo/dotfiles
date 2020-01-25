@@ -11,8 +11,6 @@ instances = subprocess.run(['playerctl', '-l'], stdout=subprocess.PIPE)
 
 instancesArr = instances.stdout.decode().split()
 
-print(instancesArr)
-
 def getTrackInformation():
   song = subprocess.run(['playerctl', 'metadata', 'title'], stdout=subprocess.PIPE).stdout.decode().rstrip()
   artist = subprocess.run(['playerctl', 'metadata', 'artist'], stdout=subprocess.PIPE).stdout.decode().rstrip()
