@@ -7,6 +7,11 @@ def sendNotification(message):
   notification = "notify-send \""+ message + ":\n" + getTrackInformation() + "\"" 
   os.system(notification)
 
+instances = subprocess.run(['playerctl', '-l'], stdout=subprocess.PIPE)
+
+instancesArr = instances.stdout.decode().split()
+
+print(instancesArr)
 
 def getTrackInformation():
   song = subprocess.run(['playerctl', 'metadata', 'title'], stdout=subprocess.PIPE).stdout.decode().rstrip()
@@ -22,8 +27,6 @@ if sys.argv[1] == "previous":
   time.sleep(0.2)
 
   sendNotification("It's rewind time");
-
-
   
 if sys.argv[1] == "next":
   action = "playerctl next"
@@ -38,9 +41,10 @@ if sys.argv[1] == "info":
   sendNotification("Currently Playing");
   
 if sys.argv[1] == "toggle":
-  action = "playerctl play-pause"
-  
-  os.system(action)
+  for instance in instancesArr:
+    action = "playerctl play-pause -p "+ instance
+    
+    os.system(action)
 
   time.sleep(0.2)
 
