@@ -33,16 +33,16 @@ cp -r polybar/* $HOME/.config/polybar/
 
 cd $DOTFILES_DIR/Configs
 
-cp -a .Xresources $HOME/
-
 cp redshift.conf $HOME/.config/
 
 cp compton.conf $HOME/.config/compton.conf
 
-# Dunst needs to be updated, and then sent to it's place
+# Dunst and Xresources needs to be updated, and then sent to it's place
 cp dunstrc $HOME/.config/wal/templates
+cp -a .Xresources $HOME/.config/wal/templates
 
 cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/
+cp $HOME/.cache/wal/.Xresources $HOME/
 
 cp $DOTFILES_DIR/Apps/spicetify/config.ini $HOME/.config/spicetify
 

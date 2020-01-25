@@ -179,8 +179,8 @@
     timeout = 3
 
 [urgency_critical]
-    background = "{color0}"
-    foreground = "{foreground}"
+    background = "{color3}"
+    foreground = "{background}"
     timeout = 3
 
 
