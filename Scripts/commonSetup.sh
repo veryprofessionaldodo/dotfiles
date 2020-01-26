@@ -35,7 +35,12 @@ then
 	./extraProgramsToInstall.sh $device "arch-based"
 fi
 
+sudo cp Apps/lightdm/* /etc/lightdm/
+sudo rm -rf /usr/share/backgrounds/gnome
+sudo cp Wallpapers/* /usr/share/backgrounds
+
 ./touchInitialFiles.sh
+
 
 # Fix small spicetify error 
 echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
