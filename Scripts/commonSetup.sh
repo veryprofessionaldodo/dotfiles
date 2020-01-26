@@ -62,6 +62,17 @@ if [ $device == $laptop ]
 then
 	polybar main
 
+	echo "Configuring TLP for better battery management..."
+	sleep 1
+
+	sudo systemctl enable tlp
+	sudo systemctl enable tlp-sleep.service
+	sudo systemctl mask systemd-rfkill.service
+	sudo systemctl mask systemd-rfkill.socket
+
+	sudo systemctl start tlp
+
+
 	read -p "Do you want to setup Prime? (y/n)  " answer
 
 	if [ $answer == "y" ]
