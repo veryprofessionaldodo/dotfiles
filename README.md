@@ -18,5 +18,6 @@ I also differentiate between my laptop and desktop, because I have some shortcut
 - Automatic pywal generation on boot, taking into consideration the wallpaper chosen. Affects the color scheme of rofi, dunst, GTK (using wpgtk), Firefox, Spotify and polybar;
 - A lot of scripts, some for Xrandr, volume control, brightness control, Spotify control, installing important programs, etc;
 
+Credits: Many thanks for eh8 for the LightDM greeter, and adi1090x for the Polybar theme!
 
 ### Hope you like it! <3 
