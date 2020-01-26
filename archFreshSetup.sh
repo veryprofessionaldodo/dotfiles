@@ -16,9 +16,13 @@ echo "Installing essential Arch apps..."
 
 sleep 1
 
-sudo pacman -S xorg-server xorg-xinit i3-gaps rxvt-unicode tlp powertop lightdm lightdm-gtk-greeter python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m polkit-gnome
+sudo pacman -S xorg-server xorg-xinit i3-gaps rxvt-unicode tlp tlp-rdw powertop lightdm lightdm-gtk-greeter python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m polkit-gnome
 
 sudo systemctl enable tlp
+sudo systemctl enable tlp-sleep.service
+sudo systemctl mask systemd-rfkill.service
+sudo systemctl mask systemd-rfkill.socket
+
 sudo systemctl start tlp
 sudo systemctl enable lightdm
 sudo powertop --auto-tune
