@@ -101,7 +101,7 @@ exec --no-startup-id volumeicon
 ################################################################################################
 
 # Start Applications
-bindsym $mod+F1 exec --no-startup-id firefox
+bindsym $mod+F1 exec --no-startup-id brave-browser
 bindsym $mod+F2 exec --no-startup-id urxvt -e ranger
 bindsym $mod+F3 exec --no-startup-id nautilus
 bindsym $mod+F4 exec --no-startup-id krita
@@ -191,6 +191,8 @@ assign [class="PureRef"] $ws3
 #assign [class="Blender"] $ws4
 assign [class="discord"] $ws5
 assign [class="firefox"] $ws1
+assign [class="brave-Browser"] $ws1
+assign [class="brave"] $ws1
 assign [class="Navigator"] $ws1
 assign [class="Nightly"] $ws1
 assign [class="Franz"] $ws2
@@ -222,6 +224,7 @@ for_window [class="chromium"] move to workspace $ws5
 for_window [class="krita"] move to workspace $ws4
 for_window [instance="origin.exe"] floating enable
 for_window [class="firefox"] sticky enable
+for_window [class="brave-browser"] sticky enable
 for_window [class="PureRef"] sticky enable
 for_window [class="vlc"] sticky enable
 
