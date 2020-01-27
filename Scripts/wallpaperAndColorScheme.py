@@ -26,7 +26,11 @@ myCmd = 'wpg -s' + randWallpaper + ' && wal -i ' + randWallpaper
 
 os.system(myCmd)
 
-# Update Spotify and Dunst
-myCmd = 'spicetify update && cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/ && killall dunst && dunst && cp $HOME/.cache/wal/.Xresources $HOME/. &'
+myCmd = 'sleep 0.5 && xrdb ~/.Xresources &'
 
-os.system(myCmd)
+#os.system(myCmd)
+
+# Update Spotify and Dunst
+myCmd = 'spicetify update && cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/ && killall dunst && dunst'
+
+#os.system(myCmd)
