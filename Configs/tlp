@@ -62,7 +62,7 @@ CPU_SCALING_GOVERNOR_ON_BAT=powersave
 CPU_SCALING_MIN_FREQ_ON_AC=800000
 CPU_SCALING_MAX_FREQ_ON_AC=4000000
 CPU_SCALING_MIN_FREQ_ON_BAT=800000
-CPU_SCALING_MAX_FREQ_ON_BAT=3000000
+CPU_SCALING_MAX_FREQ_ON_BAT=1800000
 
 # Set energy performance hints (HWP) for Intel P-state governor:
 #   performance, balance_performance, default, balance_power, power
