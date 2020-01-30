@@ -20,7 +20,6 @@ sudo touch /opt/spotify/Apps/zlink/css/user.cs
 sudo mkdir /opt/spotify/Apps/login
 sudo mkdir /opt/spotify/Apps/login/css
 
-
 sudo chown $USER -R /opt/spotify
 
 touch ${HOME}/.config/spotify/prefs

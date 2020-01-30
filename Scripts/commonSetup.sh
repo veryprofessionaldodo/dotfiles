@@ -5,24 +5,16 @@ desktop="desktop"
 
 read -p "On which device are you installing my dude? 'laptop' or 'desktop'?  " device
 
-echo "Got you fam, installing on $device. Adding this folder to the PATH environment variable... (requires sudo)"
-sleep 1
-
-DOTFILES_DIR=${PWD}
-
-sudo touch /etc/profile.d/dotfiles.sh
-echo "#!/bin/bash" | sudo tee -a /etc/profile.d/dotfiles.sh
-echo "export PATH=DOTFILES_DIR=$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh
-echo "export PATH=$PATH:$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh
-
-echo "Added!"
-sleep 1
+echo "Got you fam, installing on $device."
+./Scripts/addToPath.sh
 
 # This is also done right now so that the rest of the script can go along nicely, even without a reboot
 export DOTFILES_DIR=$DOTFILES_DIR
 export PATH=$PATH:$DOTFILES_DIR
 
 cd Scripts
+
+./touchInitialFiles.sh
 
 ./installPrograms.sh $device
 
@@ -35,12 +27,9 @@ then
 	./extraProgramsToInstall.sh $device "arch-based"
 fi
 
-sudo cp Apps/lightdm/* /etc/lightdm/
-sudo rm -rf /usr/share/backgrounds/gnome
-sudo cp Wallpapers/* /usr/share/backgrounds
+./setupLightDM.sh 
 
-./touchInitialFiles.sh
-
+./setupSpicetify.sh
 
 # Fix small spicetify error 
 echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
@@ -65,13 +54,7 @@ then
 	echo "Configuring TLP for better battery management..."
 	sleep 1
 
-	sudo systemctl enable tlp
-	sudo systemctl enable tlp-sleep.service
-	sudo systemctl mask systemd-rfkill.service
-	sudo systemctl mask systemd-rfkill.socket
-
-	sudo systemctl start tlp
-
+	./setupTLP.sh
 
 	read -p "Do you want to setup Prime? (y/n)  " answer
 
@@ -87,10 +70,6 @@ then
 	polybar left && polybar right
 fi
 
-sudo cp $DOTFILES_DIR/Scripts/addCommitPush /bin
-sudo cp $DOTFILES_DIR/Scripts/install* /bin
-sudo cp $DOTFILES_DIR/Scripts/update* /bin
-
 # Installing GRUB theme 
 echo "Installing GRUB theme..."
 sleep 1
@@ -103,21 +82,18 @@ python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
 # Fix small error for VLC downloading
 mkdir ~/.cache/vlc
 
-echo "Setting up Spicetify..."
-sleep 1
-
-spicetify backup apply enable-devtool
-spicetify update apply
-
 echo "Setting up WPGTK theme... (CHANGE LATER WITH LXAPPEARANCE TO FLATCOLOR THEME AND ICON PACK)"
 sleep 3
 
 wpg-install.sh -i
 wpg-install.sh -g
 
+echo "Change line 93 of this script if you want another lockscreen wallpaper."
+sleep 1 
+
 betterlockscreen -u $DOTFILES_DIR/Wallpapers/wallhaven-83do1o.jpg 
 
-echo "And that's it!"
+echo "And that's it! Exiting."
 sleep 1
 
 

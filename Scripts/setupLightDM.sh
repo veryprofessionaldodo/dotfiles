@@ -1,0 +1,8 @@
+#!/bin/bash 
+
+echo "Configuring LightDM..."
+sleep 1 
+
+sudo cp Apps/lightdm/* /etc/lightdm/
+sudo rm -rf /usr/share/backgrounds/gnome
+sudo cp Wallpapers/* /usr/share/backgrounds
