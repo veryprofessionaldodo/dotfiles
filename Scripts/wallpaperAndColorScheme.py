@@ -22,15 +22,11 @@ for entry in listOfFile:
 # Get random wallpaper
 randWallpaper = allFiles[random.randint(0,len(allFiles)-1)]
 
-myCmd = 'wpg -s' + randWallpaper + ' && wal -i ' + randWallpaper
+myCmd = 'wpg -s ' + randWallpaper + ' && wal -i ' + randWallpaper + " && exit"
 
 os.system(myCmd)
 
-#myCmd = 'rm -rf ~/.Xresource'
-
-#os.system(myCmd)
-
 # Update Spotify and Dunst
-myCmd = 'spicetify update && rm ~/.Xresources && cp $HOME/.cache/wal/.Xresources $HOME && cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/ && killall dunst && dunst'
+myCmd = 'spicetify update && rm ~/.Xresources && cp $HOME/.cache/wal/.Xresources $HOME && xrdb -merge ~/.Xresources && cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/ && killall dunst && dunst && exit'
 
 os.system(myCmd)

@@ -26,10 +26,7 @@ cp -r krita/Config/krita*rc $HOME/.config/
 
 cp -r krita/Resources/* $HOME/.local/share/krita/
 
-cp rofi/config $HOME/.config/rofi/
-
 cp -r polybar/* $HOME/.config/polybar/
-
 
 cd $DOTFILES_DIR/Configs
 
@@ -40,6 +37,7 @@ cp compton.conf $HOME/.config/compton.conf
 # Dunst and Xresources needs to be updated, and then sent to it's place
 cp dunstrc $HOME/.config/wal/templates
 cp -a .Xresources $HOME/.config/wal/templates
+cp -a rofi.rasi $HOME/.config/wal/templates
 
 cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/
 cp $HOME/.cache/wal/.Xresources $HOME/
