@@ -15,13 +15,13 @@
 
     selected-active-background: @background;
     selected-active-foreground: @foreground;
-    selected-normal-background: {color2};
+    selected-normal-background: {color5}88;
     selected-normal-foreground: @foreground;
     selected-urgent-background: @background;
     selected-urgent-foreground: @foreground;
 
     background-color: #00000000;
-    background: {color2}55;
+    background: {color1}88;
     foreground: {foreground};
     border-color: {color4};
     spacing: 2;
