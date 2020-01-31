@@ -1,5 +1,7 @@
 #navigate workspaces next / previous
 
+focus_follows_mouse yes
+
 
 bindsym $mod+Control+Up move up
 bindsym $mod+Control+Down move down

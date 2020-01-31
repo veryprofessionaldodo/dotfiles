@@ -25,7 +25,7 @@ XTerm*selectToClipboard: true
 *textColor:                       {color3}
 *inactiveTextColor:               {color1}
 *urgentBackground:                {background}
-
+*polybarBackground:               #55{color0.strip}
 *color0:                          {color0}
 *color8:                          {color8}
 
@@ -65,7 +65,7 @@ URxvt.depth:                      32
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
-URxvt*background:                 {background}
+URxvt*background:                 {color0}
 URxvt*foreground:                 {foreground}
 URxvt*saveLines:                  5000
 
