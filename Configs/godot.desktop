@@ -5,4 +5,4 @@ Type=Application
 Terminal=false
 Exec=godot
 Name=Godot
-Icon=$HOME/godot/icon.png
+I3con=$HOME/godot-git/icon.png
