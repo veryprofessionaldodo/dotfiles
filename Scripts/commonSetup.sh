@@ -31,9 +31,6 @@ fi
 
 ./setupSpicetify.sh
 
-# Fix small spicetify error 
-echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
-
 # Fix small ranger error 
 echo "set preview_script $HOME/.config/ranger/scope.sh" >> Apps/ranger/rc.conf
 

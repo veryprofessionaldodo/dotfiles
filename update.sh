@@ -42,7 +42,7 @@ cp -a rofi.rasi $HOME/.config/wal/templates
 cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/
 cp $HOME/.cache/wal/.Xresources $HOME/
 
-cp $DOTFILES_DIR/Apps/spicetify/config.ini $HOME/.config/spicetify
+cp $DOTFILES_DIR/Configs/config.ini $HOME/.config/spicetify
 
 cp -r $DOTFILES_DIR/Apps/spicetify/* $HOME/.config/spicetify/Themes/Yoo
 
