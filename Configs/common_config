@@ -76,10 +76,11 @@ set_from_resource $bg_color background
 set_from_resource $fg_color foreground
 
 set_from_resource $fg foreground
-set_from_resource $bg background
+set_from_resource $bg color0
+set_from_resource $bg_act color1
 
 # class                 border    backgr.   text     indicator  child_border
-client.focused          $fg       $bg       $fg      $fg        $fg
+client.focused          $fg       $bg_act   $fg      $fg        $fg
 client.focused_inactive $bg       $bg       $fg      $bg        $bg
 client.unfocused        $bg       $bg       $fg      $bg        $bg
 client.urgent           $fg       $bg       $fg      $fg        $fg
@@ -220,6 +221,7 @@ for_window [class="maya.bin"] move to workspace $ws3
 for_window [class="chromium"] move to workspace $ws5
 for_window [class="krita"] move to workspace $ws4
 for_window [instance="origin.exe"] floating enable
+#for_window [instance="Godot_Engine"] floating enable
 for_window [class="firefox"] sticky enable
 for_window [class="PureRef"] sticky enable
 for_window [class="vlc"] sticky enable
