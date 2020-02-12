@@ -22,10 +22,10 @@ lnColor=${c[1]}
 fgColor=${c[15]}
 bg2Color=${c[0]}
 contrastColor=${c[0]}
-sbColor=${c[0]}
+sbColor=${c[1]}
 treeColor=${c[15]}
 disabledColor=${c[15]}
-activeColor=${c[2]}
+activeColor=${c[15]}
 
 # Get current Directory
 SOURCE="${BASH_SOURCE[0]}"
