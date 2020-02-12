@@ -77,14 +77,19 @@ set_from_resource $fg_color foreground
 
 set_from_resource $fg foreground
 set_from_resource $bg color0
-set_from_resource $bg_act color1
+set_from_resource $bg_act color0
+set_from_resource $border_act color2
 
-# class                 border    backgr.   text     indicator  child_border
-client.focused          $fg       $bg_act   $fg      $fg        $fg
-client.focused_inactive $bg       $bg       $fg      $bg        $bg
-client.unfocused        $bg       $bg       $fg      $bg        $bg
-client.urgent           $fg       $bg       $fg      $fg        $fg
-client.placeholder      $bg       $bg       $fg      $bg        $bg
+set $text_inac #999999
+set $text_ac #FFFFFF
+
+
+# class                 border    backgr.   text       indicator  child_border
+client.focused          $fg       $bg_act   $text_ac   $text_ac   $border_act
+client.focused_inactive $bg       $bg       $text_inac $bg        $bg
+client.unfocused        $bg       $bg       $text_inac $bg        $bg
+client.urgent           $fg       $bg       $text_ac   $fg        $border_act
+client.placeholder      $bg       $bg       $text_inac $bg        $bg
 
 client.background       $bg
 

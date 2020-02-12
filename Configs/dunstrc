@@ -170,17 +170,17 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "{color0}"
-    foreground = "{foreground}"
+    foreground = "#FFFFFF"
     timeout = 3
 
 [urgency_normal]
     background = "{color0}"
-    foreground = "{foreground}"
+    foreground = "#FFFFFF"
     timeout = 3
 
 [urgency_critical]
     background = "{color3}"
-    foreground = "{background}"
+    foreground = "#FFFFFF"
     timeout = 3
 
 
