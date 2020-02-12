@@ -13,7 +13,6 @@ sleep 1
 
 sudo pacman -S xorg-server xorg-xinit i3-gaps rxvt-unicode tlp tlp-rdw powertop lightdm lightdm-gtk-greeter python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m polkit-gnome
 
-echo "Configuring TLP..."
 sudo systemctl enable lightdm
 sudo powertop --auto-tune
 

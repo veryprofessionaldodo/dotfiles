@@ -1,5 +1,5 @@
 <scheme name="material-pywal" version="142">
-  <option name="FONT_SCALE" value="1.25" />
+  <option name="FONT_SCALE" value="1.35" />
   <metaInfo>
     <property name="created">2017-11-02T17:04:42</property>
     <property name="ide">idea</property>
@@ -10,7 +10,7 @@
   <option name="LINE_SPACING" value="1.4" />
   <font>
     <option name="EDITOR_FONT_NAME" value="Fira Code" />
-    <option name="EDITOR_FONT_SIZE" value="14" />
+    <option name="EDITOR_FONT_SIZE" value="15" />
   </font>
   <font>
     <option name="EDITOR_FONT_NAME" value="Source Code Pro" />

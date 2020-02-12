@@ -1,9 +1,9 @@
 <application>
   <component name="MaterialCustomThemeConfig">
     <option name="treeSelectionColor" value="leTree" />
-    <option name="highlightColor" value="leSBG" />
+    <option name="highlightColor" value="leBG" />
     <option name="secondBorderColor" value="leSBC" />
-    <option name="contrastColor" value="leContrast" />
+    <option name="contrastColor" value="leSBG" />
     <option name="secondaryBackgroundColor" value="leBG2" />
     <option name="caretColor" value="ffffff" />
     <option name="inactiveColor" value="000000" />
