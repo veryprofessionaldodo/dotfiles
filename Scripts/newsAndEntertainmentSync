@@ -1,13 +1,9 @@
 #!/bin/bash
 
 firefox --new-window reddit.com/r/linux_gaming/top/?sort=top&t=day
-firefox reddit.com/r/linux/top/?sort=top&t=day
-firefox phoronix.com
-firefox mail.google.com
-firefox protonmail.com
-firefox https://www.youtube.com/results?search_query=yo
-firefox reddit.com/r/news/top/?sort=top&t=day
-firefox reddit.com/r/worldnews/top/?sort=top&t=day
-firefox reddit.com/r/nintendoswitch/top/?sort=top&t=day
-firefox eurogamer.net
-firefox pcgamer.com
+
+sleep 1
+
+firefox reddit.com/r/linux/top/?sort=top&t=day && firefox phoronix.com && firefox mail.google.com && firefox protonmail.com && firefox https://www.youtube.com/results?search_query=yo && firefox reddit.com/r/news/top/?sort=top&t=day && firefox reddit.com/r/worldnews/top/?sort=top&t=day && firefox reddit.com/r/nintendoswitch/top/?sort=top&t=day && firefox eurogamer.net && firefox pcgamer.com
+
+exit

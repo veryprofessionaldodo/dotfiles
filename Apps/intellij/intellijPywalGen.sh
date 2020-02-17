@@ -16,7 +16,7 @@ ijConfigPath=$1
 txtColor=${c[15]}
 bgColor=${c[0]}
 sbgColor=${c[0]}
-sfgColor=${c[0]}
+sfgColor=${c[1]} 
 caretRowColor=${sfgColor}
 lnColor=${c[1]}
 fgColor=${c[15]}
@@ -25,7 +25,7 @@ contrastColor=${c[0]}
 sbColor=${c[1]}
 treeColor=${c[15]}
 disabledColor=${c[15]}
-activeColor=${c[15]}
+activeColor=${c[2]}
 
 # Get current Directory
 SOURCE="${BASH_SOURCE[0]}"

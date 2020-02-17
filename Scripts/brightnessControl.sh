@@ -31,7 +31,7 @@ case $1 in
     ;;
   down)
     # decrease the backlight by 5%
-    if [ ${backlight} -lt 8.0 ] && [ ${backlight} -gt 1.0 ] ;
+    if [ ${backlight} -lt 8.0 ] && [ ${backlight} -gt 0.0 ] ;
     then
       echo $@
       xbacklight -set 1
