@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S base-devel git subversion cmake libxi libxcursor libxrandr libxinerama
+sudo pacman -S base-devel git subversion cmake libxi libxcursor libxrandr libxinerama boost
 
 mkdir -p $HOME/blender-git
 
@@ -12,18 +12,9 @@ mkdir -p $HOME/blender-git/lib
 
 cd $HOME/blender-git/lib
 
-svn checkout https://svn.blender.org/svnroot/bf-blender/trunk/lib/linux_centos7_x86_64
-
-cd linux_centos7_x86_64/boost
-
-sudo cp -r include/* /include/
-sudo cp -r lib/* /lib/
+svn checkout https://svn.blender.org/svnroot/bf-blender/trunk/lib/linux_centos7_x86_64/
 
 cd $HOME/blender-git/blender 
-
-git submodule update --init --recursive
-git submodule foreach git checkout master
-git submodule foreach git pull --rebase origin master
 
 make update
 make full
