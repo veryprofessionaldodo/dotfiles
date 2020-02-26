@@ -143,5 +143,5 @@ mkdir Documents Downloads Music Games Pictures Desktop
 
 sudo pacman -S git 
 
-### Then clone this repo, and after this, I made a script to automate everything :) and run the archFullSetup.sh, and you're good to go!
+### Then clone this repo, and after this, I made a script to automate everything :) and run the archFullSetup, and you're good to go!
 

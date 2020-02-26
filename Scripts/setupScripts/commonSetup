@@ -6,7 +6,7 @@ desktop="desktop"
 read -p "On which device are you installing my dude? 'laptop' or 'desktop'?  " device
 
 echo "Got you fam, installing on $device."
-./Scripts/addToPath.sh
+./Scripts/bashScripts/addToPath
 
 # This is also done right now so that the rest of the script can go along nicely, even without a reboot
 export DOTFILES_DIR=$DOTFILES_DIR
@@ -14,17 +14,17 @@ export PATH=$PATH:$DOTFILES_DIR
 
 cd Scripts
 
-./touchInitialFiles.sh
+./touchInitialFiles
 
-./installPrograms.sh $device
+./installRicePrograms $device
 
-echo "There is a list of programs at Scripts/extraProgramsToInstall.sh . You can modify this file now if you want, to download exactly what you need!"
+echo "There is a list of programs at Scripts/setupScripts/extraProgramsToInstall . You can modify this file now if you want, to download exactly what you need!"
 sleep 2
 
-read -p "Do you want to install the extra programs at Scripts/extraProgramsToInstall.sh? (y/n)  " answer
+read -p "Do you want to install the extra programs at Scripts/setupScripts/extraProgramsToInstall.sh? (y/n)  " answer
 if [ $answer == "y" ]
 then 
-	./extraProgramsToInstall.sh $device "arch-based"
+	./setupScripts/extraProgramsToInstall.sh $device "arch-based"
 fi
 
 ./setupLightDM.sh 
@@ -39,9 +39,13 @@ sleep 1
 
 ./update.sh $device
 
-cd Scripts
+cd $DOTFILES_DIR/Scripts/setupScripts/
 
-./installFonts.sh
+./moveScriptsToBin
+
+cd $DOTFILES_DIR/Scripts
+
+./installFonts
 killall i3bar
 	
 if [ $device == $laptop ]
@@ -51,7 +55,7 @@ then
 	echo "Configuring TLP for better battery management..."
 	sleep 1
 
-	./setupTLP.sh
+	./setupTLP
 
 	read -p "Do you want to setup Prime? (y/n)  " answer
 
@@ -63,7 +67,7 @@ then
 
 elif [ $device == $desktop ]
 then
-	./tabletConfig.sh
+	./tabletConfig
 	polybar left && polybar right
 fi
 
@@ -74,7 +78,7 @@ sleep 1
 sudo $DOTFILES_DIR/Apps/grub/install.sh -v
 
 # First wal run
-python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
+python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
 
 # Fix small error for VLC downloading
 mkdir ~/.cache/vlc

@@ -1,3 +1,0 @@
-#!/bin/bash
-
-python $DOTFILES_DIR/Scripts/updateKrita.py

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # You can call this script like this:
-# $ ./brightnessControl.sh up
-# $ ./brightnessControl.sh down
+# $ ./brightnessControl up
+# $ ./brightnessControl down
 
 # Script inspired by these wonderful people:
-# https://github.com/dastorm/volume-notification-dunst/blob/master/volume.sh
+# https://github.com/dastorm/volume-notification-dunst/blob/master/volume
 # https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a
 
 function get_brightness {

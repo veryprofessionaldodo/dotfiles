@@ -44,10 +44,10 @@ sleep 1
 
 DOTFILES_DIR=${PWD}
 
-sudo touch /etc/profile.d/dotfiles.sh
-echo "#!/bin/bash" | sudo tee -a /etc/profile.d/dotfiles.sh
-echo "export PATH=DOTFILES_DIR=$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh
-echo "export PATH=$PATH:$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles.sh
+sudo touch /etc/profile.d/dotfiles
+echo "#!/bin/bash" | sudo tee -a /etc/profile.d/dotfiles
+echo "export PATH=DOTFILES_DIR=$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles
+echo "export PATH=$PATH:$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles
 
 echo "Added!"
 sleep 1
@@ -72,19 +72,19 @@ sudo xbps-install wmctrl ranger dmenu dunst ffmpegthumbnailer feh rofi polybar g
 # pacmixer
 # spicetify-cli
 
-echo "There is a list of programs at Scripts/extraProgramsToInstall.sh . You can modify this file now if you want, to download exactly what you need!"
+echo "There is a list of programs at Scripts/setupScripts/extraProgramsToInstall . You can modify this file now if you want, to download exactly what you need!"
 sleep 2
 
 cd Scripts
 
-read -p "Do you want to install the extra programs at Scripts/extraProgramsToInstall.sh? (y/n)  " answer
+read -p "Do you want to install the extra programs at Scripts/setupScripts/extraProgramsToInstall? (y/n)  " answer
 if [ $answer == "y" ]
 then 
-	./extraProgramsToInstall.sh $device "void"
+	./setupScripts/extraProgramsToInstall $device "void"
 fi
 
 
-./touchInitialFiles.sh
+./touchInitialFiles
 
 # Fix small spicetify error 
 echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
@@ -97,11 +97,11 @@ sleep 1
 
 cd $DOTFILES_DIR
 
-./update.sh $device
+./update $device
 
 cd Scripts
 
-./installFonts.sh
+./installFonts
 	
 if [ $device == $laptop ]
 then
@@ -117,13 +117,13 @@ then
 
 elif [ $device == $desktop ]
 then
-	./tabletConfig.sh
+	./tabletConfig
 	polybar left && polybar right
 fi
 
-sudo cp $DOTFILES_DIR/Scripts/addCommitPush /bin
-sudo cp $DOTFILES_DIR/Scripts/install* /bin
-sudo cp $DOTFILES_DIR/Scripts/update* /bin
+cd $DOTFILES_DIR/Scripts/setupScripts/
+
+./moveScriptsToBin
 
 # Installing GRUB theme 
 echo "Installing GRUB theme..."
@@ -132,7 +132,7 @@ sleep 1
 sudo $DOTFILES_DIR/Apps/grub/install.sh -v
 
 # First wal run
-python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
+python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
 
 # Fix small error for VLC downloading
 mkdir ~/.cache/vlc

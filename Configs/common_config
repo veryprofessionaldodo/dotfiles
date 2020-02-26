@@ -5,9 +5,6 @@
 set $mod Mod1
 set $mod4 Mod4
 
-bindsym $mod4+Shift+r exec --no-startup-id $DOTFILES_DIR/Scripts/resync
-bindsym $mod4+Shift+d exec --no-startup-id $DOTFILES_DIR/Scripts/disconnect
-
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
@@ -131,10 +128,10 @@ bindsym $mod+Right focus right
 #bindsym $mod+b workspace back_and_forth
 
 # Media controller
-bindsym $mod+Shift+v exec --no-startup-id python $DOTFILES_DIR/Scripts/mediaPlayerController.py toggle
-bindsym $mod+Shift+b exec --no-startup-id python $DOTFILES_DIR/Scripts/mediaPlayerController.py previous
-bindsym $mod+Shift+n exec --no-startup-id python $DOTFILES_DIR/Scripts/mediaPlayerController.py next
-bindsym $mod+Shift+m exec --no-startup-id python $DOTFILES_DIR/Scripts/mediaPlayerController.py info
+bindsym $mod+Shift+v exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/mediaPlayerController.py toggle
+bindsym $mod+Shift+b exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/mediaPlayerController.py previous
+bindsym $mod+Shift+n exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/mediaPlayerController.py next
+bindsym $mod+Shift+m exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/mediaPlayerController.py info
 
 # split orientation
 bindsym $mod+h split h;exec --no-startup-id notify-send 'tile horizontally'
@@ -329,8 +326,6 @@ exec --no-startup-id rescuetime
 exec --no-startup-id redshift -c "$HOME/.config/redshift.conf"
 exec --no-startup-id clipit
 
-#conky 
-#exec --no-startup-id $HOME/.conky/SimplecOne/start.sh
 
 exec --no-startup-id conky -c $DOTFILES_DIR/Apps/conky/conky_shortcuts
 exec --no-startup-id conky -c $DOTFILES_DIR/Apps/conky/conky

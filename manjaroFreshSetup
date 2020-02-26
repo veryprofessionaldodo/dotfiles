@@ -6,4 +6,4 @@ sleep 2
 echo "With that out of the way, good luck, hope everything turns out well!"
 sleep 1
 
-./Scripts/commonSetup.sh
+./Scripts/setupScripts/commonSetup

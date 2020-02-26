@@ -8,7 +8,7 @@ cd ~
 
 mkdir krita-git
 
-python $DOTFILES_DIR/Scripts/updateKrita.py
+python $DOTFILES_DIR/Scripts/pythonScripts/updateKrita.py
 
 sudo chmod u+x $HOME/krita-git/krita.appimage
 

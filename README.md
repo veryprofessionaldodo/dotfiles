@@ -5,7 +5,7 @@ Storage of my Dotfiles for a Manjaro i3, here's an example of how it looks.
 
 Note: This was custom made for my own Manjaro (and now Arch) setup, but I have a lot of scripts that can help you bootstrap your own config. 
 
-The most helpful scripts for you are probably update.sh and \*FreshSetup.sh scripts. The "update" script takes all the important files in the configuration folders, and shoves them where they belong. This includes configuration files for a lot of different things, so please read the script and modify it how much you want :)  The "freshSetup" is to setup fonts, install programs, as well as using update, both for Manjaro and Arch. Again, I reiterate, this was done to automate work on *my* setup, so you may have to tinker with it a bit.
+The most helpful scripts for you are probably update and \*FreshSetup scripts. The "update" script takes all the important files in the configuration folders, and shoves them where they belong. This includes configuration files for a lot of different things, so please read the script and modify it how much you want :)  The "freshSetup" is to setup fonts, install programs, as well as using update, both for Manjaro and Arch. Again, I reiterate, this was done to automate work on *my* setup, so you may have to tinker with it a bit.
 
 I've tried to make things path-agnostic, so wherever you place this folder is where the setup is configured. Just an important thing to keep in mind, I setup a new environment variable called $DOTFILES_DIR that is referenced liberally throughout the scripts. This variable is set on the FreshSetup script automagically, so there's no need for you to input any information. 
 
