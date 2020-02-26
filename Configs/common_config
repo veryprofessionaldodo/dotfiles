@@ -18,7 +18,7 @@ hide_edge_borders none
 # Polybar
 bindsym $mod+Shift+k exec --no-startup-id killall -q polybar
 
-bindsym $mod+Shift+f exec --no-startup-id python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
+bindsym $mod+Shift+f exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -315,7 +315,7 @@ exec --no-startup-id thunar --daemon
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 #exec --no-startup-id pamac-tray
-exec --no-startup-id python $DOTFILES_DIR/Scripts/wallpaperAndColorScheme.py
+exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
 exec_always --no-startup-id compton --config "$HOME/.config/compton.conf" 
