@@ -318,9 +318,9 @@ exec --no-startup-id nm-applet
 exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
-exec_always --no-startup-id compton --config "$HOME/.config/compton.conf" 
+exec --no-startup-id compton --config "$HOME/.config/compton.conf" 
 exec --no-startup-id TelegramDesktop
-# exec --no-startup-id franz
+exec --no-startup-id franz
 exec --no-startup-id telegram-desktop
 exec --no-startup-id rescuetime
 exec --no-startup-id redshift -c "$HOME/.config/redshift.conf"
