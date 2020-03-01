@@ -90,11 +90,14 @@ wpg-install.sh -i
 wpg-install.sh -g
 
 echo "Change line 93 of this script if you want another lockscreen wallpaper."
-sleep 1 
+sleep 2 
 
 betterlockscreen -u $DOTFILES_DIR/Wallpapers/wallhaven-83do1o.jpg 
 
+echo "If you want to configure VPN, you can do it now."
+sleep 3
+
 echo "And that's it! Exiting."
-sleep 1
+sleep 2
 
 
