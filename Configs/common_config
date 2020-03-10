@@ -225,7 +225,9 @@ for_window [class="krita"] move to workspace $ws4
 for_window [instance="origin.exe"] floating enable
 #for_window [instance="Godot_Engine"] floating enable
 for_window [class="firefox"] sticky enable
+for_window [class="PureRef"] floating enable
 for_window [class="PureRef"] sticky enable
+# for_window [class="PureRef"] floating enable
 for_window [class="vlc"] sticky enable
 
 assign [instance="origin.exe"] $ws6
