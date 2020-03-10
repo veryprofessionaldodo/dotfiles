@@ -1,3 +1,13 @@
 #!/bin/bash
 
-python $DOTFILES_DIR/Scripts/pythonScripts/updateKrita.py
+cd ~/krita-git 
+
+cd krita 
+
+git pull
+
+cd ../build
+
+make -j8
+
+make install

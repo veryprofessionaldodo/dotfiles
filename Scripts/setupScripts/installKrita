@@ -2,17 +2,27 @@
 
 mkdir -p krita-git
 
-sudo pip install beautifulsoup4
+cd krita-git 
 
-cd ~
+mkdir build 
 
-mkdir krita-git
+mkdir install 
 
-python $DOTFILES_DIR/Scripts/pythonScripts/updateKrita.py
+git clone git://anongit.kde.org/krita.git
 
-sudo chmod u+x $HOME/krita-git/krita.appimage
+cd build 
 
-sudo cp $DOTFILES_DIR/Configs/krita.desktop /usr/share/applications
+yay -S extra-cmake-modules python-qt5 sip libheif gsl fftw eigen quazip vc poppler-qt5
+
+cmake ../krita -DCMAKE_INSTALL_PREFIX=$HOME/krita-git/install -DCMAKE_BUILD_TYPE=Release -DKRITA_DEVS=ON
+
+make -j8
+
+make install
+
+sudo cp ~/krita-git/install/bin/krita /bin
+
+sudo cp -r ~/krita-git/install/share/* /usr/share
 
 
 
