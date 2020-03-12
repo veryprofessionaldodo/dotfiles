@@ -10,4 +10,4 @@ cd ../build
 
 make --no-print-directory -j8
 
-make install
+make --no-print-directory install

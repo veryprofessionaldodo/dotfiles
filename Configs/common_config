@@ -45,33 +45,8 @@ bindsym $mod+Shift+q kill
 # to:
 # background $term_background
 # Same logic applied to everything else.
-set_from_resource $bg-color background
-set_from_resource $inactive-bg-color  inactive
-set_from_resource $text-color textColor
-set_from_resource $inactive-text-color inactiveTextColor
-set_from_resource $urgent-bg-color urgentBackground
-set_from_resource $rofi-bg rofiBackground
-set_from_resource $term_background background
-set_from_resource $term_foreground foreground
-set_from_resource $term_color0     color0
-set_from_resource $term_color1     color1
-set_from_resource $term_color2     color2
-set_from_resource $term_color3     color3
-set_from_resource $term_color4     color4
-set_from_resource $term_color5     color5
-set_from_resource $term_color6     color6
-set_from_resource $term_color7     color7
-set_from_resource $term_color8     color8
-set_from_resource $term_color9     color9
-set_from_resource $term_color10    color10
-set_from_resource $term_color11    color11
-set_from_resource $term_color12    color12
-set_from_resource $term_color13    color13
-set_from_resource $term_color14    color14
-set_from_resource $term_color15    color15
-set_from_resource $bg_color background
-set_from_resource $fg_color foreground
 
+set_from_resource $inactive-bg-color  inactive
 set_from_resource $fg foreground
 set_from_resource $bg color0
 set_from_resource $bg_act color0
@@ -103,7 +78,6 @@ exec --no-startup-id volumeicon
 
 ################################################################################################
 
-# Start Applications
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id urxvt -e ranger
 bindsym $mod+F3 exec --no-startup-id nautilus
@@ -111,21 +85,11 @@ bindsym $mod+F4 exec --no-startup-id krita
 bindsym $mod+F5 exec --no-startup-id spotify
 bindsym Mod4+Shift+s --release exec --no-startup-id flameshot gui
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-# workspace back and forth (with/without active container)
-#workspace_auto_back_and_forth yes
-#bindsym $mod+b workspace back_and_forth
 
 # Media controller
 bindsym $mod+Shift+v exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/mediaPlayerController.py toggle
@@ -134,8 +98,8 @@ bindsym $mod+Shift+n exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScr
 bindsym $mod+Shift+m exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/mediaPlayerController.py info
 
 # split orientation
-bindsym $mod+h split h;exec --no-startup-id notify-send 'tile horizontally'
-bindsym $mod+v split v;exec --no-startup-id notify-send 'tile vertically'
+bindsym $mod+h split h;exec --no-startup-id notify-send 'Tile Horizontally'
+bindsym $mod+v split v;exec --no-startup-id notify-send 'Tile Vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -310,7 +274,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+Shift+Escape exec --no-startup-id gnome-system-monitor
+bindsym $mod+Shift+Escape exec --no-startup-id urxvt -e gotop
 
 # Autostart applications
 exec --no-startup-id thunar --daemon
@@ -320,7 +284,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
-exec --no-startup-id compton --config "$HOME/.config/compton.conf" 
+exec --no-startup-id compton --config "$HOME/.config/compton.conf" --experimental-backends 
 exec --no-startup-id TelegramDesktop
 exec --no-startup-id franz
 exec --no-startup-id telegram-desktop

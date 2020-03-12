@@ -34,6 +34,7 @@ cd $DOTFILES_DIR/Configs
 cp redshift.conf $HOME/.config/
 
 cp compton.conf $HOME/.config/compton.conf
+cp picom.conf $HOME/.config/picom.conf
 
 # Dunst and Xresources needs to be updated, and then sent to it's place
 cp dunstrc $HOME/.config/wal/templates
