@@ -8,6 +8,6 @@ git pull
 
 cd ../build
 
-make -j8
+make --no-print-directory -j8
 
 make install

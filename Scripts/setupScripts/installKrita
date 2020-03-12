@@ -16,7 +16,7 @@ yay -S extra-cmake-modules python-qt5 sip libheif gsl fftw eigen quazip vc poppl
 
 cmake ../krita -DCMAKE_INSTALL_PREFIX=$HOME/krita-git/install -DCMAKE_BUILD_TYPE=Release -DKRITA_DEVS=ON
 
-make -j8
+make --no-print-directory -j8
 
 make install
 
