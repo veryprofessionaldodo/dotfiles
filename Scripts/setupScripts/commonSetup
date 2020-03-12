@@ -18,6 +18,9 @@ cd Scripts
 
 ./installRicePrograms $device
 
+# Remove fish intro message
+echo 'set -U fish_greeting ""' >> .config/fish/config.fish
+
 echo "There is a list of programs at Scripts/setupScripts/extraProgramsToInstall . You can modify this file now if you want, to download exactly what you need!"
 sleep 2
 

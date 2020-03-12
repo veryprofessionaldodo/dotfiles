@@ -28,7 +28,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec urxvt
+bindsym $mod+Shift+Return exec urxvt -e fish
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -115,9 +115,6 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
@@ -284,17 +281,11 @@ exec --no-startup-id nm-applet
 exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
-exec --no-startup-id compton --config "$HOME/.config/compton.conf" --experimental-backends 
+exec --no-startup-id compton --config "$HOME/.config/compton.conf"
 exec --no-startup-id TelegramDesktop
 exec --no-startup-id franz
 exec --no-startup-id telegram-desktop
-exec --no-startup-id rescuetime
 exec --no-startup-id redshift -c "$HOME/.config/redshift.conf"
-exec --no-startup-id clipit
-
-
-exec --no-startup-id conky -c $DOTFILES_DIR/Apps/conky/conky_shortcuts
-exec --no-startup-id conky -c $DOTFILES_DIR/Apps/conky/conky
 
 set $inactive #1C2332
 # Start i3bar to display a workspace bar (plus the system information i3status if available)

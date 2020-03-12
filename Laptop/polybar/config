@@ -122,7 +122,7 @@ font-2 = "Iosevka Nerd Font:size=12;3"
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
 
-modules-left = menu i3
+modules-left = menu bspwm
 modules-center = 
 ; modules-right = alsa network battery time date sysmenu tray
 modules-right = alsa network battery time date sysmenu 
@@ -187,7 +187,9 @@ tray-scale = 1.0
 ; Currently supported WM's:
 ;   bspwm
 ;   i3 (requires: `override-redirect = true`)
-; wm-restack =
+; 
+
+wm-restack = bspwm
 
 ; Set a DPI values used when rendering text
 ; This only affects scalable fonts
