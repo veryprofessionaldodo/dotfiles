@@ -1,17 +1,17 @@
 #! /bin/sh
 
 sxhkd &
-compton &
-python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py &
+#compton &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 setxkbmap pt -option 'numpad:microsoft' &
-TelegramDesktop &
-killall redshift && redshift -c "$HOME/.config/redshift.conf" &
+#redshift -c "$HOME/.config/redshift.conf" &
+
+python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py &
+
 
 bspc monitor -d 1 2 3 4 5 6 7 8
 
-killall polybar && polybar main &
-
+polybar main &
 
 bspc config single_monocle true
 
@@ -26,4 +26,8 @@ bspc rule -a code-oss desktop='^3' follow=on
 bspc rule -a firefox desktop='^1'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+bspc rule -a telegram-desktop desktop='^2'
+bspc rule -a Franz desktop='^2'
+
+telegram-desktop &
+franz &

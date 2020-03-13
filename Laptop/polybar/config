@@ -97,7 +97,7 @@ border-color = ${color.bg}
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
 ;   padding-{left,right}
-padding = 0
+padding-right = 0
 
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
@@ -122,7 +122,7 @@ font-2 = "Iosevka Nerd Font:size=12;3"
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
 
-modules-left = menu bspwm
+modules-left = menu i3 bspwm
 modules-center = 
 ; modules-right = alsa network battery time date sysmenu tray
 modules-right = alsa network battery time date sysmenu 
@@ -173,7 +173,7 @@ tray-offset-x = 0
 tray-offset-y = 0
 
 ; Pad the sides of each tray icon
-tray-padding = 2
+tray-padding = 0
 
 ; Scale factor for tray clients
 tray-scale = 1.0
@@ -189,7 +189,7 @@ tray-scale = 1.0
 ;   i3 (requires: `override-redirect = true`)
 ; 
 
-wm-restack = bspwm
+;wm-restack = bspwm
 
 ; Set a DPI values used when rendering text
 ; This only affects scalable fonts
