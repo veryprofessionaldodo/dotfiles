@@ -12,7 +12,7 @@ git clone git://anongit.kde.org/krita.git
 
 cd build 
 
-yay -S extra-cmake-modules python-qt5 python-sip libheif gsl fftw eigen quazip vc python-poppler-qt5 karchive kconfig kwidgetsaddons kwindowsystem kcomopletion kcoreaddons kguiaddons k18n kitemmodels kitemviews kcrash 
+yay -S extra-cmake-modules python-pyqt5 libheif gsl fftw eigen quazip vc python-poppler-qt5 karchive kconfig kwidgetsaddons kwindowsystem kcompletion kcoreaddons kguiaddons ki18n kitemmodels kitemviews kcrash 
 
 cmake ../krita -DCMAKE_INSTALL_PREFIX=$HOME/krita-git/install -DCMAKE_BUILD_TYPE=Release -DKRITA_DEVS=ON
 

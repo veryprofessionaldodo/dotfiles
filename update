@@ -56,34 +56,28 @@ sleep 0.1
 
 cd $DOTFILES_DIR 
 
-cp Configs/sxhkdrc $HOME/.config/sxhkd/
-
 if [ $1 == $laptop ]
 then 
     cd $DOTFILES_DIR/Laptop
     
     touch $HOME/.config/i3/config
-    touch $HOME/.config/bspwm/bspwmrc
     rm $HOME/.config/i3/config
-    rm $HOME/.config/bspwm/bspwmrc
-
+    
     cat $DOTFILES_DIR/Configs/common_config config >> $HOME/.config/i3/config
 
     cp polybar/config $HOME/.config/polybar
-    cp bspwmrc $HOME/.config/bspwm
+
 elif [ $1 == $desktop ]
 then
     cd $DOTFILES_DIR/Desktop
 
     touch $HOME/.config/i3/config
-    touch $HOME/.config/bspwm/bspwmrc
     rm $HOME/.config/i3/config
-    rm $HOME/.config/bspwm/bspwmrc
-
+    
     cat $DOTFILES_DIR/Configs/common_config config >> $HOME/.config/i3/config
     
     cp polybar/config $HOME/.config/polybar
-    cp bspwmrc $HOME/.config/bspwm
+
 fi
 
 

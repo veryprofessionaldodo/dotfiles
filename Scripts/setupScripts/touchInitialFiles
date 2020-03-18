@@ -10,6 +10,10 @@ mkdir $HOME/.config/spicetify/Themes/
 
 mkdir $HOME/.config/spicetify/Themes/Yoo
 
+mkdir $HOME/.config/fish
+mkdir $HOME/.config/bspwm
+mkdir $HOME/.config/sxhkd
+
 mkdir $HOME/.config/dunst
 
 # For Spicetify

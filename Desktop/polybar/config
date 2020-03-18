@@ -67,7 +67,7 @@ font-0 = "Noto Sans:size=9;3"
 font-1 = "icomoon\-feather:size=9;3"
 font-2 = "Iosevka Nerd Font:size=12;3"
 
-modules-left = menu bspwm
+modules-left = menu i3
 modules-center = 
 modules-right = alsa network battery time date sysmenu tray
 
@@ -158,7 +158,7 @@ font-0 = "Noto Sans:size=9;3"
 font-1 = "icomoon\-feather:size=9;3"
 font-2 = "Iosevka Nerd Font:size=12;3"
 
-modules-left = menu bspwm
+modules-left = menu i3 bspwm
 modules-center = 
 modules-right = alsa network battery time date sysmenu
 
