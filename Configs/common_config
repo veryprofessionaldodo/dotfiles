@@ -5,6 +5,8 @@
 set $mod Mod1
 set $mod4 Mod4
 
+exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
+
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
@@ -278,10 +280,9 @@ exec --no-startup-id thunar --daemon
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 #exec --no-startup-id pamac-tray
-exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
-exec --no-startup-id compton --config "$HOME/.config/compton.conf"
+exec --no-startup-id compton --config "$HOME/.config/compton.conf" 
 exec --no-startup-id TelegramDesktop
 exec --no-startup-id franz
 exec --no-startup-id telegram-desktop

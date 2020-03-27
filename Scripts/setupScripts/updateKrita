@@ -11,3 +11,7 @@ cd ../build
 make --no-print-directory -j8
 
 make --no-print-directory install
+
+sudo cp ~/krita-git/install/bin/krita /bin
+
+sudo cp -r ~/krita-git/install/share/* /usr/share

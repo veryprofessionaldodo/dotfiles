@@ -4,9 +4,7 @@ mkdir -p krita-git
 
 cd krita-git 
 
-mkdir build 
-
-mkdir install 
+mkdir build install
 
 git clone git://anongit.kde.org/krita.git
 
@@ -14,11 +12,9 @@ cd build
 
 yay -S extra-cmake-modules python-pyqt5 libheif gsl fftw eigen quazip vc python-poppler-qt5 karchive kconfig kwidgetsaddons kwindowsystem kcompletion kcoreaddons kguiaddons ki18n kitemmodels kitemviews kcrash 
 
-cmake ../krita -DCMAKE_INSTALL_PREFIX=$HOME/krita-git/install -DCMAKE_BUILD_TYPE=Release -DKRITA_DEVS=ON
+cmake ../krita -DCMAKE_INSTALL_PREFIX=$HOME/krita-dev/install -DCMAKE_BUILD_TYPE=Debug -DKRITA_DEVS=ON
 
-make --no-print-directory -j8
-
-make --no-print-directory install
+make --no-print-directory -j8 && make --no-print-directory install
 
 sudo cp ~/krita-git/install/bin/krita /bin
 
