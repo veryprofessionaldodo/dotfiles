@@ -282,7 +282,7 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id pamac-tray
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
-exec --no-startup-id compton --config "$HOME/.config/compton.conf" 
+exec --no-startup-id picom --experimental-backends
 exec --no-startup-id TelegramDesktop
 exec --no-startup-id franz
 exec --no-startup-id telegram-desktop
