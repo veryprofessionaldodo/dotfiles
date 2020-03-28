@@ -10,11 +10,11 @@ mv godot godot-git
 
 cd godot-git
 
-scons -j8 platform=x11
+scons -j8 platform=linuxbsd
 
 cd bin
 
-mv godot.x11.tools.64 godot
+mv godot.linuxbsd.tools.64 godot
 
 sudo cp godot /bin
 
