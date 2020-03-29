@@ -276,14 +276,9 @@ mode "resize" {
 bindsym $mod+Shift+Escape exec --no-startup-id urxvt -e gotop
 
 # Autostart applications
-exec --no-startup-id thunar --daemon
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nm-applet
-#exec --no-startup-id pamac-tray
-
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
-exec --no-startup-id 'picom --experimental-backends'
-exec --no-startup-id TelegramDesktop
+exec --no-startup-id picom --experimental-backends
 exec --no-startup-id franz
 exec --no-startup-id telegram-desktop
 exec --no-startup-id redshift -c "$HOME/.config/redshift.conf"
