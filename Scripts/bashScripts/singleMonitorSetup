@@ -1,12 +1,9 @@
 #!/bin/bash
 
-killall compton &
-
 xrandr --output HDMI-A-1 --off
 xrandr --output DisplayPort-1 --off
 
 xrandr --output DisplayPort-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
-#xrandr --output DisplayPort-1 --auto
 
-killall polybar 
+killall polybar
 polybar left &

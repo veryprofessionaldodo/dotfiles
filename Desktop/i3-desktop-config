@@ -52,9 +52,5 @@ bindsym $mod+Shift+h exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScr
 # Extra autostart #
 ###################
 
-# Polybar 
-exec --no-startup-id polybar left
-exec --no-startup-id polybar right
-
-# Set primary monitor
+# Set primary monitor and polybars
 exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/dualMonitorSetup
