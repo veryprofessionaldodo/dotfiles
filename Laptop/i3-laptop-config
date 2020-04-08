@@ -1,3 +1,23 @@
+####################
+# Laptop Specific #
+####################
+
+###### 
+# i3 #
+######
+
+focus_follows_mouse no
+
+#disables tap to click
+#exec --no-startup-id synclient MaxTapTime=50
+#exec --no-startup-id synclient PalmDetect=1
+#exec --no-startup-id synclient TapButton1=1
+exec --no-startup-id synclient HorizTwoFingerScroll=1
+
+#####################
+# Extra keybindings #
+#####################
+
 bindsym XF86AudioLowerVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl down 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl up 5
 bindsym XF86AudioMute exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl mute
@@ -12,33 +32,13 @@ bindsym XF86MonBrightnessUp exec --no-startup-id $DOTFILES_DIR/Scripts/bashScrip
 
 bindsym $mod+Shift+p exec --no-startup-id polybar main
 
-# Autostart applications
-#exec --no-startup-id xfce4-power-manager
-#exec --no-startup-id fix_xcursor
+###################
+# Extra autostart #
+###################
 
 #Polybar
 exec --no-startup-id polybar main
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
 
-focus_follows_mouse no
 
-
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
-
-# hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
-
-#############################
-### settings for i3-gaps: ###
-#############################
-
-# Set inner/outer gaps
-gaps inner 14
-gaps outer -6
-
-#disables tap to click
-#exec --no-startup-id synclient MaxTapTime=50
-#exec --no-startup-id synclient PalmDetect=1
-#exec --no-startup-id synclient TapButton1=1
-exec --no-startup-id synclient HorizTwoFingerScroll=1

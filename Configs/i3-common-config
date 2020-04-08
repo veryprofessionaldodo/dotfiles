@@ -1,0 +1,74 @@
+######
+# i3 #
+######
+
+# Set mod key (Mod1=<Alt>, Mod4=<Super>)
+set $mod Mod1
+set $mod4 Mod4
+
+# Configure border style <normal|1pixel|pixel xx|none|pixel>
+new_window pixel 3
+new_float pixel 3
+
+# Hide borders
+hide_edge_borders none
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font xft:URWGothic-Book 11
+
+# Use Mouse+$mod to drag floating windows
+floating_modifier $mod
+
+##########
+# Colors #
+##########
+
+set_from_resource $fg foreground
+set_from_resource $bg color0
+set_from_resource $bg_act color0
+set_from_resource $border_act color2
+set_from_resource $text_inac color5
+set_from_resource $text_ac color7
+
+# class                 border    backgr.   text       indicator  child_border
+client.focused          $fg       $bg_act   $text_ac   $text_ac   $border_act
+client.focused_inactive $bg       $bg       $text_inac $bg        $bg
+client.unfocused        $bg       $bg       $text_inac $bg        $bg
+client.urgent           $fg       $bg       $text_ac   $fg        $border_act
+client.placeholder      $bg       $bg       $text_inac $bg        $bg
+
+client.background       $bg
+
+##############
+# Workspaces #
+##############
+
+set $ws1 1:
+set $ws2 2:
+set $ws3 3:
+set $ws4 4:
+set $ws5 5:
+set $ws6 6:
+set $ws7 7
+set $ws8 8
+
+########
+# Gaps #
+########
+
+# Set inner/outer gaps
+gaps inner 14
+gaps outer -6
+
+# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
+# gaps inner|outer current|all set|plus|minus <px>
+# gaps inner all set 10
+# gaps outer all plus 5
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+smart_gaps on
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+smart_borders on

@@ -62,9 +62,9 @@ then
     
     touch $HOME/.config/i3/config
     rm $HOME/.config/i3/config
-    
-    cat $DOTFILES_DIR/Configs/common_config config >> $HOME/.config/i3/config
 
+    cat ../Configs/i3-common-config ../Configs/i3-windows ../Configs/i3-keybindings ../Configs/i3-autostart i3-laptop-config >> $HOME/.config/i3/config
+    
     cp polybar/config $HOME/.config/polybar
 
 elif [ $1 == $desktop ]
@@ -74,7 +74,7 @@ then
     touch $HOME/.config/i3/config
     rm $HOME/.config/i3/config
     
-    cat $DOTFILES_DIR/Configs/common_config config >> $HOME/.config/i3/config
+    cat ../Configs/i3-common-config ../Configs/i3-windows ../Configs/i3-keybindings ../Configs/i3-autostart i3-desktop-config >> $HOME/.config/i3/config
     
     cp polybar/config $HOME/.config/polybar
 
