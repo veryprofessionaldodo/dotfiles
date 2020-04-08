@@ -37,7 +37,6 @@ for_window [instance="Steam Login"] move to workspace $ws6
 for_window [class="Spotify"] move to workspace $ws5
 
 
-
 ############
 # Floating #
 ############
@@ -70,6 +69,7 @@ for_window [class="Xfburn"] floating enable
 for_window [class="sun-awt-X11-XWindowPeer"] floating enable
 for_window [class="PureRef"] floating enable
 for_window [instance="origin.exe"] floating enable
+for_window [class="java-lang-Thread"] floating enable
 
 ##########
 # Sticky #
