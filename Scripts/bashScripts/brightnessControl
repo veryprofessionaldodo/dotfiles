@@ -26,8 +26,8 @@ backlight="$(xbacklight)"
 
 case $1 in
   up)
-    xbacklight -inc 5
     send_notification
+    xbacklight -inc 5
     ;;
   down)
     # decrease the backlight by 5%

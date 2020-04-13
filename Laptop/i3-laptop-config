@@ -18,10 +18,6 @@ exec --no-startup-id synclient HorizTwoFingerScroll=1
 # Extra keybindings #
 #####################
 
-bindsym XF86AudioLowerVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl down 5
-bindsym XF86AudioRaiseVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl up 5
-bindsym XF86AudioMute exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl mute
-
 bindsym $mod+Shift+Right move right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Up move up
