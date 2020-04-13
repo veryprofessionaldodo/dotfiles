@@ -39,6 +39,7 @@ bindsym $mod+Shift+p exec --no-startup-id polybar main
 #Polybar
 exec --no-startup-id polybar main
 
-exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
+# Picom
+exec --no-startup-id picom --experimental-backends 
 
 

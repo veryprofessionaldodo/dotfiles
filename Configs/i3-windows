@@ -2,7 +2,7 @@
 # Assigns #
 ###########
 assign [class="PureRef"] $ws3
-assign [class="Blender"] $ws4
+#assign [class="Blender"] $ws4
 assign [class="discord"] $ws5
 assign [class="firefox"] $ws1
 assign [class="Navigator"] $ws1

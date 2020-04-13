@@ -7,7 +7,7 @@ exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColo
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
-exec --no-startup-id picom --experimental-backends
+
 exec --no-startup-id franz
 exec --no-startup-id telegram-desktop
 
