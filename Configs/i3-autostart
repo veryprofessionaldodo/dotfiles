@@ -14,3 +14,5 @@ exec --no-startup-id telegram-desktop
 exec --no-startup-id redshift -c "$HOME/.config/redshift.conf"
 
 exec --no-startup-id pacmd set-source-volume 2 20000
+
+exec --no-startup-id pulseeffects --gapplication-service
