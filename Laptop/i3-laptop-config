@@ -36,6 +36,6 @@ bindsym $mod+Shift+p exec --no-startup-id polybar main
 exec --no-startup-id polybar main
 
 # Picom
-exec --no-startup-id picom --experimental-backends 
+#exec --no-startup-id picom --experimental-backends 
 
 

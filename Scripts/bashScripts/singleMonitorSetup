@@ -1,10 +1,10 @@
 #!/bin/bash
 
 xrandr --output HDMI-A-1 --off
-#xrandr --output DisplayPort-1 --off
+xrandr --output DisplayPort-1 --off
 
-#xrandr --output DisplayPort-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+xrandr --output DisplayPort-1 --primary --mode 1920x1080 --rate 74.97 --pos 0x0 --rotate normal
 
 killall polybar
 polybar left &
-picom --experimental-backends &
+#picom --experimental-backends &
