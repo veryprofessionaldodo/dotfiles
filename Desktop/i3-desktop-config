@@ -48,7 +48,6 @@ bindsym $mod+Shift+g exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/sing
 # Toggle refresh rates
 bindsym $mod+Shift+h exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/toggleMonitorRate.py
 
-bindsym $mod+Shift+j exec --no-startup-id pacmd set-source-volume 2 20000
 
 ###################
 # Extra autostart #

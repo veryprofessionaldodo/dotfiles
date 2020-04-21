@@ -32,6 +32,11 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # Restart i3 
 bindsym $mod+Shift+r restart
 
+bindsym $mod+Control+Right move right
+bindsym $mod+Control+Left move left
+bindsym $mod+Control+Up move up
+bindsym $mod+Control+Down move down
+
 # Exits i3
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -134,6 +139,8 @@ bindsym $mod+Shift+f exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScr
 bindsym XF86AudioLowerVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl down 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl up 5
 bindsym XF86AudioMute exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl mute
+
+bindsym $mod+Shift+j exec --no-startup-id pacmd set-source-volume 2 20000
 
 #########
 # Media #

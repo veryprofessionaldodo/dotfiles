@@ -18,11 +18,6 @@ exec --no-startup-id synclient HorizTwoFingerScroll=1
 # Extra keybindings #
 #####################
 
-bindsym $mod+Shift+Right move right
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Down move down
-
 bindsym XF86MonBrightnessDown exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/brightnessControl down
 bindsym XF86MonBrightnessUp exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/brightnessControl up
 
@@ -37,5 +32,6 @@ exec --no-startup-id polybar main
 
 # Picom
 #exec --no-startup-id picom --experimental-backends 
+
 
 
