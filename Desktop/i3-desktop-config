@@ -23,11 +23,6 @@ workspace $ws6 output $monitor_two
 # Extra keybindings #
 #####################
 
-bindsym $mod+Control+Up move up
-bindsym $mod+Control+Down move down
-bindsym $mod+Ctrl+Left move left
-bindsym $mod+Ctrl+Right move right
-
 bindsym $mod4+F2 exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl down 5
 bindsym $mod4+F3 exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl up 5
 bindsym $mod4+F1 exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl mute

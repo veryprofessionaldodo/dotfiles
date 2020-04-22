@@ -1,7 +1,9 @@
 #!/bin/bash
 
-xrandr --output HDMI-A-1 --off
-xrandr --output DisplayPort-1 --off
+#xrandr --output HDMI-A-1 --off
+#xrandr --output DisplayPort-1 --off
+
+killall compton
 
 xrandr --output DisplayPort-1 --primary --mode 1920x1080 --rate 60.00 --pos 0x0 --rotate normal --output HDMI-A-1 --mode 1920x1080 --pos 1920x630 --rotate normal
 
@@ -9,3 +11,5 @@ killall polybar
 polybar right &
 polybar left &
 #picom --experimental-backends &
+
+compton &
