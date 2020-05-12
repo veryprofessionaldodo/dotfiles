@@ -37,6 +37,7 @@ for_window [instance="Steam Login"] move to workspace $ws6
 #for_window [instance="Steam"] move to workspace $ws6
 for_window [class="Spotify"] move to workspace $ws5
 for_window [class="firefox"] move to workspace $ws1
+for_window [class="Navigator"] move to workspace $ws1
 
 ############
 # Floating #

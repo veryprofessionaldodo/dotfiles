@@ -51,4 +51,5 @@ bindsym $mod+Shift+h exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScr
 # Set primary monitor and polybars
 exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/dualMonitorSetup
 
-
+# No mismatch between Windows and Linux time
+exec --no-startup-id timedatectl set-local-rtc 1 --adjust-system-clock

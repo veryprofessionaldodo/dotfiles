@@ -127,15 +127,18 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show run -lines 5 -eh 2 -width 5
 # Monitor
 bindsym $mod+Shift+Escape exec --no-startup-id urxvt -e gotop
 
+bindsym $mod+Shift+f exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
+
+
 ###########
 # Polybar #
 ###########
+
 bindsym $mod+Shift+k exec --no-startup-id killall -q polybar
 
 ##########
 # Volume #
 ##########
-bindsym $mod+Shift+f exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
 bindsym XF86AudioLowerVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl down 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl up 5
 bindsym XF86AudioMute exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl mute
