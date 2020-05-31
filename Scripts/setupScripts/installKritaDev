@@ -15,7 +15,7 @@ cd krita
 # Make upstream be the source for Krita
 git remote add upstream git://anongit.kde.org/krita.git
 
-cd build 
+cd ../build 
 
 # Install packages, only for Arch-based systems
 sudo pacman -S extra-cmake-modules python-pyqt5 libheif gsl fftw eigen quazip vc karchive kconfig kwidgetsaddons kwindowsystem kcompletion kcoreaddons kguiaddons ki18n kitemmodels kitemviews kcrash cmake
