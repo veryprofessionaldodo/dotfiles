@@ -10,6 +10,11 @@ mkdir build install
 
 git clone https://invent.kde.org/reispedro/krita.git
 
+cd krita 
+
+# Make upstream be the source for Krita
+git remote add upstream git://anongit.kde.org/krita.git
+
 cd build 
 
 # Install packages, only for Arch-based systems
