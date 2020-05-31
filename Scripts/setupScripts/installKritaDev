@@ -18,7 +18,7 @@ git remote add upstream git://anongit.kde.org/krita.git
 cd ../build 
 
 # Install packages, only for Arch-based systems
-sudo pacman -S extra-cmake-modules python-pyqt5 libheif gsl fftw eigen quazip vc karchive kconfig kwidgetsaddons kwindowsystem kcompletion kcoreaddons kguiaddons ki18n kitemmodels kitemviews kcrash cmake
+sudo pacman -S extra-cmake-modules python-pyqt5 libheif gsl fftw eigen quazip vc karchive kconfig kwidgetsaddons kwindowsystem kcompletion kcoreaddons kguiaddons ki18n kitemmodels kitemviews kcrash cmake poppler-qt5
 
 cmake ../krita -DCMAKE_INSTALL_PREFIX=$HOME/krita-dev/install -DCMAKE_BUILD_TYPE=Debug -DKRITA_DEVS=ON
 
