@@ -12,7 +12,7 @@ git clone https://invent.kde.org/reispedro/krita.git
 
 cd krita 
 
-# Make upstream be the source for Krita
+# Make upstream be the source for Kritagi
 git remote add upstream git://anongit.kde.org/krita.git
 
 cd ~/krita-dev/build 
