@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd ~/krita-dev
+
+cd krita 
+
+git pull upstream master
+
+cd ../build
+
+make --no-print-directory -j8 && make --no-print-directory install
+
+sudo cp ~/krita-dev/install/bin/krita /bin
+
+sudo cp -r ~/krita-dev/install/share/* /usr/share

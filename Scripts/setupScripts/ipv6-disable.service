@@ -1,9 +1,0 @@
-[Unit]
-Description=IPv6 disable
-
-[Service]
-ExecStart=/bin/ipv6-disable-script
-Type=oneshot
-
-[Install]
-WantedBy=multi-user.target 
