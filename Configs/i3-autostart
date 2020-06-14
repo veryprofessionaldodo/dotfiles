@@ -20,6 +20,6 @@ exec --no-startup-id pulseeffects --gapplication-service
 exec --no-startup-id compton
 
 # Intelligent layouts
-exec python $DOTFILES_DIR/Scripts/pythonScripts/alternatingLayouts.py
+exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/alternatingLayouts.py
 
 

@@ -26,6 +26,6 @@ make --no-print-directory -j8 && make --no-print-directory install
 
 # Executables are now in krita-dev/install/bin/krita
 
-sudo cp ~/krita-dev/install/bin/krita /bin
-
-sudo cp -r ~/krita-dev/install/share/* /usr/share
+# sudo cp ~/krita-dev/install/bin/krita /bin
+ 
+# sudo cp -r ~/krita-dev/install/share/* /usr/share
