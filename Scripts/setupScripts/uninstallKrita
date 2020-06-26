@@ -28,3 +28,9 @@ sudo rm -rf /usr/share/color-schemes/Krita*
 sudo rm -rf /usr/share/icons/hicolor/scalable/apps/krita*
 sudo rm -rf /usr/share/metainfo/org.kde.krita*
 
+sudo rm -rf /usr/lib/libkrita*
+sudo rm -rf /usr/lib/qt/qml/org/krita
+sudo rm -rf /usr/lib/kritaplugins/
+sudo rm -rf /etc/xdg/kritarc
+sudo rm -rf /usr/bin/krita*
+
