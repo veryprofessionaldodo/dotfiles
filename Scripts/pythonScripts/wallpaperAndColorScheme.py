@@ -7,7 +7,7 @@ import os
 dotfilesDir = os.environ['DOTFILES_DIR']
 print(dotfilesDir)
 
-dirName = dotfilesDir + "/Wallpapers/set3/"
+dirName = dotfilesDir + "/Wallpapers/set2/"
 
 listOfFile = os.listdir(dirName)
 allFiles = list()

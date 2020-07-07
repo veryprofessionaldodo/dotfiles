@@ -10,12 +10,12 @@ mv godot godot-git
 
 cd godot-git
 
-scons -j8 platform=linuxbsd
+scons -j8 platform=x11
 
 cd bin
 
-mv godot.linuxbsd.tools.64 godot
+#mv godot.linuxbsd.tools.64 godot
 
-sudo cp godot /bin
+#sudo cp godot /bin
 
-sudo cp $DOTFILES_DIR/Configs/godot.desktop /usr/share/applications
+#sudo cp $DOTFILES_DIR/Configs/godot.desktop /usr/share/applications
