@@ -95,7 +95,7 @@ bindsym $mod+F5 exec --no-startup-id spotify
 bindsym Mod4+Shift+s --release exec --no-startup-id flameshot gui
 
 # start a terminal
-bindsym $mod+Shift+Return exec urxvt -e fish
+bindsym $mod+Shift+Return exec urxvt --no-startup-id -e fish
 
 # split orientation
 bindsym $mod+h split h;exec --no-startup-id notify-send 'Tile Horizontally'
