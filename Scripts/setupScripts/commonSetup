@@ -12,7 +12,7 @@ echo "Got you fam, installing on $device."
 export DOTFILES_DIR=$DOTFILES_DIR
 export PATH=$PATH:$DOTFILES_DIR
 
-cd Scripts
+cd Scripts/setupScripts
 
 ./touchInitialFiles
 
@@ -46,7 +46,7 @@ cd $DOTFILES_DIR/Scripts/setupScripts/
 
 ./moveScriptsToBin
 
-cd $DOTFILES_DIR/Scripts
+cd $DOTFILES_DIR/Scripts/setupScripts
 
 ./installFonts
 killall i3bar

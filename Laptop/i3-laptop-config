@@ -6,7 +6,7 @@
 # i3 #
 ######
 
-focus_follows_mouse no
+focus_follows_mouse yes
 
 #disables tap to click
 #exec --no-startup-id synclient MaxTapTime=50

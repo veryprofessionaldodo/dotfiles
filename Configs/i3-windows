@@ -26,6 +26,7 @@ assign [class="maya.bin"] $ws3
 assign [instance="origin.exe"] $ws6
 assign [class="krita"] $ws4
 assign [class="Steam"] $ws6
+assign [class="Slack"] $ws2
 
 #############################
 # For stubborn applications #
