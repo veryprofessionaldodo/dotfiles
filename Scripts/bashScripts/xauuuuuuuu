@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# close all windows on firefox instances, three is unlikely, so we're cool, I think
+wmctrl -a firefox; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w;xdotool key Ctrl+w; wmctrl -r firefox -b add,shaded &
+wmctrl -a firefox; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w;xdotool key Ctrl+w; wmctrl -r firefox -b add,shaded &
+wmctrl -a firefox; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w;xdotool key Ctrl+w; wmctrl -r firefox -b add,shaded &
+
+killall slack & 
+
+killall code &

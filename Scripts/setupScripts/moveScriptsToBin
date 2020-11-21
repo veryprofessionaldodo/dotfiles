@@ -3,11 +3,9 @@
 sudo cp $DOTFILES_DIR/Scripts/setupScripts/installBlender /bin
 sudo cp $DOTFILES_DIR/Scripts/setupScripts/installGodot /bin
 sudo cp $DOTFILES_DIR/Scripts/setupScripts/installKrita /bin
-sudo cp $DOTFILES_DIR/Scripts/setupScripts/ipv6-disable-script /bin
-sudo cp $DOTFILES_DIR/Scripts/setupScripts/ipv6-disable.service /etc/systemd/system/
 sudo cp $DOTFILES_DIR/Scripts/bashScripts/newsAndEntertainmentSync /bin
-sudo cp $DOTFILES_DIR/Scripts/bashScripts/killDistractions /bin
-sudo cp $DOTFILES_DIR/Scripts/bashScripts/resync /bin
-
+sudo cp $DOTFILES_DIR/Scripts/bashScripts/xauuuuuuuu /bin
+sudo cp $DOTFILES_DIR/Scripts/bashScripts/workingTime /bin
+sudo cp $DOTFILES_DIR/Scripts/bashScripts/drawingMode /bin
 
 sudo cp $DOTFILES_DIR/Scripts/setupScripts/update* /bin

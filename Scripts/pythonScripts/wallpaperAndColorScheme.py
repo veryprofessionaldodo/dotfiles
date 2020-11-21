@@ -28,11 +28,6 @@ myCmd = 'wpg -s ' + randWallpaper + ' && wal -i ' + randWallpaper + " && exit"
 
 os.system(myCmd)
 
-# Add this if you want Intellij IDEs to be included
-#myCmd = 'cd ' + dotfilesDir + ' && ./Apps/intellij/intellijPywalGen.sh  $HOME/.AndroidStudioPreview4.0/config && exit'
-
-#os.system(myCmd)
-
 # Update Spotify and Dunst
 myCmd = 'spicetify update && rm ~/.Xresources && cp $HOME/.cache/wal/.Xresources $HOME && xrdb -merge ~/.Xresources && cp $HOME/.cache/wal/dunstrc $HOME/.config/dunst/ && cp -r $HOME/.cache/wal/KritaPywal.colors $HOME/.local/share/krita/color-schemes/ && exit'
 
