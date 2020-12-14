@@ -33,6 +33,8 @@ exec --no-startup-id polybar main
 # Picom
 #exec --no-startup-id picom --experimental-backends 
 
+exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --output eDP-1-1 --off
 
+exec --no-startup-id --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/gamingConsoleMode
 
 

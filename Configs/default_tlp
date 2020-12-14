@@ -275,12 +275,12 @@ USB_AUTOSUSPEND=1
 # Use lsusb to get the ids.
 # Note: input devices (usbhid) are excluded automatically
 # Default: <none>
-#USB_BLACKLIST="1111:2222 3333:4444"
+USB_BLACKLIST="8087:0a2a 0b05:17cb 1d6b:0003 1db6:0002"
 
 # Bluetooth devices are excluded from USB autosuspend:
 #   0=do not exclude, 1=exclude.
 # Default: 0
-USB_BLACKLIST_BTUSB=0
+USB_BLACKLIST_BTUSB=1
 
 # Phone devices are excluded from USB autosuspend:
 #   0=do not exclude, 1=exclude (enable charging).
@@ -312,7 +312,7 @@ USB_BLACKLIST_WWAN=0
 # Note: the parameters DEVICES_TO_DISABLE/ENABLE_ON_STARTUP/SHUTDOWN below
 #   are ignored when this is enabled.
 # Default: 0
-RESTORE_DEVICE_STATE_ON_STARTUP=0
+RESTORE_DEVICE_STATE_ON_STARTUP=1
 
 # Radio devices to disable on startup: bluetooth, wifi, wwan.
 # Separate multiple devices with spaces.

@@ -8,18 +8,10 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
 
-exec --no-startup-id franz
-exec --no-startup-id telegram-desktop
-
 exec --no-startup-id redshift -c "$HOME/.config/redshift.conf"
-
-exec --no-startup-id pacmd set-source-volume 2 20000
-
-exec --no-startup-id pulseeffects --gapplication-service
 
 exec --no-startup-id compton
 
 # Intelligent layouts
 exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/alternatingLayouts.py
-
 

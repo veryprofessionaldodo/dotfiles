@@ -26,6 +26,7 @@ assign [class="maya.bin"] $ws3
 assign [instance="origin.exe"] $ws6
 assign [class="krita"] $ws4
 assign [class="Steam"] $ws6
+assign [class="steam"] $ws6
 
 #############################
 # For stubborn applications #
@@ -33,8 +34,10 @@ assign [class="Steam"] $ws6
 
 for_window [class="Steam Login"] move to workspace $ws6
 for_window [instance="Steam Login"] move to workspace $ws6
-#for_window [class="Steam"] move to workspace $ws6
-#for_window [instance="Steam"] move to workspace $ws6
+for_window [class="Steam"] move to workspace $ws6
+for_window [instance="Steam"] move to workspace $ws6
+for_window [class="steam"] move to workspace $ws6
+for_window [instance=steam"] move to workspace $ws6
 for_window [class="Spotify"] move to workspace $ws5
 for_window [class="firefox"] move to workspace $ws1
 for_window [class="Navigator"] move to workspace $ws1
@@ -72,6 +75,9 @@ for_window [class="Xfburn"] floating enable
 for_window [class="sun-awt-X11-XWindowPeer"] floating enable
 for_window [class="PureRef"] floating enable
 for_window [instance="origin.exe"] floating enable
+for_window [instance="Origin.exe"] floating enable
+for_window [instance="Origin"] floating enable
+for_window [instance="origin"] floating enable
 for_window [class="java-lang-Thread"] floating enable
 
 ##########
