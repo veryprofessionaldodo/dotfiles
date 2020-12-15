@@ -12,6 +12,8 @@ exec --no-startup-id redshift -c "$HOME/.config/redshift.conf"
 
 exec --no-startup-id compton
 
+exec --no-startup-id --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/gamingConsoleMode
+
 # Intelligent layouts
 exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/alternatingLayouts.py
 

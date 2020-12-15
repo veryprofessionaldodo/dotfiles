@@ -23,10 +23,15 @@ assign [class="Main"] $ws4
 assign [class="Maya-2019"] $ws3
 assign [class="TelegramDesktop"] $ws2
 assign [class="maya.bin"] $ws3
-assign [instance="origin.exe"] $ws6
+assign [class="Origin"] $ws5
+assign [class="Origin.exe"] $ws5
+assign [class="origin.exe"] $ws5
 assign [class="krita"] $ws4
 assign [class="Steam"] $ws6
 assign [class="steam"] $ws6
+assign [class="lutris"] $ws4
+assign [class="Lutris"] $ws4
+assign [class="explorer.exe"] $ws1
 
 #############################
 # For stubborn applications #
@@ -40,7 +45,14 @@ for_window [class="steam"] move to workspace $ws6
 for_window [instance=steam"] move to workspace $ws6
 for_window [class="Spotify"] move to workspace $ws5
 for_window [class="firefox"] move to workspace $ws1
+for_window [class="Firefox"] move to workspace $ws1
 for_window [class="Navigator"] move to workspace $ws1
+for_window [class="origin.exe"] move to workspace $ws5
+for_window [class="Origin.exe"] move to workspace $ws5
+for_window [instance="Origin"] move to workspace $ws5
+for_window [instance="origin"] move to workspace $ws5
+for_window [instance="explorer.exe"] move to workspace $ws1
+for_window [class="explorer.exe"] move to workspace $ws1
 
 ############
 # Floating #
