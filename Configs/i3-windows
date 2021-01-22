@@ -1,18 +1,17 @@
-
 ###########
 # Assigns #
 ###########
 
+assign [class="Godot_Editor"] $ws3
+assign [class="Godot_Engine"] $ws4
 assign [class="PureRef"] $ws3
 #assign [class="Blender"] $ws4
 assign [class="discord"] $ws5
 assign [class="firefox"] $ws1
-assign [instance="firefox"] $ws1
 assign [class="Navigator"] $ws1
 assign [class="Nightly"] $ws1
-assign [class="Franz"] $ws2
-assign [class="Slack"] $ws2
 assign [class="slack"] $ws2
+assign [class="Slack"] $ws2
 assign [class="code-oss"] $ws3
 assign [class="Code"] $ws3
 assign [class="vscodium"] $ws3
@@ -27,18 +26,40 @@ assign [class="Main"] $ws4
 assign [class="Maya-2019"] $ws3
 assign [class="TelegramDesktop"] $ws2
 assign [class="maya.bin"] $ws3
-assign [instance="origin.exe"] $ws6
+assign [class="Origin"] $ws5
+assign [class="Origin.exe"] $ws5
+assign [class="origin.exe"] $ws5
 assign [class="krita"] $ws4
 assign [class="Steam"] $ws6
-assign [instance="Steam"] $ws6
-assign [class="Spotify"] $ws5
-assign [instance="spotify"] $ws5
+assign [class="steam"] $ws6
+assign [class="lutris"] $ws4
+assign [class="Lutris"] $ws4
+assign [class="explorer.exe"] $ws1
 
 #############################
 # For stubborn applications #
 #############################
 
+for_window [class="Godot"] move to workspace $ws3
+for_window [class="New Game Project"] move to workspace $ws4
+for_window [class="firefox"] move to workspace $ws1
+for_window [class="Navigator"] move to workspace $ws1
+for_window [class="Steam Login"] move to workspace $ws6
+for_window [instance="Steam Login"] move to workspace $ws6
+for_window [class="Steam"] move to workspace $ws6
+for_window [instance="Steam"] move to workspace $ws6
+for_window [class="steam"] move to workspace $ws6
+for_window [instance=steam"] move to workspace $ws6
 for_window [class="Spotify"] move to workspace $ws5
+for_window [class="firefox"] move to workspace $ws1
+for_window [class="Firefox"] move to workspace $ws1
+for_window [class="Navigator"] move to workspace $ws1
+for_window [class="origin.exe"] move to workspace $ws5
+for_window [class="Origin.exe"] move to workspace $ws5
+for_window [instance="Origin"] move to workspace $ws5
+for_window [instance="origin"] move to workspace $ws5
+for_window [instance="explorer.exe"] move to workspace $ws1
+for_window [class="explorer.exe"] move to workspace $ws1
 
 ############
 # Floating #
@@ -73,9 +94,10 @@ for_window [class="Xfburn"] floating enable
 for_window [class="sun-awt-X11-XWindowPeer"] floating enable
 for_window [class="PureRef"] floating enable
 for_window [instance="origin.exe"] floating enable
+for_window [instance="Origin.exe"] floating enable
+for_window [instance="Origin"] floating enable
+for_window [instance="origin"] floating enable
 for_window [class="java-lang-Thread"] floating enable
-
-
 
 ##########
 # Sticky #
@@ -84,12 +106,4 @@ for_window [class="java-lang-Thread"] floating enable
 for_window [class="vlc"] sticky enable
 for_window [class="firefox"] sticky enable
 for_window [class="PureRef"] sticky enable
-
-#########
-# Extra #
-#########
-
-no_focus [window_role="pop-up"]
-no_focus [class="jetbrains-studio"]
-
 

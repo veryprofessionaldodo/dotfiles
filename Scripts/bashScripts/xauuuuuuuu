@@ -8,3 +8,5 @@ wmctrl -a firefox; xdotool key Ctrl+w; xdotool key Ctrl+w; xdotool key Ctrl+w; x
 killall slack & 
 
 killall code &
+
+killall Discord &

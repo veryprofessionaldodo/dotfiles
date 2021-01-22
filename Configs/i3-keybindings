@@ -142,7 +142,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bashScri
 bindsym XF86AudioRaiseVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl up 5
 bindsym XF86AudioMute exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/volumeControl mute
 
-bindsym $mod+Shift+j exec --no-startup-id pacmd set-source-volume 2 20000
+bindsym $mod+Shift+j exec --no-startup-id pacmd set-source-volume 4 20000 ; exec --no-startup-id pacmd set-source-volume 3 20000 ; exec --no-startup-id pacmd set-source-volume 2 20000 ; exec --no-startup-id pacmd set-source-volume 1 20000
 
 #########
 # Media #
