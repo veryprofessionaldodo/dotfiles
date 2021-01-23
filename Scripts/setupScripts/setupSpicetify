@@ -3,6 +3,16 @@
 echo "Setting up Spicetify..."
 sleep 1
 
+mkdir -p $HOME/.config/spicetify/Themes/Yoo
+
+sudo mkdir -p /opt/spotify/Apps/zlink/css
+sudo touch /opt/spotify/Apps/zlink/css/user.cs
+sudo mkdir -p /opt/spotify/Apps/login/css
+
+sudo chown $USER -R /opt/spotify
+
+touch ${HOME}/.config/spotify/prefs
+
 # Fix small spicetify error 
 echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
 
