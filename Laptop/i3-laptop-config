@@ -10,7 +10,7 @@ focus_follows_mouse no
 
 #disables tap to click
 #exec --no-startup-id synclient MaxTapTime=50
-#exec --no-startup-id synclient PalmDetect=1
+exec --no-startup-id synclient PalmDetect=1
 #exec --no-startup-id synclient TapButton1=1
 exec --no-startup-id synclient HorizTwoFingerScroll=1
 
@@ -28,7 +28,7 @@ bindsym $mod+Shift+p exec --no-startup-id polybar main
 ###################
 
 #Polybar
-exec --no-startup-id polybar main
+#exec --no-startup-id polybar main
 
 # Picom
 #exec --no-startup-id picom --experimental-backends 

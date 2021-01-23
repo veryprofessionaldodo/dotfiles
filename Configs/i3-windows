@@ -49,10 +49,10 @@ for_window [class="Firefox"] move to workspace $ws1
 for_window [class="Navigator"] move to workspace $ws1
 for_window [class="origin.exe"] move to workspace $ws5
 for_window [class="Origin.exe"] move to workspace $ws5
-for_window [instance="Origin"] move to workspace $ws5
-for_window [instance="origin"] move to workspace $ws5
+for_window [class="steam_app_1182480"] move to workspace $ws5
 for_window [instance="explorer.exe"] move to workspace $ws1
 for_window [class="explorer.exe"] move to workspace $ws1
+for_window [urgent="latest"] focus
 
 ############
 # Floating #
@@ -88,8 +88,7 @@ for_window [class="sun-awt-X11-XWindowPeer"] floating enable
 for_window [class="PureRef"] floating enable
 for_window [instance="origin.exe"] floating enable
 for_window [instance="Origin.exe"] floating enable
-for_window [instance="Origin"] floating enable
-for_window [instance="origin"] floating enable
+for_window [class="steam_app_1182480"] floating enable
 for_window [class="java-lang-Thread"] floating enable
 
 ##########

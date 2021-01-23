@@ -2,8 +2,7 @@
 
 bluetoothctl &
 
-i3-msg workspace 4:
+i3-msg workspace 6:
 
-lutris & 
-steam -silent &
+steam &
 

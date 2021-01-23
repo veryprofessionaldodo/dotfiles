@@ -10,7 +10,7 @@ exec --no-startup-id setxkbmap pt -option 'numpad:microsoft'
 
 exec --no-startup-id redshift -c "$HOME/.config/redshift.conf"
 
-exec --no-startup-id compton
+# exec --no-startup-id compton
 
 exec --no-startup-id --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/gamingConsoleMode
 
