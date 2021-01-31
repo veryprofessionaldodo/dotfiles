@@ -12,45 +12,38 @@ ls /sys/firmware/efi/efivars
 
 ### If there are results everything is nice.
 
-### Establish network connection, maybe use cable for this one, a lot easier, configure the wireless:
-
+### Establish network connection, maybe use cable for this one, a lot easier
 
 timedatectl set-ntp true
 
 ### To list partitions, use: 
 
-fdisk -l
+lsblk
 
 ### There needs to be:
 ### - A /mnt/boot or /mnt/efi with 260-512 MB;
 ### - A /mnt which is the entirety of the device;
 ### - A swap, make it around 1.25* of RAM, that should do it (a lot of varying opinions on this);
 
-### Check what is the drive you are going to install Arch on, and run:
+### Check what is the drive you are going to install Artix on, and run:
 
-fdisk /dev/sdX
+sudo cfdisk /dev/drive
 
-### Where X is the name of the partition, then wipe the partitions that you want delete by entering 'd' and then deleting the respective partition.  
+### Now we need to create three main partitions:
+### - A /mnt/boot or /mnt/efi with 260-512 MB (select Linux EFI for the type);
+### - A swap, make it around 1.25* of RAM, that should do it (a lot of varying opinions on this, select Linux Swap for type);
+### - A /mnt which is the rest of the entire;
 
-### To create a new partition write 'n', let the number of the partition be default, the starting point be default, and for the size you can write '+#X', where X is the format (G for gigabytes, M for Megabytes), and # is the number of MB or GB for the partition.
+### Now we need to assign the correct filesystems to the partitions, using:
 
-### If fdisk asks you to override the signature, choose Yes.
+mkfs.fat -F32 /dev/efidrive
+mkfs.xfs /dev/root (or mkfs.ext4)
+mkswap /dev/swap
+swapon /dev/swap
 
-### Create a partition of 512M for the /mnt/boot/efi, a partition for the SWAP, and another for the /mnt. 
+### Now we need to mount the partitions using:
 
-### Now we need to actually make the partitions usable, so we use:
-
-mkfs.ext4 /dev/sdXY (where XY are the partitions created for /mnt/boot/efi and /mnt partitions)
-
-## Important! If you have an EFI system, create the boot partition with:
-
-mkfs.fat -F32 /dev/sdXY 
-
-mkswap /dev/sdXY && swapon /dev/sdXY (where XY is the partition created for the swap file)
-
-### Now we need to mount the partitions using
-
-mount /dev/sdXY /mnt/boot/efi
+mount /dev/sdXY /mnt/boot
 mount /dev/sdXZ /mnt/
 
 ### where XY is the partition for the boot and XZ is the root partition.

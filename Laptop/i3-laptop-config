@@ -13,6 +13,7 @@ focus_follows_mouse no
 exec --no-startup-id synclient PalmDetect=1
 #exec --no-startup-id synclient TapButton1=1
 exec --no-startup-id synclient HorizTwoFingerScroll=1
+exec --no-startup-id synclient TouchpadOff=0
 
 #####################
 # Extra keybindings #
