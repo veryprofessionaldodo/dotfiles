@@ -3,18 +3,6 @@
 laptop="laptop"
 desktop="desktop"
 
-if [ ! -d "$HOME/.config/polybar" ]; then 
-    mkdir $HOME/.config/polybar
-fi
-
-if [ ! -d "$HOME/.config/spicetify/Themes/Yoo" ]; then
-    mkdir $HOME/.config/spicetify/Themes/Yoo
-fi
-
-if [ ! -d "$HOME/.config/rofi" ]; then
-    mkdir $HOME/.config/rofi
-fi
-
 echo "Configuring apps..."
 sleep 0.1
 
@@ -80,8 +68,7 @@ then
 
 fi
 
-
-echo "Updated $1, homie."
-sleep 0.1
+echo "Updated!"
+sleep 1
 
 exit 0

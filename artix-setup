@@ -115,7 +115,7 @@ sleep 1
 sudo $DOTFILES_DIR/Apps/grub/install.sh -v
 
 # First wal run
-python $DOTFILES_DIR/Scripts/pythonScripts/wallpaperAndColorScheme.py
+python $DOTFILES_DIR/Scripts/pythonScripts/wallpaper-change.py
 
 # Fix small error for VLC downloading
 mkdir ~/.cache/vlc

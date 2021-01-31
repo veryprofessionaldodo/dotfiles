@@ -1,5 +1,0 @@
-#!/bin/bash
-
-firefox reddit.com/r/linux_gaming/top/?sort=top&t=day && firefox reddit.com/r/linux/top/?sort=top&t=day && firefox phoronix.com && firefox mail.google.com && firefox krita-artists.org && firefox blenderartists.org && firefox https://www.youtube.com/results?search_query=cenas && firefox reddit.com/r/news/top/?sort=top&t=day && firefox reddit.com/r/pornfree && firefox reddit.com/r/simpleliving/top/?sort=top&t=day && firefox reddit.com/r/worldnews/top/?sort=top&t=day && firefox reddit.com/r/psp/top/?sort=top&t=day && firefox eurogamer.net && firefox pcgamer.com
-
-exit

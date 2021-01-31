@@ -19,8 +19,8 @@ exec --no-startup-id synclient TouchpadOff=0
 # Extra keybindings #
 #####################
 
-bindsym XF86MonBrightnessDown exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/brightnessControl down
-bindsym XF86MonBrightnessUp exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/brightnessControl up
+bindsym XF86MonBrightnessDown exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/brightness-control down
+bindsym XF86MonBrightnessUp exec --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/brightness-control up
 
 bindsym $mod+Shift+p exec --no-startup-id polybar main
 

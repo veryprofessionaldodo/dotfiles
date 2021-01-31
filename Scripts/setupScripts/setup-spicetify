@@ -13,8 +13,5 @@ sudo chown $USER -R /opt/spotify
 
 touch ${HOME}/.config/spotify/prefs
 
-# Fix small spicetify error 
-echo "prefs_path       = ${HOME}/.config/spotify/prefs" >> Apps/spicetify/config.ini
-
 spicetify backup apply enable-devtool
 spicetify update apply

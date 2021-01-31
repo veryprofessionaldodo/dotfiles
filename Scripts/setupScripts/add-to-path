@@ -9,7 +9,7 @@ echo "
 
 " | tee -a ~/.bashrc
 echo "export DOTFILES_DIR=$DOTFILES_DIR" | tee -a ~/.bashrc
-echo "export PATH=$PATH:$DOTFILES_DIR:$DOTFILES_DIR/Scripts/bashScripts" | tee -a ~/.bashrc
+echo "export PATH=$PATH:$DOTFILES_DIR:$DOTFILES_DIR/Scripts/bashScripts:$DOTFILES_DIR/Scripts/setupScripts" | tee -a ~/.bashrc
 
 # This is also done right now so that the rest of the script can go along nicely, even without a reboot
 export DOTFILES_DIR=$DOTFILES_DIR

@@ -1,0 +1,7 @@
+#!/bin/bash 
+
+xrandr --output HDMI-0 --off --output eDP-1-1 --mode 1920x1080 &
+
+killall polybar && polybar main &
+
+exit

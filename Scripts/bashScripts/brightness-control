@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # You can call this script like this:
-# $ ./brightnessControl up
-# $ ./brightnessControl down
+# $ ./brightness-control up
+# $ ./brightness-control down
 
 # Script inspired by these wonderful people:
 # https://github.com/dastorm/volume-notification-dunst/blob/master/volume

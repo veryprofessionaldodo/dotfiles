@@ -38,4 +38,12 @@ makepkg -si
 
 popd 
 
-./Scripts/setupScripts/commonSetup
+laptop="laptop"
+desktop="desktop"
+console="console"
+
+read -p "What's this device? 'console', 'laptop' or 'desktop'? Pls no typo: " device
+
+git checkout device
+
+./Scripts/setupScripts/specific-setup
