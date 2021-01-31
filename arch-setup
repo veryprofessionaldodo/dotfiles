@@ -46,4 +46,4 @@ read -p "What's this device? 'console', 'laptop' or 'desktop'? Pls no typo: " de
 
 git checkout device
 
-./Scripts/setupScripts/specific-setup
+./Scripts/setup-scripts/specific-setup

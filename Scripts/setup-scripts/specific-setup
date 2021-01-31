@@ -1,0 +1,55 @@
+#!/bin/bash
+
+./Scripts/Scripts/add-to-path
+
+create-base-files
+
+install-rice
+
+read -p "Do you want to install the extra programs at Scripts/setup-scripts/extraProgramsToInstall.sh? (y/n)  " answer
+if [ $answer == "y" ]
+then 
+	extra-programs-to-install 
+fi
+
+# Remove fish intro message
+echo 'set -U fish_greeting ""' >> .config/fish/config.fish
+
+setup-lightdm
+
+setup-tlp
+
+setup-spicetify
+
+# Fix small ranger error 
+#echo "set preview_script $HOME/.config/ranger/scope.sh" >> Apps/ranger/rc.conf
+
+echo "\nSetting up $device configurations..."
+sleep 1
+
+install-fonts
+	
+echo "Installing Nvidia drivers..."
+sleep 1
+
+sudo pacman -S nvidia lib32-nvidia-utils xf86-video-intel nvidia-prime
+sudo mv $DOTFILES_DIR/Configs/30-nvidia.conf /etc/X11/xorg.conf.d/
+
+echo "Installing Kodi..."
+sleep 1
+
+kodi-setup
+
+# First wal run
+python $DOTFILES_DIR/Scripts/python-scripts/wallpaper-change.py
+
+# Fix small error for VLC downloading
+mkdir ~/.cache/vlc
+
+wpg-install.sh -i
+wpg-install.sh -g
+
+echo "And that's it! Exiting."
+sleep 2
+
+

@@ -1,0 +1,13 @@
+<settings version="2">
+    <setting id="arts-expire-after-months">2</setting>
+    <setting id="debug" default="true">false</setting>
+    <setting id="delete-cache" default="true"></setting>
+    <setting id="enable-art-fallback">true</setting>
+    <setting id="games-expire-after-minutes">4320</setting>
+    <setting id="steam-args" default="true"></setting>
+    <setting id="steam-exe">/bin/steam</setting>
+    <setting id="steam-id">76561198032742127</setting>
+    <setting id="steam-key">0345275C660AF404C94D2F544A490A30</setting>
+    <setting id="steam-path" default="true"></setting>
+    <setting id="version">0.7.0</setting>
+</settings>

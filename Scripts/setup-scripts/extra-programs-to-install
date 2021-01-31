@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Installing extra programs..."
+sleep 1
+
+yay -S lightdm neofetch unzip sl redshift gnome-system-monitor pavucontrol vlc networkmanager-dmenu-git authy nautilus firefox telegram-desktop code transmission-qt discord steam
+
+yay -S xorg-xbacklight blacklist_pcspkr
+
+# Spotify sometimes breaks
+yay -S spotify
+
+
+
+
+

@@ -1,0 +1,19 @@
+{
+    "access_manager": {
+        "current_user": "0", 
+        "developers": {}, 
+        "last_origin": "plugin.video.youtube", 
+        "users": {
+            "0": {
+                "access_token": "", 
+                "id": "145f379b060045abb534cd9c61958dc7", 
+                "last_key_hash": "94aa8ff1499c32985b71113ea0b99b60", 
+                "name": "Default", 
+                "refresh_token": "", 
+                "token_expires": -1, 
+                "watch_history": "HL", 
+                "watch_later": " WL"
+            }
+        }
+    }
+}

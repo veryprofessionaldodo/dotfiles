@@ -2,7 +2,7 @@
 # Autostart #
 #############
 
-exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/wallpaper-change.py
+exec --no-startup-id python $DOTFILES_DIR/Scripts/python-scripts/wallpaper-change.py
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
@@ -12,8 +12,8 @@ exec --no-startup-id redshift -c "$HOME/.config/redshift.conf"
 
 # exec --no-startup-id compton
 
-exec --no-startup-id --no-startup-id $DOTFILES_DIR/Scripts/bashScripts/gamingconsole-mode
+exec --no-startup-id --no-startup-id $DOTFILES_DIR/Scripts/bash-scripts/gamingconsole-mode
 
 # Intelligent layouts
-exec --no-startup-id python $DOTFILES_DIR/Scripts/pythonScripts/alternatingLayouts.py
+exec --no-startup-id python $DOTFILES_DIR/Scripts/python-scripts/alternatingLayouts.py
 

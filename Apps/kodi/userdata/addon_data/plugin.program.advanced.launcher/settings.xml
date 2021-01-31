@@ -1,0 +1,37 @@
+<settings version="2">
+    <setting id="auto_backup">true</setting>
+    <setting id="clean_title">true</setting>
+    <setting id="datas_method" default="true">0</setting>
+    <setting id="datas_scraper" default="true">AllGame</setting>
+    <setting id="fanart_image_size" default="true">0</setting>
+    <setting id="fanarts_method" default="true">0</setting>
+    <setting id="fanarts_scraper" default="true">GameFAQs</setting>
+    <setting id="game_region" default="true">0</setting>
+    <setting id="hide_default_cat" default="true">false</setting>
+    <setting id="hide_finished" default="true">false</setting>
+    <setting id="ignore_bios">true</setting>
+    <setting id="ignore_title" default="true">false</setting>
+    <setting id="launcher_fanart_path" default="true"></setting>
+    <setting id="launcher_nfo_path" default="true"></setting>
+    <setting id="launcher_notification" default="true">false</setting>
+    <setting id="launcher_thumb_path" default="true"></setting>
+    <setting id="lirc_state">true</setting>
+    <setting id="media_state" default="true">0</setting>
+    <setting id="nb_backup_files">10</setting>
+    <setting id="open_default_cat" default="true">false</setting>
+    <setting id="overwrite_fanarts" default="true">false</setting>
+    <setting id="overwrite_thumbs" default="true">false</setting>
+    <setting id="recursive_scan">true</setting>
+    <setting id="scrap_fanarts" default="true">0</setting>
+    <setting id="scrap_info" default="true">0</setting>
+    <setting id="scrap_thumbs" default="true">0</setting>
+    <setting id="select_fanarts" default="true">0</setting>
+    <setting id="show_batch" default="true">false</setting>
+    <setting id="show_log">true</setting>
+    <setting id="snap_flyer" default="true">0</setting>
+    <setting id="start_tempo">1000</setting>
+    <setting id="thumb_image_size" default="true">0</setting>
+    <setting id="thumbs_method" default="true">0</setting>
+    <setting id="thumbs_scraper" default="true">GameFAQs</setting>
+    <setting id="title_formating">true</setting>
+</settings>

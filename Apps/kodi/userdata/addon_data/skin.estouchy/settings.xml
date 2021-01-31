@@ -1,0 +1,9 @@
+<settings>
+    <setting id="usecustombackground" type="bool">false</setting>
+    <setting id="hidevizbackground" type="bool">false</setting>
+    <setting id="hidevideobackground" type="bool">false</setting>
+    <setting id="skinhelper.disablescreensaveronfullscreenmusic" type="bool">false</setting>
+    <setting id="CustomBackground" type="string"></setting>
+    <setting id="skinhelper.autoclosevideoosd" type="string"></setting>
+    <setting id="skinhelper.autoclosemusicosd" type="string"></setting>
+</settings>

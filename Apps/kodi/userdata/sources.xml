@@ -1,0 +1,45 @@
+<sources>
+    <programs>
+        <default pathversion="1"></default>
+    </programs>
+    <video>
+        <default pathversion="1"></default>
+        <source>
+            <name>shows</name>
+            <path pathversion="1">/home/workingdodo/kodi/shows/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>Downloads</name>
+            <path pathversion="1">/home/workingdodo/Downloads/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </video>
+    <music>
+        <default pathversion="1"></default>
+    </music>
+    <pictures>
+        <default pathversion="1"></default>
+    </pictures>
+    <files>
+        <default pathversion="1"></default>
+        <source>
+            <name>kodi</name>
+            <path pathversion="1">/home/workingdodo/kodi/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>LazyKodi</name>
+            <path pathversion="1">https://lazykodi.com/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>SuperRepo</name>
+            <path pathversion="1">http://srp.nu/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </files>
+    <games>
+        <default pathversion="1"></default>
+    </games>
+</sources>
