@@ -129,7 +129,6 @@ bindsym $mod+Shift+Escape exec --no-startup-id urxvt -e gotop
 
 bindsym $mod+Shift+f exec --no-startup-id python $DOTFILES_DIR/Scripts/python-scripts/wallpaper-change.py
 
-
 ###########
 # Polybar #
 ###########

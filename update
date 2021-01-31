@@ -44,9 +44,9 @@ cd $DOTFILES_DIR/Configs
 touch $HOME/.config/i3/config
 rm $HOME/.config/i3/config
     
-cat i3-common-config i3-windows i3-keybindings i3-autostart i3-specific-config >> $HOME/.config/i3/config
+cat i3-autostart i3-common-config i3-windows i3-keybindings i3-specific-config >> $HOME/.config/i3/config
     
-cp polybar/config $HOME/.config/polybar
+cp polybar-config $HOME/.config/polybar/config
 
 echo "Updated!"
 sleep 1

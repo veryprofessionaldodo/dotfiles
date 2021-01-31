@@ -7,15 +7,15 @@ DOTFILES_DIR=${PWD}
 
 echo "
 
-" >> ~/.bashrc
+" >> ~/.profile
 echo "export DOTFILES_DIR=$DOTFILES_DIR" >> ~/.bashrc
-echo "export PATH=$PATH:$DOTFILES_DIR:$DOTFILES_DIR/Scripts/bash-scripts:$DOTFILES_DIR/Scripts/setup-scripts" >> ~/.bashrc
+echo "export PATH=$PATH:$DOTFILES_DIR:$DOTFILES_DIR/Scripts/bash-scripts:$DOTFILES_DIR/Scripts/setup-scripts:$DOTFILES_DIR/Scripts/setup-scripts" >> ~/.bashrc
 
 source ~/.bashrc
 
 # This is also done right now so that the rest of the script can go along nicely, even without a reboot
 export DOTFILES_DIR=$DOTFILES_DIR
-export PATH=$PATH:$DOTFILES_DIR:$DOTFILES_DIR/Scripts/bash-scripts:$DOTFILES_DIR/Scripts/setup-scripts
+export PATH=$PATH:$DOTFILES_DIR:$DOTFILES_DIR/Scripts/bash-scripts:$DOTFILES_DIR/Scripts/setup-scripts:$DOTFILES_DIR/Scripts/python-scripts
 
 echo "Added!"
 sleep 1
