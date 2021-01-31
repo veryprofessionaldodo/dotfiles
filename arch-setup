@@ -11,9 +11,9 @@ echo "Installing essential Arch apps..."
 
 sleep 1
 
-sudo pacman -S xorg-server xorg-xinit awesome rxvt-unicode  powertop lightdm lightdm-gtk-greeter python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m polkit-gnome
+sudo pacman -S xorg-server xorg-xinit i3-gaps rxvt-unicode lxdm python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m polkit-gnome
 
-sudo systemctl enable lightdm
+sudo systemctl enable lxdm
 sudo powertop --auto-tune
 
 echo "Configuring i3 on boot..."
@@ -27,7 +27,7 @@ echo "export LANG=en_GB.UTF-8" | tee -a ~/.bashrc
 echo "export LANGUAGE=en_GB.UTF-8" | tee -a ~/.bashrc
 echo "xrdb merge ~/.Xresources" | tee -a ~/.bashrc
 
-cd Downloads
+pushd ~/Downloads
 
 echo "Downloading and installing yay..."
 sleep 1
@@ -35,5 +35,7 @@ sleep 1
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+
+popd 
 
 ./Scripts/setupScripts/commonSetup

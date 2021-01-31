@@ -2,8 +2,9 @@
 
 laptop="laptop"
 desktop="desktop"
+console="console"
 
-read -p "On which device are you installing my dude? 'laptop' or 'desktop'?  " device
+read -p "What's this device? 'console', 'laptop' or 'desktop'? Pls no typo: " device
 
 echo "Got you fam, installing on $device."
 ./Scripts/bashScripts/addToPath

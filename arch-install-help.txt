@@ -53,7 +53,7 @@ lsblk
 
 ### Now to install Arch!
 
-pacstrap /mnt base base-devel linux linux-firmware (more programs you want to install)
+pacstrap /mnt base base-devel linux linux-firmware nano (more programs you want to install)
 
 ### Now that we have Arch Linux installed, we need to generate our file system tab, stored in /etc/fstab. For this we run: 
 
@@ -65,13 +65,18 @@ arch-chroot /mnt
 
 ### Nice, we're getting there. Now to install GRUB
 
-pacman -S grub (and efibootmgr if you have UEFI)
+pacman -S grub (and efibootmgr if you have UEFI) os-prober
 
 ### All that's left is installing and configuring grub.
 
-grub-install /dev/sdX (not sdXY, the file system, and not the partition)
-
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Artix_GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
+
+### Hopefully nothing failed! If everything worked alright, then we can now configure our system!
+### First, let's configure the time zone:
+
+ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
+hwclock --systohc 
 
 ### Setup a password using: 
 
@@ -116,23 +121,25 @@ nano /etc/hosts
 sudo pacman -S networkmanager
 sudo systemctl enable NetworkManager
 
-### Arch is installed! Exit your arch-chroot by entering 'exit', and then do 'umount -R /mnt' to unmount all partitions.
-
-### Reboot, and then in the new Arch Linux install do: 
+### Now create the user:
 
 useradd -m -g wheel username (change this to what you want)
 
 passwd username 
 
-### Now edit the /etc/sudoers file and uncomment the %wheel statement
+### Edit the /etc/sudoers file and uncomment the %wheel statement to allow for sudo access
 
-### Edit the /etc/pacman.conf, and uncomment multilib
+### Arch is installed! Exit your arch-chroot by entering 'exit', and then do 'umount -R /mnt' to unmount all partitions.
+
+### Reboot, and then in the new Arch Linux install edit the /etc/pacman.conf, and uncomment multilib:
 
 ### Now exit, log into your user and setup basic folder structure: 
 
 cd ~
 
-mkdir Documents Downloads Music Games Pictures Desktop 
+mkdir Documents Downloads Games Desktop Media
+
+mkdir Media/Pictures Media/Music Media/Videos
 
 sudo pacman -S git 
 

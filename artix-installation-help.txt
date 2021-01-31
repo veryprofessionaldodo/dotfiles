@@ -33,7 +33,7 @@ sudo cfdisk /dev/drive
 ### Now we need to assign the correct filesystems to the partitions, using:
 
 mkfs.fat -F32 /dev/efidrive
-mkfs.xfs /dev/root (or mkfs.ext4)
+mkfs.ext4 /dev/root
 mkswap /dev/swap
 swapon /dev/swap
 
