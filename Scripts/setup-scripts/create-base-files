@@ -19,8 +19,10 @@ sudo mkdir -p /opt/spotify/Apps/login/css
 
 sudo chown $USER -R /opt/spotify
 
-touch ${HOME}/.config/spotify/prefs
+mkdir -p $HOME/.config/spotify
+touch $HOME/.config/spotify/prefs
 
 mkdir -p $HOME/.config/polybar
 
 mkdir -p $HOME/.config/rofi
+

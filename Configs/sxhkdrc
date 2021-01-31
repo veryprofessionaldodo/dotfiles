@@ -9,7 +9,7 @@ alt + shift + k
 	killall -q polybar
 
 alt + shift + f
-	python $DOTFILES_DIR/Scripts/pythonScripts/wallpaper-change.py
+	python $DOTFILES_DIR/Scripts/python-scripts/wallpaper-change.py
 
 # program launcher
 alt + d
@@ -37,35 +37,35 @@ super + shift + s
     flameshot gui
 
 alt + shift + v
-    python $DOTFILES_DIR/Scripts/pythonScripts/media-player-controller.py toggle
+    python $DOTFILES_DIR/Scripts/python-scripts/media-player-controller.py toggle
 
 alt + shift + b
-    python $DOTFILES_DIR/Scripts/pythonScripts/media-player-controller.py previous
+    python $DOTFILES_DIR/Scripts/python-scripts/media-player-controller.py previous
 
 alt + shift + n 
-    python $DOTFILES_DIR/Scripts/pythonScripts/media-player-controller.py next
+    python $DOTFILES_DIR/Scripts/python-scripts/media-player-controller.py next
 
 alt + shift + m
-    python $DOTFILES_DIR/Scripts/pythonScripts/media-player-controller.py info
+    python $DOTFILES_DIR/Scripts/python-scripts/media-player-controller.py info
 
 # make sxhkd reload its configuration files:
 alt + Escape
 	pkill -USR1 -x sxhkd
 
 XF86AudioMute
-	$DOTFILES_DIR/Scripts/bashScripts/volume-control mute
+	$DOTFILES_DIR/Scripts/bash-scripts/volume-control mute
 
 XF86AudioRaiseVolume
-	$DOTFILES_DIR/Scripts/bashScripts/volume-control up 5
+	$DOTFILES_DIR/Scripts/bash-scripts/volume-control up 5
 
 XF86AudioLowerVolume
-	$DOTFILES_DIR/Scripts/bashScripts/volume-control down 5
+	$DOTFILES_DIR/Scripts/bash-scripts/volume-control down 5
 
 XF86MonBrightnessUp
-	$DOTFILES_DIR/Scripts/bashScripts/brightness-control up
+	$DOTFILES_DIR/Scripts/bash-scripts/brightness-control up
 
 XF86MonBrightnessDown
-	$DOTFILES_DIR/Scripts/bashScripts/brightness-control down
+	$DOTFILES_DIR/Scripts/bash-scripts/brightness-control down
 
 #
 # bspwm hotkeys

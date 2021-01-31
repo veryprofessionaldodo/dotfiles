@@ -40,7 +40,7 @@ desktop="desktop"
 read -p "On which device are you installing my dude? 'laptop' or 'desktop'?  " device
 
 echo "Got you fam, installing on $device."
-./Scripts/bashScripts/addToPath
+./Scripts/bash-scripts/addToPath
 
 # This is also done right now so that the rest of the script can go along nicely, even without a reboot
 export DOTFILES_DIR=$DOTFILES_DIR
@@ -55,7 +55,7 @@ cd Scripts
 # Remove fish intro message
 echo 'set -U fish_greeting ""' >> .config/fish/config.fish
 
-echo "There is a list of programs at Scripts/setupScripts/extraProgramsToInstall . You can modify this file now if you want, to download exactly what you need!"
+echo "There is a list of programs at Scripts/setup-scripts/extraProgramsToInstall . You can modify this file now if you want, to download exactly what you need!"
 sleep 2
 
 
@@ -72,7 +72,7 @@ sleep 1
 
 ./update.sh $device
 
-cd $DOTFILES_DIR/Scripts/setupScripts/
+cd $DOTFILES_DIR/Scripts/setup-scripts/
 
 ./moveScriptsToBin
 
@@ -111,7 +111,7 @@ sleep 1
 sudo $DOTFILES_DIR/Apps/grub/install.sh -v
 
 # First wal run
-python $DOTFILES_DIR/Scripts/pythonScripts/wallpaper-change.py
+python $DOTFILES_DIR/Scripts/python-scripts/wallpaper-change.py
 
 # Fix small error for VLC downloading
 mkdir ~/.cache/vlc

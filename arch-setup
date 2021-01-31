@@ -14,7 +14,6 @@ sleep 1
 sudo pacman -S xorg-server xorg-xinit i3-gaps rxvt-unicode lxdm python-pip pamixer pulseaudio pulseaudio-alsa alsa-utils w3m polkit-gnome
 
 sudo systemctl enable lxdm
-sudo powertop --auto-tune
 
 echo "Configuring i3 on boot..."
 
@@ -46,4 +45,4 @@ read -p "What's this device? 'console', 'laptop' or 'desktop'? Pls no typo: " de
 
 git checkout device
 
-./Scripts/setupScripts/specific-setup
+./Scripts/setup-scripts/specific-setup

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ../Configs
+cd $DOTFILES_DIR/Configs
 
 sudo cp 10-evdev.conf /etc/X11/xorg.conf.d/
 

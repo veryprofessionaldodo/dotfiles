@@ -7,20 +7,9 @@ mkdir ~/kodi
 
 cd ~/kodi
 
-mkdir addons
 mkdir movies
 mkdir shows
 mkdir audio
-
-cd addons
-
-curl https://covenant01.github.io/zip/repository.covenant-0.1.zip --output covenant.zip
-
-curl https://github.com/teeedubb/teeedubb-xbmc-repo/raw/master/script.steam.launcher/script.steam.launcher-3.4.1.zip --output steamlauncher.zip
-
-curl https://github.com/SpiralCut/plugin.program.advanced.launcher/archive/2.5.8.u2.zip --output advancedlauncher.zip
-
-curl https://github.com/julr/plugin.program.steam.library/archive/master.zip --output steamlibrary.zip
 
 cd ..
 

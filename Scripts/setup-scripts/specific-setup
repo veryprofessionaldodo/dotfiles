@@ -1,0 +1,55 @@
+#!/bin/bash
+
+./Scripts/setup-scripts/add-to-path
+
+create-base-files
+
+install-rice
+
+read -p "Do you want to install the extra programs at Scripts/setup-scripts/extraProgramsToInstall.sh? (y/n)  " answer
+if [ $answer == "y" ]
+then 
+	extra-programs-to-install 
+fi
+
+# Remove fish intro message
+echo 'set -U fish_greeting ""' >> ~/.config/fish/config.fish
+
+setup-lightdm
+
+setup-spicetify
+
+# Fix small ranger error 
+#echo "set preview_script $HOME/.config/ranger/scope.sh" >> Apps/ranger/rc.conf
+
+echo "\nSetting up $device configurations..."
+sleep 1
+
+install-fonts
+	
+tablet-config
+
+# Installing GRUB theme 
+echo "Installing GRUB theme..."
+sleep 1
+
+sudo $DOTFILES_DIR/Apps/grub/install.sh -v
+
+# First wal run
+python $DOTFILES_DIR/Scripts/python-scripts/wallpaper-change.py
+
+# Fix small error for VLC downloading
+mkdir ~/.cache/vlc
+
+wpg-install.sh -i
+wpg-install.sh -g
+
+betterlockscreen -u $DOTFILES_DIR/Wallpapers/wallhaven-83do1o.jpg 
+
+echo "If you want to configure VPN, you can do it now."
+sleep 3
+
+echo "And that's it! Exiting."
+sleep 2
+
+

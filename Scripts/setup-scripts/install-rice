@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Essential software for rice
+echo "Installing essential software for rice..."
+sleep 0.5
+
+yay -S lxdm-themes wmctrl ranger pacmixer lightdm-webkit-theme-litarvan dmenu dunst ffmpegthumbnailer feh rofi polybar gsimplecal flameshot betterlockscreen wpgtk-git playerctl spicetify-cli lxappearance python-sh gotop fish compton-tryone-git adobe-source-code-pro-fonts noto-fonts gsfonts cantarell-fonts xorg-fonts-cyrillic
+
+sudo cp -r $DOTFILES_DIR/fonts /usr/share/
+
+echo "Cleaning cache..."
+sleep 0.5
+yay -Sc
+
+echo "Updating system..."
+sleep 0.5
+yay
+
