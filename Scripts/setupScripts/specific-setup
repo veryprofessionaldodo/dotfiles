@@ -10,6 +10,12 @@ create-base-files
 
 install-rice
 
+read -p "Do you want to install the extra programs at Scripts/setupScripts/extraProgramsToInstall.sh? (y/n)  " answer
+if [ $answer == "y" ]
+then 
+	extra-programs-to-install 
+fi
+
 # Remove fish intro message
 echo 'set -U fish_greeting ""' >> .config/fish/config.fish
 

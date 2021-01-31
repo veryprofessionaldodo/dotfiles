@@ -58,13 +58,9 @@ echo 'set -U fish_greeting ""' >> .config/fish/config.fish
 echo "There is a list of programs at Scripts/setupScripts/extraProgramsToInstall . You can modify this file now if you want, to download exactly what you need!"
 sleep 2
 
-read -p "Do you want to install the extra programs at Scripts/setupScripts/extraProgramsToInstall.sh? (y/n)  " answer
-if [ $answer == "y" ]
-then 
-	./setupScripts/extraProgramsToInstall.sh $device "arch-based"
-fi
 
-./setupLightDM.sh 
+
+./setup-lightdm
 
 ./setupSpicetify.sh
 
