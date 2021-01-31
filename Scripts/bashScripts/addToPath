@@ -10,5 +10,9 @@ echo "#!/bin/bash" | sudo tee -a /etc/profile.d/dotfiles
 echo "export PATH=DOTFILES_DIR=$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles
 echo "export PATH=$PATH:$DOTFILES_DIR" | sudo tee -a /etc/profile.d/dotfiles
 
+# This is also done right now so that the rest of the script can go along nicely, even without a reboot
+export DOTFILES_DIR=$DOTFILES_DIR
+export PATH=$PATH:$DOTFILES_DIR
+
 echo "Added!"
 sleep 1
