@@ -22,6 +22,7 @@ assign [class="UnrealVersionSelector-Linux-Shipping"] $ws4
 assign [class="Main"] $ws4
 assign [class="Maya-2019"] $ws3
 assign [class="TelegramDesktop"] $ws2
+assign [class="Slack"] $ws2
 assign [class="maya.bin"] $ws3
 assign [class="Origin"] $ws5
 assign [class="Origin.exe"] $ws5

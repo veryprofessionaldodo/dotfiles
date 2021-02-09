@@ -88,7 +88,7 @@ mode "resize" {
 bindsym $mod+F1 exec --no-startup-id firefox
 bindsym $mod+F2 exec --no-startup-id urxvt -e ranger
 bindsym $mod+F3 exec --no-startup-id nautilus
-bindsym $mod+F4 exec --no-startup-id krita
+bindsym $mod+F4 exec --no-startup-id urxvt -e cmus
 bindsym $mod+F5 exec --no-startup-id spotify
 
 # Print Screen
@@ -142,7 +142,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bash-scr
 bindsym XF86AudioRaiseVolume exec --no-startup-id $DOTFILES_DIR/Scripts/bash-scripts/volume-control up 5
 bindsym XF86AudioMute exec --no-startup-id $DOTFILES_DIR/Scripts/bash-scripts/volume-control mute
 
-bindsym $mod+Shift+j exec --no-startup-id pacmd set-source-volume 2 20000
+bindsym $mod+Shift+j exec --no-startup-id pacmd set-source-volume 2 19000
 
 #########
 # Media #

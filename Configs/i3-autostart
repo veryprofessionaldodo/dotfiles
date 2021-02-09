@@ -17,3 +17,6 @@ exec --no-startup-id compton
 # Intelligent layouts
 exec --no-startup-id python $DOTFILES_DIR/Scripts/python-scripts/alternating-layouts.py
 
+# reset audio
+exec --no-startup-id pacmd set-source-volume 2 19000
+
