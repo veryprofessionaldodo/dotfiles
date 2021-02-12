@@ -1,0 +1,41 @@
+auto-reload yes
+reload-threads 20
+
+#color listfocus color1 color2 color3 bold
+
+browser firefox
+
+macro , open-in-browser
+macro t set broser "tsp youtube-dl --add-metadata -xic -f bestaudio/best" ; open-in-browser; set browser firefox
+macro v set browser "setsid -f vlc --qt-minimal-view -q" ; open-in-browser ; set browser 
+
+# Not show read feeds
+show-read-feeds yes
+
+# Not show read articles
+show-read-articles yes
+
+color background          white   default
+color listnormal          white   default
+color listnormal_unread   magenta color0 bold
+color listfocus           white color1 bold
+color listfocus_unread    white color1 bold
+color info                green   color0
+color article             white   default
+
+# highlights
+highlight article "^(Feed|Link):.*$" color0 default bold
+highlight article "^(Title|Date|Author):.*$" color2 default bold
+highlight article "https?://[^ ]+" color3 default underline
+highlight article "\\[[0-9]+\\]" color4 default bold
+highlight article "\\[image\\ [0-9]+\\]" color5 default bold
+highlight feedlist "^─.*$" color0 color0 bold
+highlight feedlist "---.*---" color0 color0 bold
+
+highlight feedlist "tag=Gaming" white red bold
+
+
+#unbind-key k # bound to `sort` by default
+bind-key BACKSPACE quit
+#unbind-key G # bound to `rev-sort` by default
+#bind-key G end

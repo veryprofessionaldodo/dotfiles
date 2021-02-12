@@ -97,6 +97,8 @@ for_window [class="java-lang-Thread"] floating enable
 ##########
 
 for_window [class="vlc"] sticky enable
+for_window [class="mpv"] sticky enable
+for_window [class="gl"] sticky enable
 for_window [class="firefox"] sticky enable
 for_window [class="PureRef"] sticky enable
 

@@ -4,7 +4,7 @@
 echo "Installing essential software for rice..."
 sleep 0.5
 
-yay -S python-i3-py arc-gtk-theme wmctrl ranger pacmixer lightdm-webkit-theme-litarvan dmenu dunst ffmpegthumbnailer feh rofi polybar gsimplecal flameshot betterlockscreen wpgtk-git playerctl spicetify-cli lxappearance python-sh gotop fish compton-tryone-git adobe-source-code-pro-fonts noto-fonts gsfonts cantarell-fonts xorg-fonts-cyrillic
+yay -S newsboat python-i3-py arc-gtk-theme wmctrl ranger pacmixer lightdm-webkit-theme-litarvan dmenu dunst ffmpegthumbnailer feh rofi polybar gsimplecal flameshot betterlockscreen wpgtk-git playerctl spicetify-cli lxappearance python-sh gotop fish compton-tryone-git adobe-source-code-pro-fonts noto-fonts gsfonts cantarell-fonts xorg-fonts-cyrillic
 
 sudo cp -r $DOTFILES_DIR/fonts /usr/share/
 
