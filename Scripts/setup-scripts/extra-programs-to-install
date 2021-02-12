@@ -6,7 +6,7 @@ desktop="desktop"
 echo "Installing extra programs..."
 sleep 1
 
-yay -S adb baobab gparted wine winetricks xorg-xinput gvfs-mtp npm droidcam rhythmbox unzip ntfs-3g neofetch unzip sl redshift gnome-system-monitor pavucontrol vlc networkmanager-dmenu-git authy blender krita nautilus firefox telegram-desktop code transmission-qt simplenote-electron-bin franz-bin discord youtube-dl steam
+yay -S mpv adb baobab gparted wine winetricks xorg-xinput gvfs-mtp npm droidcam rhythmbox unzip ntfs-3g neofetch unzip sl redshift gnome-system-monitor pavucontrol vlc networkmanager-dmenu-git authy blender krita nautilus firefox telegram-desktop code transmission-qt simplenote-electron-bin franz-bin discord youtube-dl steam
 
 yay -S xf86-input-wacom pureref xf86-video-amdgpu
 sudo cp $DOTFILES_DIR/Configs/20-amdgpu.conf /etc/X11/xorg.conf.d/

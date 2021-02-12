@@ -7,7 +7,7 @@ browser firefox
 
 macro , open-in-browser
 macro t set broser "tsp youtube-dl --add-metadata -xic -f bestaudio/best" ; open-in-browser; set browser firefox
-macro v set browser "setsid -f vlc --qt-minimal-view -q" ; open-in-browser ; set browser 
+macro v set browser "setsid -f mpv --really-quiet" ; open-in-browser ; set browser 
 
 # Not show read feeds
 show-read-feeds yes

@@ -96,17 +96,6 @@ http://www.blender.org/feed/ "Tech"
 http://www.godotengine.org/rss.xml "Tech"
 http://news.tecmint.com/feed/ "Tech"
 
-"--------------------"
-"------ Music -------"
-"--------------------"
-
-https://www.youtube.com/feeds/videos.xml?channel_id=UCTPjZ7UC8NgcZI8UKzb3rLw "Music"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCw_5z6HhKttOmcWgVgZ8tcg "Music"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCOxqgCwgOqC2lMqC5PYz_Dg "Music"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCpoKdKVhH-jcr3Pu0auKjmw "Music"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCwVQIkAtyZzQSA-OY1rsGig "Music"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCMkBFD0YPtrcoB_tni5uOLQ "Music"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCRQo9K9EMR1etIaZZ9_iPvA "Music"
 
 "-------------------"
 "----- Gaming ------"
@@ -164,7 +153,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCKtu_JtQCY0yryIy6zK4ZCg "Ar
 "------ News -------"
 "-------------------"
 
-http://feeds.reuters.com/reuters/topNews?irpc=69 "~Reuters" "News"
+https://www.reutersagency.com/feed/?taxonomy=best-topics&post_type=best "~Reuters" "News"
 https://poligrafo.sapo.pt/feed/ "News"
 http://www.shifter.pt/feed/ "News"
 http://feeds.feedburner.com/euronews/en/home/ "News"
@@ -177,3 +166,16 @@ https://smithsdownunder.com/reddit_rss/?rss=r/linux_gaming/top/.rss%3Flimit%3D10
 https://smithsdownunder.com/reddit_rss/?rss=r/masseffect/top/.rss%3Flimit%3D10 "~r/masseffect" "Reddit"
 https://smithsdownunder.com/reddit_rss/?rss=r/persona/top/.rss%3Flimit%3D10 "~r/persona" "Reddit"
 https://smithsdownunder.com/reddit_rss/?rss=r/nintendoswitch/top/.rss%3Flimit%3D10 "~r/nintendoswitch" "Reddit"
+
+
+"--------------------"
+"------ Music -------"
+"--------------------"
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCTPjZ7UC8NgcZI8UKzb3rLw "Music"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCw_5z6HhKttOmcWgVgZ8tcg "Music"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOxqgCwgOqC2lMqC5PYz_Dg "Music"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCpoKdKVhH-jcr3Pu0auKjmw "Music"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwVQIkAtyZzQSA-OY1rsGig "Music"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMkBFD0YPtrcoB_tni5uOLQ "Music"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRQo9K9EMR1etIaZZ9_iPvA "Music"
