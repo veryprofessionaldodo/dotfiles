@@ -29,7 +29,7 @@ then
 
 elif [ $1 == $arch-based ]
 then
-    yay -S epdfview neofetch unzip sl redshift gnome-system-monitor pavucontrol vlc networkmanager-dmenu-git authy nautilus firefox telegram-desktop code transmission-qt simplenote-electron-bin franz-bin authy discord youtube-dl steam
+    yay -S epdfview neofetch unzip sl redshift gnome-system-monitor pavucontrol vlc networkmanager-dmenu-git authy nautilus firefox telegram-desktop code transmission-qt simplenote-electron-bin discord youtube-dl steam
 
     if [ $1 == $laptop ]
     then

@@ -1,8 +1,0 @@
-# Replace in /etc/default/grub the GRUB_CMDLINE_LINUX_DEFAULT with
-# quiet splash loglevel=3 rd.udev.log_priority=3 vt.global_cursor_default=0
-
-# Add to in /etc/mkinitcpio.conf hooks()
-# sd-plymouth
-
-# Then run this 
-#sudo mkinitcpio -p linux
