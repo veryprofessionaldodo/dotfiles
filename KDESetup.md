@@ -22,6 +22,10 @@ Regardwing workspaces, search in the System Settings for "Virtual Desktops", and
 
 Regarding workspaces shortcuts, search for shortcuts, and the search for desktop. To switch desktop, the command is "Switch Desktop", set it to what you want. To send a window to a desktop, the command is "Window to Desktop".
 
+To configure an application starting desktop, you can right-click on the titlebar, and under "More Options", clck on "Configure Special Application Settings". There you can add a property, namely "Window Desktop", and assign it to the desktop you want.
+
+Set the KRunner configuration shortcut (mine is Alt+D).
+
 ## Customizing Appearance
 
 Go to System Settings > Appearance > Global Theme, and click on "Get New Global Themes". Install the Layan Theme (you can search by clicking on the three dots).
@@ -40,7 +44,7 @@ To enable Blur, search for Blur on the System Settings
 
 Go to System Settings > KWin Scripts, and install Krohnkite from the "Get New Scripts". To customize Krohnkite, run
 
-mkdir -p ~/.local/share/kservice5 && ln -s ~/.local/share/kwin/scripts/krohnkite/metadata.desktop ~/.local/share/kservice5/krohnkite.desktop
+mkdir -p ~/.local/share/kservices5/ && ln -s ~/.local/share/kwin/scripts/krohnkite/metadata.desktop ~/.local/share/kservices5/krohnkite.desktop
 
 ## Fixing VSCode Deletion
 
