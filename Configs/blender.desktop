@@ -1,8 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Version=1.0
-Type=Application
-Terminal=false
-Exec=/home/workingdodo/blender-git/build_linux_full/bin/blender
-Name=Blender
-Icon=$HOME/godot/icon.png

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-firefox 'https://mail.google.com/mail/u/1' && firefox https://calendar.google.com/calendar/u/1/r &
-
-code ~/Documents/work/work.code-workspace & 
-
-slack &
-
-discord &
