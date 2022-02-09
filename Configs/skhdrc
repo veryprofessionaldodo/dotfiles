@@ -5,6 +5,23 @@ shift + cmd - 4 : yabai -m window --space 4; yabai -m space --focus 4
 shift + cmd - 5 : yabai -m window --space 5; yabai -m space --focus 5
 shift + cmd - 6 : yabai -m window --space 6; yabai -m space --focus 6
 
-cmd + alt - f : yabai -m window --toggle native-fullscreen
-shift + cmd - space : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
+cmd + lctrl + alt + shift - f : yabai -m window --toggle native-fullscreen
+cmd + lctrl + alt + shift - space : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
 shift + cmd - p : yabai -m window --toggle sticky
+
+alt + cmd - up : yabai -m window --grid 1:1:0:0:1:1
+
+cmd + lctrl + alt + shift - return : open -n -a iTerm
+
+# Restart Yabai
+cmd + lctrl + alt + shift - r : \
+    /usr/bin/env osascript <<< \
+        "display notification \"Restarting Yabai\" with title \"Yabai\""; \
+    launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
+cmd + lctrl + alt + shift - left : yabai -m window --focus west
+cmd + lctrl + alt + shift - down : yabai -m window --focus south
+cmd + lctrl + alt + shift - up : yabai -m window --focus north
+cmd + lctrl + alt + shift - right : yabai -m window --focus east
+
+hyper - f : yabai -m window --space next; yabai -m space --focus next
