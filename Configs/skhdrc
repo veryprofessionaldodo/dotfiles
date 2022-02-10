@@ -11,7 +11,7 @@ shift + cmd - p : yabai -m window --toggle sticky
 
 alt + cmd - up : yabai -m window --grid 1:1:0:0:1:1
 
-cmd + lctrl + alt + shift - return : open -n -a iTerm
+cmd + shift - return : open -n -a iTerm
 
 # Restart Yabai
 cmd + lctrl + alt + shift - r : \
@@ -19,9 +19,9 @@ cmd + lctrl + alt + shift - r : \
         "display notification \"Restarting Yabai\" with title \"Yabai\""; \
     launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
-cmd + lctrl + alt + shift - left : yabai -m window --focus west
-cmd + lctrl + alt + shift - down : yabai -m window --focus south
-cmd + lctrl + alt + shift - up : yabai -m window --focus north
-cmd + lctrl + alt + shift - right : yabai -m window --focus east
+cmd + lctrl - left : yabai -m window --focus west
+cmd + lctrl - down : yabai -m window --focus south
+cmd + lctrl - up : yabai -m window --focus north
+cmd + lctrl - right : yabai -m window --focus east
 
 hyper - f : yabai -m window --space next; yabai -m space --focus next
