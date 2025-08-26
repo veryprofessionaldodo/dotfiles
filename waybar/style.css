@@ -37,7 +37,6 @@ tooltip {
     color:@color7;
 }
 #clock{
-    padding: 0px 5px;
     color:@foreground;
     transition: all .3s ease;
 }
@@ -58,23 +57,19 @@ tooltip {
 }
 #workspaces button.active {
     color: @foreground;
-    border: none;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
 #workspaces button.empty {
     color: rgba(0,0,0,0);
-    border: none;
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
 }
 #workspaces button.empty:hover {
     color: rgba(0,0,0,0);
-    border: none;
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
     transition: all 1s ease;
 }
 #workspaces button.empty.active {
     color: @color9;
-    border: none;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
 #power-profiles-daemon,

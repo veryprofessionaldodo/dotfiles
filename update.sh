@@ -5,8 +5,10 @@ cp kitty.conf ~/.config/kitty
 cp waybar/waybar.jsonc ~/.config/waybar/config.jsonc
 cp waybar/style.css ~/.config/waybar
 
-rm -rf $HOME/Imagens/wallpapers
-cp -r wallpapers $HOME/Imagens/wallpapers
+cp -r swaync ~/.config
+
+rm -rf $HOME/Pictures/wallpapers
+cp -r wallpapers $HOME/Pictures/wallpapers
 
 # update configs with pywal generated
 cat ~/.cache/wal/colors-kitty.conf >> ~/.config/kitty/kitty.conf

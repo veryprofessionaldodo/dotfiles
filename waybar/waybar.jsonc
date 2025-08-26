@@ -3,8 +3,8 @@
   "spacing": 4, // Gaps between modules (4px)
   "position": "bottom",
   "reload_style_on_change": true,
-  "modules-left": ["custom/notification", "clock"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-left": ["custom/notification", "hyprland/workspaces"],
+  "modules-center": ["custom/media"],
   "modules-right": [
     "group/expand",
     "custom/media",
@@ -12,7 +12,8 @@
     "mpd",
     "power-profiles-daemon",
     "bluetooth",
-    "network"
+    "network",
+    "clock"
   ],
   "hyprland/mode": {
     "format": "<span style=\"italic\">{}</span>"
